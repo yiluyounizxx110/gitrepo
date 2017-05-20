@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>文章列表</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="top">
+			<div class="logo"></div>
+			<ul class="main_links">
+				<li><a href="javascript:void(0)">系统</a></li>
+				<li><a href="javascript:void(0)">商品</a></li>
+				<li><a href="javascript:void(0)">文章</a></li>
+				<li><a href="javascript:void(0)">前台</a></li>
+			</ul>	
+			<div class="user_info">
+				<span class="user_info_desc"><span class="user_name cur">Lucky</span><span>欢迎你</span></span>
+				<span class="user_info_msg cur">
+					<span class="user_msg_num">10</span>
+					<ul class="user_msg_list">
+						<li class="user_msg_item space">
+							<div></div>
+						</li>	
+						<li class="user_msg_item clear">
+							<span class="msg_icon order_icon left"><i></i></span>
+							<span class="msg_title left">订单有6笔新订单</span>
+							<span class="msg_time left">10分钟前</span>
+						</li>
+						<li class="user_msg_item clear">
+							<span class="msg_icon info_icon left"><i></i></span>
+							<span class="msg_title left">有3个来自人事内部的消息</span>
+							<span class="msg_time left">16分钟前</span>
+						</li>
+						<li class="user_msg_item clear">
+							<span class="msg_icon meeting_icon left"><i></i></span>
+							<span class="msg_title left">上午开会消息存档</span>
+							<span class="msg_time left">15分钟前</span>
+						</li>
+						<li class="user_msg_item">
+							<span class="enter_list clear"><i class="left"></i><span class="left">进入列表...</span></span>
+						</li>
+					</ul>
+				</span>
+				<a class="exit" href="javascript:void(0);">退出</a>
+			</div>
+		</div>
+		<div class="main">
+			<div class="nav_tree">
+				<div class="user_info_detail">
+					<img class="user_icon" src="img/head.png"/>
+					<span class="user_name_left">Lucky</span>
+				</div>
+				<div class="nav_tree_list">
+					<div class="tree_menue up">
+						<div class="tree_menue_first cur"><a href="javascript:void(0)">一级菜单</div>
+						<div class="tree_menue_second_group up">
+							<div class="tree_menue_second cur"><a href="javascript:void(0)">二级菜单1</a></div>
+							<div class="tree_menue_third cur"><a href="javascript:void(0)">三级菜单1</a></div>
+							<div class="tree_menue_third cur"><a href="javascript:void(0)">三级菜单2</a></div>
+						</div>
+						<div class="tree_menue_second_group up">
+							<div class="tree_menue_second cur"><a href="javascript:void(0)">二级菜单2</a></div>
+							<div class="tree_menue_third cur"><a href="javascript:void(0)">三级菜单11</a></div>
+							<div class="tree_menue_third cur"><a href="javascript:void(0)">三级菜单21</a></div>
+						</div>
+					</div>
+					<div class="tree_menue up">
+						<div class="tree_menue_first cur"><a href="javascript:void(0)">一级菜单</a></div>
+						<div class="tree_menue_second_group up">
+							<div class="tree_menue_second cur"><a href="javascript:void(0)">二级菜单1</a></div>
+							<div class="tree_menue_third cur"><a href="javascript:void(0)">三级菜单1</a></div>
+							<div class="tree_menue_third cur"><a href="javascript:void(0)">三级菜单2</a></div>
+						</div>
+						<div class="tree_menue_second_group up">
+							<div class="tree_menue_second cur"><a href="javascript:void(0)">二级菜单2</a></div>
+							<div class="tree_menue_third cur"><a href="javascript:void(0)">三级菜单11</a></div>
+							<div class="tree_menue_third cur"><a href="javascript:void(0)">三级菜单21</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content none">
+				<div class="articlelist">
+					<div class="edit">
+						<div class="edit_left ">
+							<a href="javascript:void(0)" class="add cur">新增</a>
+							<a href="javascript:void(0)" class="delete cur">删除</a>
+						</div>
+						<div class="search_right">
+							<input type="text" />
+							<div class="search_btn"></div>
+						</div>
+					</div>
+					<div class="article_table">
+						<div class="article_table_header article_table_tr">
+							<!--加class往后面加，不要加在已有class前面-->
+							<div class="article_folder article_table_th" w_percent="18">折叠</div>
+							<div class="article_name article_table_th" w_percent="50">名称</div>
+							<div class="article_sort article_table_th" w_percent="10">排序</div>
+							<div class="article_deploy article_table_th" w_percent="10">发布</div>
+							<div class="list_opr article_table_th" w_percent="22">操作</div>
+						</div>
+						<div class="first_level_group opened">
+							<div class="first_level article_table_tr">
+								<div class="article_folder">
+									<span class="folder_icon"></span>
+								</div>
+								<div class="article_name">
+									<input type="text" value="开发文档"/>
+									<span class="add_article"></span>
+								</div>
+								<div class="article_sort">
+									<input type="text" value="0"/>
+								</div>
+								<div class="article_deploy">1</div>
+								<div class="list_opr">
+									<span class="opr_box">
+										<span class="edit_btn cur">编辑</span>
+										<span class="del_btn cur">删除</span>
+									</span>
+								</div>
+							</div>
+							<div class="second_level_group opened">
+								<div class="second_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="安装"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+								<div class="third_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="使用"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+								<div class="third_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="使用"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="second_level_group opened">
+								<div class="second_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="安装"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+								<div class="third_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="使用"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+								<div class="third_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="使用"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="first_level_group opened">
+							<div class="first_level article_table_tr">
+								<div class="article_folder">
+									<span class="folder_icon"></span>
+								</div>
+								<div class="article_name">
+									<input type="text" value="开发文档"/>
+									<span class="add_article"></span>
+								</div>
+								<div class="article_sort">
+									<input type="text" value="0"/>
+								</div>
+								<div class="article_deploy">1</div>
+								<div class="list_opr">
+									<span class="opr_box">
+										<span class="edit_btn cur">编辑</span>
+										<span class="del_btn cur">删除</span>
+									</span>
+								</div>
+							</div>
+							<div class="second_level_group opened">
+								<div class="second_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="安装"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+								<div class="third_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="使用"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+								<div class="third_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="使用"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="second_level_group opened">
+								<div class="second_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="安装"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+								<div class="third_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="使用"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+								<div class="third_level article_table_tr">
+									<div class="article_folder">
+										<span class="folder_icon"></span>
+									</div>
+									<div class="article_name">
+										<input type="text" value="使用"/>
+										<span class="add_article"></span>
+									</div>
+									<div class="article_sort">
+										<input type="text" value="0"/>
+									</div>
+									<div class="article_deploy">1</div>
+									<div class="list_opr">
+										<span class="opr_box">
+											<span class="edit_btn cur">编辑</span>
+											<span class="del_btn cur">删除</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright left">
+			版权所有：yershop@2001-2015武汉华亿思科技有限公司.Powered by yershop.com
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+		<script>
+			$(function(){
+				initPage();
+				window.onresize=function(){
+					initPage();
+				}
+				bindEvent();
+			});
+			
+			function initPage(){
+				var contentWidth = $(window).width() -261;
+				$(".content").width(contentWidth);
+				$(".nav_tree").css("min-height",($(window).height() - 86) + 'px');
+				$(".content").css("min-height",($(window).height() - 86) + 'px');
+				$(".nav_tree").attr("min-height",$(window).height() - 86);
+				$(".content").attr("min-height",$(window).height() - 86);
+				$(".articlelist").attr("min-height",$(window).height() - 86);
+				$(".articlelist").css("min-height",($(window).height() - 86) + 'px');
+				
+				var currentRightHeight = $(".content").height();
+				var currentNavHeight = $(".nav_tree").height();
+				if(currentRightHeight < currentNavHeight){
+					$(".articlelist").css("min-height",currentNavHeight + 'px');
+					$(".articlelist").attr("min-height",currentNavHeight);
+				}else{
+					$(".nav_tree").css("min-height",currentRightHeight + 'px');
+				}
+				$(".content").removeClass("none");
+				calculateTableWidth();
+			}
+			
+			function bindEvent(){
+				$(".tree_menue_first").on('click',function(){
+					if($(this).parent(".tree_menue").hasClass("down")){
+						$(this).parent(".tree_menue").removeClass("down").addClass("up");
+					}else{
+						$(this).parent(".tree_menue").removeClass("up").addClass("down");
+					}
+					calculateHeight();
+				});
+				$(".tree_menue_second").on("click",function(){
+					if(!$(this).hasClass("checked")){
+						$(".nav_tree_list .tree_menue_second").removeClass("checked");
+						$(this).addClass("checked");
+						$(this).parent().removeClass("up").addClass("down");
+					}else{
+						$(this).removeClass("checked");
+						$(this).parent().removeClass("down").addClass("up");
+					}
+					calculateHeight();
+				});
+				$(".tree_menue_third").on("click",function(){
+					if(!$(this).hasClass("checked")){
+						$(".nav_tree_list .tree_menue_third").removeClass("checked");
+						$(this).addClass("checked");
+					}
+				});
+				
+				
+				/****树形菜单展开**/
+				$(".first_level .folder_icon").click(function(){
+					var parent= $(this).parents(".first_level_group").first();
+					if(parent.hasClass("closed")){
+						parent.removeClass("closed").addClass("opened");
+					}else if(parent.hasClass("opened")){
+						parent.removeClass("opened").addClass("closed");
+						parent.find(".second_level_group").removeClass("opened").addClass("closed");
+					}
+					calculateHeight();
+				});
+				$(".second_level .folder_icon").click(function(){
+					var parent= $(this).parents(".second_level_group").first();
+					if(parent.hasClass("closed")){
+						parent.removeClass("closed").addClass("opened");
+					}else if(parent.hasClass("opened")){
+						parent.removeClass("opened").addClass("closed");
+					}
+					calculateHeight();
+				});
+			}
+			
+			function calculateHeight(){
+				var realHeight = $(".articlelist .edit").outerHeight() + $(".article_table").outerHeight();
+				var realLeftHeight = $(".user_info_detail").outerHeight() + $(".nav_tree_list").outerHeight();
+				var currentNavHeight = $(".nav_tree").height();
+				if(realHeight > $(".articlelist").attr("min-height")){
+					if(realHeight > currentNavHeight){
+						$(".nav_tree").css("min-height",realHeight + 'px');
+					    $(".articlelist").css("min-height",realHeight + 'px');
+					}else{
+						if(realLeftHeight > realHeight){
+							$(".articlelist").css("min-height",realLeftHeight + 'px');
+							$(".nav_tree").css("min-height",realLeftHeight + 'px');
+						}else{
+							$(".nav_tree").css("min-height",realHeight + 'px');
+						    $(".articlelist").css("min-height",realHeight + 'px');
+						}
+					}
+				}else{
+					if(currentNavHeight >= $(".articlelist").attr("min-height")){
+						if(realLeftHeight >= $(".articlelist").attr("min-height")){
+							$(".articlelist").css("min-height",realLeftHeight + 'px');
+							$(".nav_tree").css("min-height",realLeftHeight + 'px');
+						}else{
+							$(".nav_tree").css("min-height",$(".articlelist").attr("min-height") + 'px');
+							$(".articlelist").css("min-height",$(".articlelist").attr("min-height")  + 'px');
+						}
+						
+					}else{
+						$(".nav_tree").css("min-height",$(".articlelist").attr("min-height") + 'px');
+						$(".articlelist").css("min-height",$(".articlelist").attr("min-height")  + 'px');
+					}
+				}
+			}
+			
+			function calculateTableWidth(){
+				var thArray = $(".article_table_tr .article_table_th");
+				var totalPercent = 0;
+				for(var index = 0; index < thArray.length; index ++){
+					totalPercent += parseInt($(thArray[index]).attr("w_percent"));
+				}
+				
+				var totalWidth = $(".article_table").width();
+				for(var index = 0; index < thArray.length; index ++){
+					var percent = parseInt($(thArray[index]).attr("w_percent"));
+					var className = $(thArray[index]).attr("class").split(" ")[0]
+					var width = parseInt((totalWidth * percent )/ totalPercent);
+					$(".article_table_tr ." + className).width(width);
+				}
+			}
+		</script>
+	</body>
+</html>
