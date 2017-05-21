@@ -1117,13 +1117,24 @@
 							<img jqimg="images/s1.gif" src="images/s1.gif" width="360"/>
 						</span> 
 					</div>
-					<div class="spec-scroll"> 
+					<div class="spec-scroll">
+						<a class="spec-forward disable">
+							<i class="sprite-arrow-prev"></i>
+						</a>
+						<a class="spec-backward">
+							<i class="sprite-arrow-next"></i>
+						</a>
 						<div class="items">
 							<ul>
 								<li><img alt="" bimg="images/s1.gif" src="images/s1.gif" onmousemove="preview(this);"></li>
-								<li><img alt="" bimg="images/s1.gif" src="images/s1.gif" onmousemove="preview(this);"></li>
-								<li><img alt="" bimg="images/s1.gif" src="images/s1.gif" onmousemove="preview(this);"></li>
-								<li><img alt="" bimg="images/s1.gif" src="images/s1.gif" onmousemove="preview(this);"></li>
+								<li><img alt="" bimg="images/s1.gif" src="images/cbjl_pic_02.gif" onmousemove="preview(this);"></li>
+								<li><img alt="" bimg="images/s1.gif" src="images/cbjl_pic_03.gif" onmousemove="preview(this);"></li>
+								<li><img alt="" bimg="images/s1.gif" src="images/cbjl_pic_04.gif" onmousemove="preview(this);"></li>
+								<li><img alt="" bimg="images/s1.gif" src="images/cbjl_pic_05.gif" onmousemove="preview(this);"></li>
+								<li><img alt="" bimg="images/s1.gif" src="images/cbjl_pic_06.gif" onmousemove="preview(this);"></li>
+								<li><img alt="" bimg="images/s1.gif" src="images/cbjl_pic_07.gif" onmousemove="preview(this);"></li>
+								<li><img alt="" bimg="images/s1.gif" src="images/cbjl_pic_08.gif" onmousemove="preview(this);"></li>
+								<li><img alt="" bimg="images/s1.gif" src="images/cbjl_pic_09.gif" onmousemove="preview(this);"></li>
 							</ul>
 						</div>
 					</div>
@@ -3309,6 +3320,66 @@
 				var this_index = $(this).index();
 				$(this).closest('.zx_tab').siblings('.zx_list').eq(this_index).addClass('current');
 				$(this).closest('.zx_tab').siblings('.zx_list').eq(this_index).siblings('.zx_list').removeClass('current');
+			});
+			
+			
+			
+			//左右滚动
+			//向前按钮点击
+			$(".spec-scroll .spec-forward").click(function(){
+				if($(this).hasClass("disable")){
+					return false;
+				}
+				var reg = /\d+/;
+				var marleft = parseInt($(".spec-scroll .items ul").css("margin-left").match(reg)[0]);
+				var nums = $(".spec-scroll .items ul li").length;
+				if(nums <= 4){
+					$(".spec-scroll .spec-backward").addClass("disable");
+					$(this).addClass("disable");
+					return false;
+				}
+				var totallen = nums * (72);
+				var setLeft = 0;
+				
+				if((marleft - 288) <= 0){
+					setLeft = 0;
+					$(this).addClass("disable");
+				}else{
+					setLeft = -(marleft - 288);
+				}
+				$(".spec-scroll .spec-backward").removeClass("disable");
+				$(".spec-scroll .items ul").animate({
+					"margin-left":setLeft + "px"
+				});
+			});
+			//向后按钮点击
+			$(".spec-scroll .spec-backward").click(function(){
+				if($(this).hasClass("disable")){
+					return false;
+				}
+				var reg = /\d+/;
+				var marleft = parseInt($(".spec-scroll .items ul").css("margin-left").match(reg)[0]);
+				var nums = $(".spec-scroll .items ul li").length;
+				
+				if(nums <= 4){
+					$(".spec-scroll .spec-forward").addClass("disable");
+					$(this).addClass("disable");
+					return false;
+				}
+				
+				var totallen = nums * (72);
+				var setLeft = 0;
+				
+				if((marleft + 576) >= totallen){
+					setLeft = -(totallen - 288);
+					$(this).addClass("disable");
+				}else{
+					setLeft = -marleft - 288;
+				}
+				$(".spec-scroll .spec-forward").removeClass("disable");
+				$(".spec-scroll .items ul").animate({
+					"margin-left":setLeft + "px"
+				},1000);
 			});
 		})
 	</script>

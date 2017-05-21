@@ -1186,12 +1186,20 @@ color:#e53344;}
 .bigimg{width:800px; height:800px;}
 /*图片小图预览列表*/
 .spec-preview{width:360px;height:360px;}
-.spec-scroll{clear:both;margin-top:10px;width:360px; height:66px;}
-.spec-scroll .items{float:left;position:relative;width:360px;height:66px;overflow:hidden;}
+.spec-scroll{clear:both;margin-top:10px;width:360px; height:66px;position: relative;}
+.spec-scroll .items{float:left;position:relative;width:278px;height:66px;overflow:hidden;margin-left:41px;}
 .spec-scroll .items ul{position:absolute;width:999999px;height:62px; border-bottom:1px dashed #fafafa; padding:0 0 3px 0;}
 .spec-scroll .items ul li{float:left;width:58px; height:58px; text-align:center; border:1px solid #eeeeee; margin:0 10px 0 0; padding:1px; cursor:pointer;}
 .spec-scroll .items ul li img{width:58px;height:58px;}
 .spec-scroll .items ul li:hover{border:2px solid #f32613;padding:0;}
+.spec-scroll .spec-forward{display: inline-block;width: 22px;height:32px;position: absolute;left:0;top:15px;}
+.spec-scroll .spec-backward{display: inline-block;width: 22px;height:32px;position: absolute;right:0;top:15px;}
+.spec-scroll .spec-forward .sprite-arrow-prev{display: inline-block;width: 22px;height:32px;background-image: url(../images/sprite-default.png);background-position: 0 -54px;}
+.spec-scroll .spec-backward .sprite-arrow-next{display: inline-block;width: 22px;height:32px;background-image: url(../images/sprite-default.png);background-position: -78px 0;}
+.spec-scroll .spec-forward:hover .sprite-arrow-prev{background-image: url(../images/hover-prev.png);background-position: 0px 0px;}
+.spec-scroll .spec-backward:hover .sprite-arrow-next{background-image: url(../images/hover-next.png);background-position: 0px 0px;}
+.spec-scroll .spec-forward.disable .sprite-arrow-prev{background-image: url(../images/disabled-prev.png);background-position: 0px 0px;}
+.spec-scroll .spec-backward.disable .sprite-arrow-next{background-image: url(../images/disabled-next.png);background-position: 0px 0px;}
 .spxq_main .spxq_main_in .top_div .lft_pic .b_div{overflow:hidden;}
 .spxq_main .spxq_main_in .top_div .lft_pic .b_div .share{width:55px; height:22px; line-height:22px; text-align:center; border:1px solid #f5f5f5; border-radius:3px; color:#777777; margin:0 5px 0 0;}
 .spxq_main .spxq_main_in .top_div .lft_pic .b_div .share:hover{border:1px solid #f32613; color:#f32613;}
