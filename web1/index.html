@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="top">
+			<div class="logo"></div>
+			<ul class="main_links">
+				<li><a href="javascript:void(0)">系统</a></li>
+				<li><a href="javascript:void(0)">商品</a></li>
+				<li><a href="javascript:void(0)">文章</a></li>
+				<li><a href="javascript:void(0)">前台</a></li>
+			</ul>	
+			<div class="user_info">
+				<span class="user_info_desc"><span class="user_name cur">Lucky</span><span>欢迎你</span></span>
+				<span class="user_info_msg cur">
+					<span class="user_msg_num">10</span>
+					<ul class="user_msg_list">
+						<li class="user_msg_item space">
+							<div></div>
+						</li>	
+						<li class="user_msg_item clear">
+							<span class="msg_icon order_icon left"><i></i></span>
+							<span class="msg_title left">订单有6笔新订单</span>
+							<span class="msg_time left">10分钟前</span>
+						</li>
+						<li class="user_msg_item clear">
+							<span class="msg_icon info_icon left"><i></i></span>
+							<span class="msg_title left">有3个来自人事内部的消息</span>
+							<span class="msg_time left">16分钟前</span>
+						</li>
+						<li class="user_msg_item clear">
+							<span class="msg_icon meeting_icon left"><i></i></span>
+							<span class="msg_title left">上午开会消息存档</span>
+							<span class="msg_time left">15分钟前</span>
+						</li>
+						<li class="user_msg_item">
+							<span class="enter_list clear"><i class="left"></i><span class="left">进入列表...</span></span>
+						</li>
+					</ul>
+				</span>
+				<a class="exit" href="javascript:void(0);">退出</a>
+			</div>
+		</div>
+		<div class="main">
+			<div class="nav_tree">
+				<div class="user_info_detail">
+					<img class="user_icon" src="img/head.png"/>
+					<span class="user_name_left">Lucky</span>
+				</div>
+				<div class="nav_tree_list">
+					<div class="menue up">
+						<div class="p_menue cur">系统首页</div>
+						<div class="c_menue">
+							<div class="c_menue_item cur"><a href="#">自定义回复</a></div>
+							<div class="c_menue_item cur"><a href="#">关键词管理</a></div>
+							<div class="c_menue_item cur"><a href="#">文本回复</a></div>
+							<div class="c_menue_item cur"><a href="#">图文回复</a></div>
+						</div>
+					</div>
+					<div class="menue up">
+						<div class="p_menue cur">页面跳转</div>
+						<div class="c_menue">
+							<div class="c_menue_item cur list_page"><a href="#">列表页</a></div>
+							<div class="c_menue_item cur edit_page"><a href="#">编辑页</a></div>
+						</div>
+					</div>
+					<div class="menue up">
+						<div class="p_menue cur">页面跳转</div>
+						<div class="c_menue">
+							<div class="c_menue_item cur list_page"><a href="#">列表页</a></div>
+							<div class="c_menue_item cur edit_page"><a href="#">编辑页</a></div>
+						</div>
+					</div>
+					<div class="menue up">
+						<div class="p_menue cur">页面跳转</div>
+						<div class="c_menue">
+							<div class="c_menue_item cur list_page"><a href="#">列表页</a></div>
+							<div class="c_menue_item cur edit_page"><a href="#">编辑页</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="show_info none"><!--pending_order-->
+					<div class="calc_goods_cate show_info_div left">
+						<div class="left_img">
+							<div></div>
+						</div>
+						<div class="right_text">
+							<span class="text_title">今日待处理订单</span>
+							<span class="num">120</span>
+						</div>
+					</div>
+					<div class="order_amount show_info_div left">
+						<div class="left_img">
+							<div></div>
+						</div>
+						<div class="right_text">
+							<span class="text_title">订单交易额</span>
+							<span class="num">￥330</span>
+						</div>
+					</div>
+					<div class="goods_quantity show_info_div left">
+						<div class="left_img">
+							<div></div>
+						</div>
+						<div class="right_text">
+							<span class="text_title">商品个数</span>
+							<span class="num">60</span>
+						</div>
+					</div>
+					<div class="user_amount show_info_div left">
+						<div class="left_img">
+							<div></div>
+						</div>
+						<div class="right_text">
+							<span class="text_title">用户量</span>
+							<span class="num">3921</span>
+						</div>
+					</div>
+				</div>
+				<div class="charts_wrap">
+						<div class="charts"></div>
+					</div>
+			</div>
+		</div>
+		<div class="copyright left">
+			版权所有：yershop@2001-2015武汉华亿思科技有限公司.Powered by yershop.com
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+        <script type="text/javascript" src="js/highcharts/exporting.js"></script>
+        <script type="text/javascript" src="js/highcharts/highcharts-zh_CN.js"></script>
+        <script type="text/javascript" src="js/highcharts/grid-light.js"></script>
+        <script>
+        	$(function(){
+				initPage();
+				window.onresize=function(){
+					initPage();
+				}
+				bindEvent();
+			});
+			
+			function initPage(){
+				var contentWidth = $(window).width() -261;
+				$(".content").width(contentWidth);
+				$(".nav_tree").css("min-height",($(window).height() - 86) + 'px');
+				$(".content").css("height",($(window).height() - 86) + 'px');
+				$(".show_info_div").width(($(window).width()-261-17)/4 - 40);
+				$(".right_text").css("width",(($(window).width()-261-17)/4 -90-40) + 'px');
+				$(".charts").width($(window).width()-261 - 17 -40);
+				$(".charts").height($(window).height() - 196);
+				$(".charts_wrap").width($(window).width()-261 - 17 -40);
+				if($(".nav_tree").height() > $(".content").height()){
+					$(".content").css("min-height",$(".nav_tree").height());
+					$(".charts_wrap").height($(".nav_tree").height() - 110);
+				}
+				$(".show_info").removeClass("none");
+				drawCharts();
+			}
+			
+			function bindEvent(){
+				$(".p_menue").on('click',function(){
+					if($(this).parent(".menue").hasClass("down")){
+						$(this).parent(".menue").removeClass("down").addClass("up");
+					}else{
+						$(this).parent(".menue").removeClass("up").addClass("down");
+					}
+					calculateHeight();
+				});
+				$(".c_menue_item").on("click",function(){
+					if(!$(this).hasClass("checked")){
+						$(".nav_tree_list .c_menue_item").removeClass("checked");
+						$(this).addClass("checked");
+					}
+				})
+			}
+			function calculateHeight(){
+				var currentRightHeight = $(".content").height();
+				var currentNavHeight = $(".nav_tree").height();
+				if(currentRightHeight < currentNavHeight){
+					$(".charts_wrap").height(currentNavHeight - 110);
+				}
+			}
+
+        	function drawCharts(){
+				$('.charts').highcharts({
+				        chart: {
+				            type: 'areaspline',
+				        },
+				        title: {
+				            text: '本年度财务报表'
+				        },
+				        legend: {
+				            layout: 'vertical',
+				            align: 'left',
+				            verticalAlign: 'top',
+				            x: 150,
+				            y: 100,
+				            floating: true,
+				            borderWidth: 1,
+				            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+				        },
+				        xAxis: {
+				            categories: [
+				                'Jan',
+				                'Feb',
+				                'Mar',
+				                'Apr',
+				                'may',
+				                'Jun',
+				                'Jul'
+				            ]
+				        },
+				        yAxis: {
+				            title: {
+				                text: '金额 w'
+				            }
+				        },
+				        tooltip: {
+				            shared: true,
+				            valueSuffix: ' w'
+				        },
+				        credits: {
+				            enabled: false
+				        },
+				        plotOptions: {
+				            areaspline: {
+				                fillOpacity: 0.5
+				            }
+				        },
+				        series: [
+					        {
+					            name: '2016',
+					            data: [200, 780, 130, 590, 950, 530,300],
+					        }, 
+					        {
+					            name: '2017',
+					            data: [300, 780, 280, 130, 620, 490, 860],
+					        }
+				        ]
+				});
+			}
+        </script>
+	</body>
+</html>
