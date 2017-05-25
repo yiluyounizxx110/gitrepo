@@ -181,6 +181,29 @@ a:hover{
 .nav_in li:first-child a{
 	padding-left: 0px;
 }
+
+.nav_bar{
+	border-bottom:1px solid #EFEFEF;
+	height:40px;
+	line-height: 40px;
+	font-size: 15px;
+	background: url(../images/home.png) no-repeat 0px 10px;
+}
+.nav_bar a,.nav_bar span{
+	float:left;
+	display: inline-block;
+    height:40px;
+	line-height: 40px;
+	cursor: pointer;
+	color:#7A7A7A;
+	padding-left: 5px;
+}
+.nav_bar a:first-child{
+	margin-left: 20px;
+}
+
+
+
 .content{
 	width:100%;
 	margin-top:15px;
@@ -368,10 +391,95 @@ a.d_link{
 	height:120px;
 	display: block;
 }
+
+/****详情页左侧部分****/
+.article_content{
+	width:852px;
+}
+.ac_in_width{
+	width:852px;
+	margin: 0 auto;
+}
+.article_title{
+	height:46px;
+	line-height: 46px;
+	text-align: center;
+	font-size: 24px;
+	color:#333333;
+	font-family: "Microsoft YaHei";
+}
+.article_desc{
+	height:43px;
+	line-height: 43px;
+	font-size: 14px;
+	border-bottom:1px solid #EFEFEF;
+}
+.article_desc .article_time{
+	float:left;
+	display: inline-block;
+	margin-left:60px;
+}
+.article_desc .article_source{
+	float:left;
+	display: inline-block;
+	margin-left:10px;
+}
+.article_desc .article_activity{
+	float:left;
+	display: inline-block;
+	margin-left:30px;
+	color:#82B7DA;
+}
+.article_content .detail_img{
+	display: block;
+	height:775px;
+	margin: 10px auto;
+}
+.detail_img_title{
+	display: block;
+	height:36px;
+	line-height: 36px;
+	text-align: center;
+	color:#82B7DA;
+	font-size: 14px;
+}
+.article_p{
+	width:780px;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	border-bottom: 1px dotted #DCDBDB;
+}
+.article_p p{
+	text-indent: 28px;
+	font-size: 15px;
+	line-height: 23px;
+	margin-bottom: 10px;
+	color: #8D8D8D;
+}
+
 .content_right{
 	width:276px;
-	height:600px;
 	margin-left:20px;
+}
+.content_right .cate_div{
+	width:276px;
+	border:1px solid #DFEFF6;
+	color:#646464;
+	font-size: 19px;
+}
+.cate_div .cate_p{
+	width:276px;
+	height:54px;
+	line-height: 54px;
+	text-indent: 20px;
+}
+.cate_div .cate_c{
+	width:276px;
+	height:38px;
+	line-height: 38px;
+	border-top:1px solid #DFEFF6;
+	text-indent: 35px;
 }
 .content_right .notice_div{
 	width:276px;
@@ -405,6 +513,17 @@ a.d_link{
 	width:276px;
 	height:158px;
 }
+.ad_img1{
+	width:276px;
+	display: block;
+	height:96px;
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+.ad_img1 img{
+	width:276px;
+	height:96px;
+}
 .content_right .rank_div{
 	width:276px;
 	margin-top:20px;
@@ -418,6 +537,9 @@ a.d_link{
 	font-size: 20px;
 	border-bottom: 1px solid #D5EAF3;
 	text-indent: 17px;
+}
+.content_right .rank_div .rank_title.black_color{
+	color:#646464;
 }
 .content_right .rank_div .rank_title_links{
 	display: inline-block;
@@ -486,6 +608,78 @@ a.d_link{
  	height:25px;
  	color: #838383;
 }
+/********最新投稿*****/
+.content_right .latest_posts{
+	width:276px;
+	margin-top:20px;
+	border:1px solid #D5EAF3;
+}
+.content_right .latest_posts .latest_posts_title{
+	width:276px;
+	height:50px;
+	color:#646464;
+	line-height: 50px;
+	font-size: 20px;
+	border-bottom: 1px solid #D5EAF3;
+	text-indent: 17px;
+}
+.content_right .latest_posts .latest_posts_list{
+	width:276px;
+	line-height: 25px;
+	font-size: 15px;
+	color: #838383;
+	list-style-type:none;
+	counter-reset:sectioncounter;
+	overflow: hidden;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.content_right .latest_posts .latest_posts_list li:before {  
+    content:counter(sectioncounter); 
+    display: inline-block;
+    width:18px;
+    height:18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    border-radius: 50%;
+    counter-increment:sectioncounter;  
+    margin-left:5px;
+    margin-right: 5px;
+    color:#ffffff;
+    background-color: #838383;
+ }
+.content_right .latest_posts .latest_posts_list li:nth-child(1):before{
+ 	background-color: #E01222;
+}
+.content_right .latest_posts .latest_posts_list li:nth-child(2):before{
+ 	background-color: #E01222;
+} 
+.content_right .latest_posts .latest_posts_list li:nth-child(3):before{
+ 	background-color: #E01222;
+}
+.content_right .latest_posts .latest_posts_list li:nth-child(4):before{
+ 	background-color: #E01222;
+}
+.content_right .latest_posts .latest_posts_list li:nth-child(5):before{
+ 	background-color: #E01222;
+}
+.content_right .latest_posts .latest_posts_list li{
+ 	cursor: pointer;
+ 	line-height: 25px;
+ 	height:25px;
+ 	display: block;
+ 	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+ 	width:276px;
+}
+.content_right .latest_posts .latest_posts_list li a{
+  	cursor: pointer;
+ 	height:25px;
+ 	color: #838383;
+}
+
 
 .pic_news{
 	height:370px;
