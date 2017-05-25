@@ -665,11 +665,10 @@ a.d_link{
 }
 .other_links_con .other_links_item{
 	float: left;
-	width:120px;
-	height:30px;
 	display: inline-block;
 	text-align: center;
-	line-height: 30px;
+	/*line-height: 30px;*/
+	padding: 3px 10px;
 }
 .footer{
 	width:100%;
