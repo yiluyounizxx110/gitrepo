@@ -132,7 +132,7 @@ a:hover{
 	line-height: 40px;
 	font-size: 18px;
 	color: #DBDADA;
-	background: url(../img/search_bg.png) no-repeat 0px 0px;
+	background: url(../images/search_bg.png) no-repeat 0px 0px;
 	background-size: contain;
 	text-indent: 60px;
 	float: left;
@@ -206,7 +206,7 @@ a:hover{
 .content_in .content_left .hot_news{
 	width:440px;
 	height:135px;
-	background: url(../img/hot.png) no-repeat 0px 0px;	
+	background: url(../images/hot.png) no-repeat 0px 0px;	
 }
 .hot_news .hot_new_text{
 	width:390px;
@@ -342,7 +342,7 @@ a.d_link{
 	border:1px solid #EEEEEE;
 	border-bottom: none;
 	margin-top:14px;
-	background: url(../img/hot_dis.png) no-repeat 0px 0px;
+	background: url(../images/hot_dis.png) no-repeat 0px 0px;
 }
 .hot_dis a{
 	display: block;
@@ -626,11 +626,14 @@ a.d_link{
 	background-color: #1A90C1;
 	margin:14px 5px 0;
 }
-.module_two,.module_four{
+.module_wrapper{
+	margin-top:16px;
+}
+.module_wrapper:nth-child(even){
 	margin-left:16px;
 }
-.module_three,.module_four{
-	margin-top:16px;
+.module_wrapper:nth-child(1),.module_wrapper:nth-child(2){
+	margin-top:0px;
 }
 .other_links_div{
 	width:1150px;
