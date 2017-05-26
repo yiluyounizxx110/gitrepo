@@ -2,6 +2,9 @@
 	padding: 0;
 	margin: 0;
 }
+img{
+	border: 0;
+}
 .fl{
 	float: left;
 }
@@ -395,6 +398,7 @@ a.d_link{
 /****详情页左侧部分****/
 .article_content{
 	width:852px;
+	border-bottom: 1px dotted #DCDBDB;
 }
 .ac_in_width{
 	width:852px;
@@ -448,7 +452,6 @@ a.d_link{
 	margin: 0 auto;
 	padding-top: 10px;
 	padding-bottom: 15px;
-	border-bottom: 1px dotted #DCDBDB;
 }
 .article_p p{
 	text-indent: 28px;
@@ -457,6 +460,142 @@ a.d_link{
 	margin-bottom: 10px;
 	color: #8D8D8D;
 }
+.article_comment .article_comment_title{
+	font-size: 20px;
+	line-height: 40px;
+	height:40px;
+	color:#686868;
+	margin-top: 20px;
+}
+.article_comment .article_comment_div{
+	height: 248px;
+	background-color: #FBFBFB;
+}
+.article_comment_user{
+	width:45px;
+	height:248px;
+	margin-left: 64px;
+}
+.article_comment_user img{
+	margin-top: 40px;
+	display: block;
+	width: 45px;
+	height:43px;
+}
+.article_comment_user_name{
+	width: 45px;
+	height:30px;
+	line-height: 30px;
+	color:#B9B9B9;
+	font-size: 12px;
+	display: block;
+	text-align: center;
+}
+.article_comment_box{
+	position: relative;
+	margin-left: 35px;
+	width:673px;
+	height:248px;
+}
+.article_comment_input{
+	width:650px;
+	height:141px;
+	max-width:650px;
+	max-height: 141px;
+	border:1px solid #E9E8E8;
+	margin-top:20px;
+	border-radius: 6px;
+	outline: none;	
+	line-height: 30px;
+	font-size: 15px;
+	padding: 5px 10px;
+}
+.article_comment_box .input_arrow{
+	display: inline-block;
+	width:13px;
+	height: 14px;
+	background: url(../images/arrow.png) no-repeat 0px 0px;
+	position: absolute;
+	left:-11px;
+	top:40px;
+}
+.article_comment_input::-webkit-input-placeholder{/* 使用webkit内核的浏览器 */
+	width:650px;
+	height:141px;
+	line-height: 140px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+}	
+.article_comment_input:-moz-placeholder{/* Firefox版本4-18 */
+	width:650px;
+	height:141px;
+	line-height: 140px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+} 
+.article_comment_input::-moz-placeholder{/* Firefox版本19+ */
+	width:650px;
+	height:141px;
+	line-height: 140px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+} 
+.article_comment_input:-ms-input-placeholder{/* IE浏览器 */
+	width:650px;
+	height:141px;
+	line-height: 140px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+} 
+.article_comment_input.input_arrow_place_holder{
+	width:650px;
+	height:141px;
+	line-height: 140px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+}
+.article_comment_tips{
+	width:650px;
+	height:20px;
+	line-height: 20px;
+	margin-top:5px;
+	color:#3099ED;
+	text-indent: 20px;
+	font-size: 13px;
+}
+.article_comment_btn{
+	width: 230px;
+	height: 36px;
+	float:right;
+	line-height: 36px;
+	font-size: 12px;
+}
+.article_comment_btn span{
+	cursor: pointer;
+}
+.article_comment_btn .article_comment_tip_span{
+	color: #3099ED;
+}
+.article_comment_btn .article_comment_submit{
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	line-height: 36px;
+	border-radius: 5px;
+	background-color: #3099ED;
+	color: #ffffff;
+	margin-left: 10px;
+}
+
+
+
+
+
 
 .content_right{
 	width:276px;
@@ -731,7 +870,6 @@ a.d_link{
 	float:left;
 	width:416px;
 	height:303px;
-	/*border:1px solid #9D9D9D;*/
 	border:1px solid #E4E3E3;
 }
 .four_module .module_wrapper .module_title{
