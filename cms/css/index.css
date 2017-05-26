@@ -592,6 +592,24 @@ a.d_link{
 	margin-left: 10px;
 }
 
+.article_comment_list .article_comment_title{
+	font-size: 20px;
+	line-height: 40px;
+	height:40px;
+	color:#686868;
+	margin-top: 20px;
+}
+.act_span1{
+	font-size: 16px;
+	margin-left: 5px;
+}
+.act_span1 .comment_nums{
+	color: #3099ED;
+	font-weight: bold;
+}
+.act_span1 a{
+	color: #333333;
+}
 
 
 
