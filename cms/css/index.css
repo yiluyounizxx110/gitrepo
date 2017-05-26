@@ -601,6 +601,8 @@ a.d_link{
 	height:40px;
 	color:#686868;
 	margin-top: 20px;
+	/*font-family: "AdobeHeitiStd-Regular";*/
+	font-weight: bold;
 }
 .act_span1{
 	font-size: 16px;
