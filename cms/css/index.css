@@ -51,6 +51,9 @@ a:hover{
 .fs26{
 	font-size: 26px;
 }
+.none{
+	display: none;
+}
 .in_width{
 	width:1150px;
 	margin: 0 auto;
@@ -610,6 +613,177 @@ a.d_link{
 .act_span1 a{
 	color: #333333;
 }
+.article_comment_item{
+	border-bottom: 1px dotted #DBDADA;
+}
+.article_comment_item .comment_item_user_warpper{
+	width:56px;
+	height:158px;
+	margin-left: 30px;
+}
+.comment_item_user_warpper img{
+	width:43px;
+	height:45px;
+	display: block;
+	margin: 25px auto 0;
+}
+.comment_item_user_warpper span{
+	display: block;
+	width:56px;
+	height:24px;
+	line-height: 24px;
+	font-size: 12px;
+	text-align: center;
+	background-color: #B1CDE5;
+	color: #ffffff;
+	cursor:pointer;
+	margin-top: 15px;
+}
+.comment_item_user_warpper span.not_friends{
+	text-indent: 10px;
+	background-image: url(../images/add.png);
+	background-position: 6px 4px;
+	background-repeat: no-repeat;
+}
+
+.comment_item_content_div{
+	width:753px;
+	min-height:158px;
+	float:left;
+	margin-left:10px;
+}
+
+.comment_item_content_div .cicd_title{
+	width:753px;
+	height:34px;
+	margin-top: 22px;
+}
+.comment_item_content_div .cicd_title span{
+	display: inline-block;
+	font-size: 16px;
+	color:#9A9A9A;
+}
+.comment_item_content_div .cicd_title .cicd_username{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.cicd_content{
+	width: 740px;
+	margin-left: 13px;
+	line-height: 25px;
+	text-indent: 30px;
+}
+.cicd_opr{
+	height: 36px;
+	line-height: 36px;
+	margin-top: 30px;
+}
+.cicd_opr a{
+	display: inline-block;
+	padding: 0 6px;
+}
+.cicd_opr a.cicd_opr_ding span{
+	color:#3099ED;
+}
+.reply_div{
+	height:210px;
+}
+.article_reply_user{
+	width:45px;
+	height:248px;
+	margin-left: 200px;
+}
+.article_reply_user img{
+	margin-top: 40px;
+	display: block;
+	width: 45px;
+	height:43px;
+}
+.article_reply_user_name{
+	width: 45px;
+	height:30px;
+	line-height: 30px;
+	color:#B9B9B9;
+	font-size: 12px;
+	display: block;
+	text-align: center;
+}
+
+.reply_div .article_reply_box{
+	position: relative;
+	margin-left: 35px;
+	width:570px;
+	height:210px;
+}
+
+.article_reply_input{
+	width:550px;
+	height:104px;
+	max-width:550px;
+	max-height: 104px;
+	border:1px solid #E9E8E8;
+	margin-top:20px;
+	border-radius: 6px;
+	outline: none;	
+	line-height: 30px;
+	font-size: 15px;
+	padding: 5px 10px;
+}
+.article_reply_box .input_arrow{
+	display: inline-block;
+	width:13px;
+	height: 14px;
+	background: url(../images/arrow.png) no-repeat 0px 0px;
+	position: absolute;
+	left:-11px;
+	top:40px;
+}
+
+.article_reply_input::-webkit-input-placeholder{/* 使用webkit内核的浏览器 */
+	width:550px;
+	height:104px;
+	line-height: 104px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+}	
+.article_reply_input:-moz-placeholder{/* Firefox版本4-18 */
+	width:550px;
+	height:104px;
+	line-height: 104px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+} 
+.article_reply_input::-moz-placeholder{/* Firefox版本19+ */
+	width:550px;
+	height:104px;
+	line-height: 104px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+} 
+.article_reply_input:-ms-input-placeholder{/* IE浏览器 */
+	width:550px;
+	height:104px;
+	line-height: 104px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+} 
+.article_reply_input.input_arrow_place_holder{
+	width:550px;
+	height:104px;
+	line-height: 104px;
+	text-align: center;
+	font-size: 12px;
+	color:#E3E3E3;
+}
+
+
+
+
+
 
 
 
