@@ -192,7 +192,7 @@ a:hover{
 	border-bottom:1px solid #EFEFEF;
 	height:40px;
 	line-height: 40px;
-	font-size: 15px;
+	font-size: 16px;
 	background: url(../images/home.png) no-repeat 0px 10px;
 }
 .nav_bar a,.nav_bar span{
@@ -201,8 +201,10 @@ a:hover{
     height:40px;
 	line-height: 40px;
 	cursor: pointer;
-	color:#7A7A7A;
+	color:#333333;
 	padding-left: 5px;
+	font-family: Adobe 黑体  Std;
+	/*font-size: ;*/
 }
 .nav_bar a:first-child{
 	margin-left: 20px;
@@ -418,7 +420,7 @@ a.d_link{
 .article_desc{
 	height:43px;
 	line-height: 43px;
-	font-size: 14px;
+	font-size: 15px;
 	border-bottom:1px solid #EFEFEF;
 }
 .article_desc .article_time{
@@ -448,7 +450,7 @@ a.d_link{
 	line-height: 36px;
 	text-align: center;
 	color:#82B7DA;
-	font-size: 14px;
+	font-size: 15px;
 }
 .article_p{
 	width:780px;
@@ -469,6 +471,7 @@ a.d_link{
 	height:40px;
 	color:#686868;
 	margin-top: 20px;
+	font-family: Adobe 黑体  Std;
 }
 .article_comment .article_comment_div{
 	height: 248px;
@@ -601,8 +604,7 @@ a.d_link{
 	height:40px;
 	color:#686868;
 	margin-top: 20px;
-	/*font-family: "AdobeHeitiStd-Regular";*/
-	font-weight: bold;
+	font-family: Adobe 黑体  Std;
 }
 .act_span1{
 	font-size: 16px;
@@ -658,34 +660,45 @@ a.d_link{
 .comment_item_content_div .cicd_title{
 	width:753px;
 	height:34px;
-	margin-top: 22px;
+	line-height: 34px;
+	margin-top: 22px;font-size: 16px;
+	color:#6E6E6E;
 }
 .comment_item_content_div .cicd_title span{
 	display: inline-block;
 	font-size: 16px;
-	color:#9A9A9A;
+	color:#6E6E6E;
+	font-family: Adobe 黑体  Std;
 }
 .comment_item_content_div .cicd_title .cicd_username{
 	margin-left: 10px;
 	margin-right: 10px;
+	color:#6E6E6E;	
+	font-family: Adobe 黑体  Std;
 }
 .cicd_content{
 	width: 740px;
+	color:#333333;
+	font-family: Adobe 黑体  Std;
 	margin-left: 13px;
 	line-height: 25px;
 	text-indent: 30px;
+	font-size: 17px;
 }
 .cicd_opr{
 	height: 36px;
 	line-height: 36px;
 	margin-top: 30px;
+	font-family: Adobe 黑体  Std;
+	font-size: 16px;
 }
 .cicd_opr a{
 	display: inline-block;
+	color:#6E6E6E;
 	padding: 0 6px;
 }
 .cicd_opr a.cicd_opr_ding span{
-	color:#3099ED;
+	color:#6E6E6E;
 }
 .reply_div{
 	height:210px;
