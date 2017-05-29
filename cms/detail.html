@@ -86,7 +86,7 @@
 							<div class="article_comment_box fl">
 								<i class="input_arrow"></i>
 								<textarea class="article_comment_input" placeholder="您的观点仅代表您本人，请文明发言，严禁散播谣言和诽谤他人"></textarea>
-								<div class="article_comment_tips">快速登录即可评论</div>
+								<div class="article_comment_tips"><a href="javascript:void(0);">登录</a><a href="javascript:void(0);">注册</a></div>
 								<div class="article_comment_btn">
 									<span class="article_comment_tip_span">Ctrl+Enter快捷提交</span>
 									<span class="article_comment_submit">马上发表</span>
@@ -99,7 +99,7 @@
 					    <div class="article_comment_item ac_in_width">
 					    	<div class="fl comment_item_user_warpper">
 					    		<img src="images/user_icon.png"/>
-					    		<span class="not_friends">关注</span>
+					    		<!--<span class="not_friends">关注</span>-->
 					    	</div>
 					    	<div class="comment_item_content_div">
 					    		<div class="cicd_title">
@@ -113,8 +113,6 @@
 					    			<div class="fr">
 						    			<a href="javascript:void(0);" class="cicd_opr_ding">顶<span>(3)</span></a>
 						    			<a href="javascript:void(0);" class="reply_btn">回复</a>
-						    			<a href="javascript:void(0);">转发</a>
-						    			<a href="javascript:void(0);">举报</a>
 					    			</div>
 					    		</div>
 					    	</div>
@@ -123,7 +121,7 @@
 					    <div class="article_comment_item ac_in_width">
 					    	<div class="fl comment_item_user_warpper">
 					    		<img src="images/user_icon.png"/>
-					    		<span class="not_friends">关注</span>
+					    		<!--<span class="not_friends">关注</span>-->
 					    	</div>
 					    	<div class="comment_item_content_div">
 					    		<div class="cicd_title">
@@ -137,8 +135,6 @@
 					    			<div class="fr">
 						    			<a href="javascript:void(0);" class="cicd_opr_ding">顶<span>(3)</span></a>
 						    			<a href="javascript:void(0);" class="reply_btn">回复</a>
-						    			<a href="javascript:void(0);">转发</a>
-						    			<a href="javascript:void(0);">举报</a>
 					    			</div>
 					    		</div>
 					    	</div>
@@ -152,7 +148,7 @@
 							<div class="article_reply_box fl">
 								<i class="input_arrow"></i>
 								<textarea class="article_reply_input" placeholder="您的观点仅代表您本人，请文明发言，严禁散播谣言和诽谤他人"></textarea>
-								<div class="article_comment_tips">快速登录即可评论</div>
+								<div class="article_comment_tips"><a href="javascript:void(0);">登录</a><a href="javascript:void(0);">注册</a></div>
 								<div class="article_comment_btn">
 									<span class="article_comment_tip_span">Ctrl+Enter快捷提交</span>
 									<span class="article_comment_submit">马上发表</span>
@@ -220,7 +216,22 @@
  			</p>
 			<p> Powered by yercms.cn @yershop 2014-2017 </p>
 		</div>
-		
+		<div class="mask none">
+			<div class="alert_success alert_div">
+				<div class="alert_header">提示</div>
+				<div class="alert_content"><i></i>评论成功</div>
+				<div class="alert_btn">确定</div>
+				<span class="alert_close"></span>
+			</div>
+		</div>
+		<div class="mask none">
+			<div class="alert_error alert_div">
+				<div class="alert_header">提示</div>
+				<div class="alert_content"><i></i>评论失败</div>
+				<div class="alert_btn">确定</div>
+				<span class="alert_close"></span>
+			</div>
+		</div>
 		<script>
 			$(function(){
 				$(".reply_btn").click(function(){
@@ -233,6 +244,21 @@
 					$(this).parents(".comment_item_content_div").first().after(clone);
 				});
 			});
+			$(".mask .alert_div .alert_close").click(function(){
+			    $(this).parents(".mask").addClass("none");
+			});
+			$(".mask .alert_div .alert_btn").click(function(){
+			    $(this).parents(".mask").addClass("none");
+			});
+			$(".article_comment_submit").click(function(){
+				opensuccess();
+			})
+			function opensuccess(){
+				$(".alert_success").parents(".mask").removeClass("none");
+			}
+			function openerror(){
+				$(".alert_error").parents(".mask").removeClass("none");
+			}
 		</script>
 	</body>
 </html>

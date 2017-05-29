@@ -570,9 +570,18 @@ a.d_link{
 	height:20px;
 	line-height: 20px;
 	margin-top:5px;
+	margin-left:20px;
 	color:#3099ED;
-	text-indent: 20px;
+	/*text-indent: 20px;*/
 	font-size: 13px;
+}
+.article_comment_tips a{
+	display: inline-block;
+	height:20px;
+	line-height: 20px;
+	padding: 0 10px 0 0;
+	font-size: 13px;
+	color:#3099ED;
 }
 .article_comment_btn{
 	width: 230px;
@@ -1380,4 +1389,87 @@ a.d_link{
 .footer_line{
 	height:20px;
 	border-top: 2px solid #E6E4E4;
+}
+
+/****弹窗***/
+.mask{
+	width:100%;
+	height:100%;
+	position: fixed;
+	left:0;
+	top:0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 2;
+}
+.mask .alert_div{
+	width:320px;
+	height:130px;
+	border:6px solid #C3C3C3;
+	margin: 220px auto;
+	background-color: #ffffff;
+	z-index: 3;
+	font-size: 17px;
+	position: relative;
+}
+.mask .alert_div .alert_header{
+	width:320px;
+	height:30px;
+	line-height: 30px;
+	text-indent: 10px;
+	font-weight: bold;
+	border-bottom: 1px solid #C4C4C4;
+	color:#333333;
+}
+.mask .alert_div .alert_content{
+	/*width:200px;*/
+	height:60px;
+	line-height: 60px;
+	/*margin: 0 auto;*/
+	text-align: center;
+	font-size: 20px;
+}
+.mask .alert_success .alert_content{
+	color: #7ABD54;
+}
+.mask .alert_error .alert_content{
+	color: #d81e06;
+}
+.mask .alert_div .alert_content i{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	margin-bottom: -4px;
+	margin-right:3px;
+}
+.mask .alert_success .alert_content i{
+	background: url(../images/success.png) no-repeat 0px 0px;
+}
+.mask .alert_error .alert_content i{
+	background: url(../images/error.png) no-repeat 0px 0px;
+}
+.mask .alert_div .alert_btn{
+	width:50px;
+	height:25px;
+	line-height: 25px;
+	border:1px solid #DDDDDD;
+	background-color: #F5F4F4;
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 4px;
+	margin: 0 auto;
+}
+.mask .alert_div .alert_btn:hover{
+	background-color: #dbdada;
+	color: #ffffff;
+}
+.mask .alert_div .alert_close{
+	display: inline-block;
+	position: absolute;
+	top:0;
+	right:0;
+	width: 30px;
+	height:30px;
+	background:url(../images/close.png) no-repeat 2px 2px; 
+	cursor: pointer;
 }
