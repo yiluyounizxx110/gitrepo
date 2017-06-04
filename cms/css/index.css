@@ -1433,10 +1433,10 @@ a.d_link{
     margin-right: 10px;
 }
 .mask .alert_success .alert_content i{
-	background: url(../images/default.png) no-repeat -224px 0px;
+	background: url(../images/success.png) no-repeat 0px 0px;
 }
 .mask .alert_error .alert_content i{
-	background: url(../images/default.png) no-repeat -192px 0px;
+	background: url(../images/error.png) no-repeat 0px 0px;
 }
 .mask .alert_div .alert_btn{
 	width:80px;
