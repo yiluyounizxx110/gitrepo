@@ -478,15 +478,15 @@ a.d_link{
 	background-color: #FBFBFB;
 }
 .article_comment_user{
-	width:45px;
+	width:53px;
 	height:248px;
 	margin-left: 64px;
 }
 .article_comment_user img{
 	margin-top: 40px;
 	display: block;
-	width: 45px;
-	height:43px;
+	width: 53px;
+	height:64px;
 }
 .article_comment_user_name{
 	width: 45px;
@@ -635,8 +635,8 @@ a.d_link{
 	margin-left: 30px;
 }
 .comment_item_user_warpper img{
-	width:43px;
-	height:45px;
+	width:45px;
+	height:53px;
 	display: block;
 	margin: 25px auto 0;
 }
@@ -713,15 +713,15 @@ a.d_link{
 	height:210px;
 }
 .article_reply_user{
-	width:45px;
+	width:53px;
 	height:248px;
-	margin-left: 200px;
+	margin-left: 190px;
 }
 .article_reply_user img{
 	margin-top: 40px;
 	display: block;
-	width: 45px;
-	height:43px;
+	width: 53px;
+	height:64px;
 }
 .article_reply_user_name{
 	width: 45px;
