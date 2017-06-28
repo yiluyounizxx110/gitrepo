@@ -211,18 +211,6 @@ a:hover{
 /*****/
 
 
-/******/
-/*.find{
-	width:100%;
-    background-color: #F5F6F6;
-}
-.find_padd{
-	margin: 40px auto;
-}
-.find_padd h2{
-	text-align: center;
-}*/
-
 
 .find{
     background-color: #F5F6F6;
@@ -336,6 +324,12 @@ ul.two_menu li a{
 }
 .fixCenter{
     height: 100%;
+    position: relative;
+}
+.area .fixCenter{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .BNav{
     height: 100%;
@@ -432,4 +426,236 @@ ul.two_menu li a{
     vertical-align: top;
     margin: 5px;
     cursor: pointer;
+}
+
+/*地区选择*/
+.section_warpper{
+    width: 1025px;
+    /*border: 1px solid #ffffff;*/
+    margin-left: 35px;
+}
+.section_warpper:first-child{
+	margin-top: 20px;
+}
+.section_warpper .area_section{
+	float:left;
+	width:100px;
+	height:30px;
+	margin:5px 0;
+	text-align: left;
+	line-height: 30px;
+	position: relative;
+	cursor: pointer;
+}
+.section_warpper .area_section:after{
+	content: ">";
+	position: absolute;
+	width:30px;
+	height:30px;
+	right:0;
+	top:0;
+	text-align: center;
+	line-height: 30px;
+}
+.section_warpper .province_wrapper_container{
+	width:925px;
+	float:left;
+}
+.section_warpper .province_wrapper_container .province_wrapper{
+	width:925px;
+}
+.province_wrapper .area_province{
+	float:left;
+	width:100px;
+	height:30px;
+	margin:5px 0;
+	text-align: left;
+	line-height: 30px;
+	padding-left: 20px;
+	background-color: #3C3C3C;
+	position: relative;
+	cursor: pointer;
+}
+.province_wrapper .area_province:after{
+	content: ">";
+	position: absolute;
+	width:30px;
+	height:30px;
+	right:0;
+	top:0;
+	text-align: center;
+	line-height: 30px;
+}
+.province_wrapper .area_province_empty{
+	float:left;
+	width:100px;
+	height:30px;
+	margin:5px 0;
+	line-height: 30px;
+	padding-left: 20px;
+}
+.province_wrapper .city_wrapper{
+	float:left;
+	width:815px;
+	margin-left: 10px;
+}
+.province_wrapper .city_wrapper .city_item{
+	float:left;
+	width:68px;
+	margin:5px 2px;
+	background-color: #505050;
+	height:30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+}
+.province_wrapper .city_wrapper .city_item.current{
+	background-color: #00C0DC;
+}
+.province_wrapper .city_wrapper .city_item:hover{
+	background-color: #00C0DC;
+}
+
+
+/**登录注册***/
+.fixBox .login_form{
+	width:250px;
+	height:120px;
+	color:#ffffff;
+	margin-top: -60px;
+	margin-left: -125px;
+	position: absolute;
+	top:50%;
+	left:50%;
+}
+.fixBox .login_form tr{
+	height:25px;
+	line-height: 25px;
+}
+.fixBox .login_form td:first-child{
+	width:100px;
+	height:25px;
+	text-align: right;
+	line-height: 25px;
+}
+.fixBox .login_form td:nth-child(2){
+	width:150px;
+	height:20px;
+	line-height: 20px;
+}
+.fixBox .login_form td:nth-child(2) input{
+	width:100px;
+	margin-left: 40px;
+	height:20px;
+	line-height: 20px;
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	background-color: transparent;
+	outline: none;
+}
+.login_form .reg_btn{
+	width:70px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	color: #ffffff;
+	float:right;
+	background-color: #01BDE0;
+	cursor: pointer;
+}
+.login_form .login_btn{
+	width:90px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	color: #ffffff;
+	float:left;
+	margin-left: 50px;
+	background-color: #505050;
+	cursor: pointer;
+}
+.login_form .reg_btn:hover{
+	background-color: #1C8EA2;
+}
+.login_form .login_btn:hover{
+	background-color: #393939;
+}
+
+/***注册**/
+.fixBox .reg_form{
+	width:360px;
+	height:240px;
+	color:#ffffff;
+	margin-top: -140px;
+	margin-left: -180px;
+	position: absolute;
+	top:50%;
+	left:50%;
+}
+.fixBox .reg_form tr{
+	height:40px;
+	line-height: 40px;
+	color:#ffffff;
+	width:300px;
+}
+.fixBox .reg_form td:first-child{
+	width:100px;
+	height:25px;
+	text-align: right;
+	line-height: 25px;
+}
+.fixBox .reg_form td:nth-child(2){
+	width:260px;
+	height:20px;
+	line-height: 20px;
+}
+.fixBox .reg_form td:nth-child(2) input{
+	width:100px;
+	margin-left: 40px;
+	height:20px;
+	line-height: 20px;
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	background-color: transparent;
+	outline: none;
+}
+.fixBox .reg_form td .sendconf{
+	display: inline-block;
+	width:80px;
+	height:25px;
+	text-align: center;
+	line-height: 25px;
+	background-color: #505050;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.fixBox .reg_form td .sendconf:hover{
+	background-color: #393939;
+}
+.reg_form .reg_btn{
+	width:70px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	color: #ffffff;
+	float:right;
+	background-color: #01BDE0;
+	cursor: pointer;
+}
+.reg_form .login_btn{
+	width:90px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	color: #ffffff;
+	float:left;
+	margin-left: 40px;
+	background-color: #505050;
+	cursor: pointer;
+}
+.reg_form .reg_btn:hover{
+	background-color: #1C8EA2;
+}
+.reg_form .login_btn:hover{
+	background-color: #393939;
 }
