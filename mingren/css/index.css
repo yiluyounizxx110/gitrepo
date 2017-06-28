@@ -337,3 +337,99 @@ ul.two_menu li a{
 .fixCenter{
     height: 100%;
 }
+.BNav{
+    height: 100%;
+    margin: 0 auto;
+    width: 360px;
+}
+.BNav span{
+    display: inline-block;
+    width: 120px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    background: #505050;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.BNav i{
+    line-height: 1em;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.BNav span:nth-child(2){
+    background: #3c3c3c;
+}
+.BNav span:hover{
+    background: #3D9BFF;
+}
+
+.navCenter{
+	padding-top: 20px;
+    height: 100%;
+    display: none;
+}
+.navName{
+    float: left;
+    width: 200px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.navCenterBox{
+    float: right;
+    height: 100%;
+    overflow: auto;
+    width: calc(100% - 201px);
+}
+.navCenterListCenter{
+    display: inline-block;
+    right: 0;
+    line-height: normal;
+    text-align: left;
+    display: none;
+}
+.navCenterList{
+    line-height: normal;
+    width: 185px;
+    float: left;
+}
+.navCenterList:after{
+    content:" ";
+    clear: both;
+    display: block;
+}
+.navCenterList span{
+    width: 166px;
+    line-height: 40px;
+    cursor: pointer;
+    text-indent: 65px;
+}
+.navCenterList span:hover{
+    background: #3D9BFF;
+}
+
+.navCenterList div{
+    float: right;
+    width: calc(100% - 220px);
+    text-align: left;
+}
+.navCenterListCenter{
+	width: 710px;
+	float:left;
+}
+.navCenterListCenter i{
+    display: inline-block;
+    width:166px;
+    padding: 0 10px;
+    background: #4f4f4f;
+    line-height: 30px;
+    text-align: center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    vertical-align: top;
+    margin: 5px;
+    cursor: pointer;
+}
