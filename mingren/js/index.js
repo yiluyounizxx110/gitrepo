@@ -108,26 +108,47 @@ function initLabel(){
             }
         ]
     };
-    if(data.code==0){
-        var $BNavH="<div class='BNav'>",_navCenter="";
-        for(var i=0;i<data.data.length;i++){
-            $BNavH+="<span>"+data.data[i].name+"</span>";
+    $.getJSON("js/joblabel.json",function(data){
+    	var $BNavH="<div class='BNav'>",_navCenter="";
+        for(var i=0;i<data.length;i++){
+            $BNavH+="<span>"+data[i].name+"</span>";
             _navCenter+="<div class='navCenter'><div class='navName'>名称</div><div class='navCenterBox'><div class='navCenterList'>";
             var navCenterListCh="";
-            for(var n=0;n<data.data[i].data.length;n++){
-                _navCenter+="<span>"+data.data[i].data[n].name+"</span>";
-                navCenterListCh+="<div class='navCenterListCenter'>";
-                for(var j=0;j<data.data[i].data[n].data.length;j++){
-                    navCenterListCh+="<i>"+data.data[i].data[n].data[j]+"</i>"
-                }
-                navCenterListCh+="</div>"
-
+            if(data[i].data != null){
+            	for(var n=0;n<data[i].data.length;n++){
+	                _navCenter+="<span>"+data[i].data[n].name+"</span>";
+	                navCenterListCh+="<div class='navCenterListCenter'>";
+	                for(var j=0;j<data[i].data[n].data.length;j++){
+	                    navCenterListCh+="<i>"+data[i].data[n].data[j].name+"</i>"
+	                }
+	                navCenterListCh+="</div>"
+	            }
             }
             _navCenter+="</div>"+navCenterListCh+"</div></div>";
         }
         $BNavH+="<i></i></div>";
         $('.header_select_link .fixCenter').html($BNavH+_navCenter);
-    }
+    });
+//  if(data.code==0){
+//      var $BNavH="<div class='BNav'>",_navCenter="";
+//      for(var i=0;i<data.data.length;i++){
+//          $BNavH+="<span>"+data.data[i].name+"</span>";
+//          _navCenter+="<div class='navCenter'><div class='navName'>名称</div><div class='navCenterBox'><div class='navCenterList'>";
+//          var navCenterListCh="";
+//          for(var n=0;n<data.data[i].data.length;n++){
+//              _navCenter+="<span>"+data.data[i].data[n].name+"</span>";
+//              navCenterListCh+="<div class='navCenterListCenter'>";
+//              for(var j=0;j<data.data[i].data[n].data.length;j++){
+//                  navCenterListCh+="<i>"+data.data[i].data[n].data[j]+"</i>"
+//              }
+//              navCenterListCh+="</div>"
+//
+//          }
+//          _navCenter+="</div>"+navCenterListCh+"</div></div>";
+//      }
+//      $BNavH+="<i></i></div>";
+//      $('.header_select_link .fixCenter').html($BNavH+_navCenter);
+//  }
     
     $('.header_select_link').hover(function(){
 		var $fixBox=$('.header_select_link .fixBox');
@@ -155,6 +176,7 @@ function initLabel(){
 }
 
 function initAreaSelect(){
+	//悬浮展示
 	$('.area').hover(function(){
 		var $fixBox=$('.area .fixBox');
     	$fixBox.css({width:$(window).width(),height:$('.carousel_item img').first().height()});
@@ -164,6 +186,7 @@ function initAreaSelect(){
 			$('.area .fixBox').css("display",'none')
         });
     });
+    //数据初始化
     $.getJSON("js/area.json",function(data){
     	var html = "";
 		if(data.length > 0){
@@ -210,11 +233,29 @@ function initAreaSelect(){
 		$('.area .fixCenter').html(html);
 		var area_id = $(".area_text").attr("data-index");
     	$(".area .fixCenter [data-index='" + area_id + "']").addClass("current");
-	})
-    
+	});
+	//
+    $("body").on("click",".area .city_item",function(){
+    	var dataid = $(this).attr("data-index");
+    	var datatext = $(this).text();
+    	$(".area .city_item").not(this).removeClass("current");
+    	$(this).addClass("current");
+    	$(".area .area_text").attr("data-index",dataid);
+    	
+    	var provinceW = $(this).parents(".province_wrapper").first();
+    	var provinceText;
+    	if(provinceW.find(".area_province_empty").length > 0){
+    		provinceText = "-";
+    	}else if(provinceW.find(".area_province").length > 0){
+    		provinceText = "-" + provinceW.find(".area_province").text() + "-";
+    	}
+    	
+    	$(".area .area_text").text("中国" + provinceText + datatext);
+    })
 }
-
+/**登录注册信息**/
 function initLoginInfo(){
+	//下拉悬浮层
 	$('.unlogin').hover(function(){
 		var $fixBox=$('.unlogin .fixBox');
     	$fixBox.css({width:$(window).width(),height:$('.carousel_item img').first().height()});
@@ -222,9 +263,11 @@ function initLoginInfo(){
         $fixBox.show();
     },function(){
         $('.unlogin .fixBox').stop().slideUp(300,function(){
-			$('.unlogin .fixBox').css("display",'none')
+			$('.unlogin .fixBox').css("display",'none');
         });
     });
+    
+    //按钮跳转
     $("body").on("click",'.login_form .reg_btn',function(){
     	$(".login_form ").addClass("none");
     	$(".reg_form ").removeClass("none");
@@ -234,7 +277,7 @@ function initLoginInfo(){
     	$(".login_form ").removeClass("none");
     });
 }    
-
+/**轮播**/
 var slider = {
 	cur_index:1,
 	sliderEvent:null,
