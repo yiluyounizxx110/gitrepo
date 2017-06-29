@@ -366,7 +366,7 @@ ul.two_menu li a{
 }
 .navName{
     float: left;
-    width: 200px;
+    width: 160px;
     line-height: 40px;
     text-align: center;
 }
@@ -375,7 +375,7 @@ ul.two_menu li a{
     float: right;
     height: 100%;
     overflow: auto;
-    width: calc(100% - 201px);
+    width: calc(100% - 161px);
 }
 .navCenterListCenter{
     display: inline-block;
@@ -395,10 +395,11 @@ ul.two_menu li a{
     display: block;
 }
 .navCenterList span{
-    width: 166px;
-    line-height: 40px;
+    width: 186px;
+    margin: 5px 0;
+    line-height: 30px;
     cursor: pointer;
-    text-indent: 65px;
+    text-align: center;
 }
 .navCenterList span:hover{
     background: #3D9BFF;
@@ -409,9 +410,18 @@ ul.two_menu li a{
     width: calc(100% - 220px);
     text-align: left;
 }
+.navRightBox{
+    width: 725px;
+    height: 100%;
+    position: absolute;
+    right: 54px;
+    top: 0px;
+    padding-top: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 .navCenterListCenter{
 	width: 710px;
-	float:left;
 }
 .navCenterListCenter i{
     display: inline-block;
@@ -427,7 +437,9 @@ ul.two_menu li a{
     margin: 5px;
     cursor: pointer;
 }
-
+.navCenterListCenter i:hover{
+    background: #3D9BFF;
+}
 /*地区选择*/
 .section_warpper{
     width: 1025px;

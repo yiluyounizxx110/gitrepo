@@ -24,90 +24,6 @@ function initPage(){
 }
 
 function initLabel(){
-	var data={
-        code:0,
-        data:[
-            {
-                name:"职业标签",
-                data:[
-                    {
-                        name:"农业",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"林业",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"钢铁业",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"农业2",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"农业3",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"农业4",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"农业5",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    }
-                ]
-            },{
-                name:"兴趣标签",
-                data:[
-                    {
-                        name:"电子",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"饮食",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"服装",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"玩具",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"电影",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"小说",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"手工",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    }
-                ]
-            },{
-                name:"随机标签",
-                data:[
-                    {
-                        name:"农业",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"林业",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"钢铁业",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"农业2",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"农业3",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"农业4",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    },{
-                        name:"农业5",
-                        data:["aaasfd","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321","dsfas","klkl","12321"]
-                    }
-                ]
-            }
-        ]
-    };
     $.getJSON("js/joblabel.json",function(data){
     	var $BNavH="<div class='BNav'>",_navCenter="";
         for(var i=0;i<data.length;i++){
@@ -117,6 +33,7 @@ function initLabel(){
             if(data[i].data != null){
             	for(var n=0;n<data[i].data.length;n++){
 	                _navCenter+="<span>"+data[i].data[n].name+"</span>";
+	                
 	                navCenterListCh+="<div class='navCenterListCenter'>";
 	                for(var j=0;j<data[i].data[n].data.length;j++){
 	                    navCenterListCh+="<i>"+data[i].data[n].data[j].name+"</i>"
@@ -124,31 +41,13 @@ function initLabel(){
 	                navCenterListCh+="</div>"
 	            }
             }
-            _navCenter+="</div>"+navCenterListCh+"</div></div>";
+            _navCenter+="</div></div><div class='navRightBox'>"+ navCenterListCh +"</div></div>";
+            
+//          navCenterListCh
         }
         $BNavH+="<i></i></div>";
         $('.header_select_link .fixCenter').html($BNavH+_navCenter);
     });
-//  if(data.code==0){
-//      var $BNavH="<div class='BNav'>",_navCenter="";
-//      for(var i=0;i<data.data.length;i++){
-//          $BNavH+="<span>"+data.data[i].name+"</span>";
-//          _navCenter+="<div class='navCenter'><div class='navName'>名称</div><div class='navCenterBox'><div class='navCenterList'>";
-//          var navCenterListCh="";
-//          for(var n=0;n<data.data[i].data.length;n++){
-//              _navCenter+="<span>"+data.data[i].data[n].name+"</span>";
-//              navCenterListCh+="<div class='navCenterListCenter'>";
-//              for(var j=0;j<data.data[i].data[n].data.length;j++){
-//                  navCenterListCh+="<i>"+data.data[i].data[n].data[j]+"</i>"
-//              }
-//              navCenterListCh+="</div>"
-//
-//          }
-//          _navCenter+="</div>"+navCenterListCh+"</div></div>";
-//      }
-//      $BNavH+="<i></i></div>";
-//      $('.header_select_link .fixCenter').html($BNavH+_navCenter);
-//  }
     
     $('.header_select_link').hover(function(){
 		var $fixBox=$('.header_select_link .fixBox');
@@ -171,7 +70,8 @@ function initLabel(){
         console.log($(this).text())
     }).on('mouseenter','.navCenterList span',function(){
         var i=$(this).index();
-        $(this).parent().siblings('.navCenterListCenter').eq(i).stop().slideDown(300).siblings('.navCenterListCenter').hide();
+        $(this).parent().parent().siblings('.navRightBox').find(".navCenterListCenter")
+			   .eq(i).stop().slideDown(300).siblings('.navCenterListCenter').hide();
     })
 }
 
