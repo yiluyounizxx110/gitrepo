@@ -27,23 +27,21 @@ function initLabel(){
     $.getJSON("js/joblabel.json",function(data){
     	var $BNavH="<div class='BNav'>",_navCenter="";
         for(var i=0;i<data.length;i++){
-            $BNavH+="<span>"+data[i].name+"</span>";
+            $BNavH+="<span data-index='"+ data[i].id +"'>"+data[i].name+"</span>";
             _navCenter+="<div class='navCenter'><div class='navName'>名称</div><div class='navCenterBox'><div class='navCenterList'>";
             var navCenterListCh="";
             if(data[i].data != null){
             	for(var n=0;n<data[i].data.length;n++){
-	                _navCenter+="<span>"+data[i].data[n].name+"</span>";
+	                _navCenter+="<span data-index='"+ data[i].data[n].id +"'>"+data[i].data[n].name+"</span>";
 	                
 	                navCenterListCh+="<div class='navCenterListCenter'>";
 	                for(var j=0;j<data[i].data[n].data.length;j++){
-	                    navCenterListCh+="<i>"+data[i].data[n].data[j].name+"</i>"
+	                    navCenterListCh+="<i data-index='"+ data[i].data[n].data[j].id +"'>"+data[i].data[n].data[j].name+"</i>"
 	                }
 	                navCenterListCh+="</div>"
 	            }
             }
             _navCenter+="</div></div><div class='navRightBox'>"+ navCenterListCh +"</div></div>";
-            
-//          navCenterListCh
         }
         $BNavH+="<i></i></div>";
         $('.header_select_link .fixCenter').html($BNavH+_navCenter);
