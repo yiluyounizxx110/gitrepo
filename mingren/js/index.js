@@ -1,3 +1,4 @@
+var timer = null;
 $(function(){
 	initPage();
 	initLabel();
@@ -174,7 +175,28 @@ function initLoginInfo(){
     	$(".reg_form ").addClass("none");
     	$(".login_form ").removeClass("none");
     });
+    
+    $("body").on("click",".sendconf",function(){
+    	if($(this).hasClass("disabled")){
+    		return false;
+    	}
+    	$(this).html("<span>60</span>s");
+    	$(this).addClass("disabled");
+    	timer = setInterval(calcutetime60,1000); 
+    });
 }    
+
+function calcutetime60(){
+	var time = parseInt($("body .sendconf span").html());
+	if(time == 1){
+		clearInterval(timer);
+		timer = null;
+		$("body .sendconf").html("发送验证");
+		$("body .sendconf").removeClass("disabled");
+		return false;
+	}
+	$("body .sendconf span").html(time - 1);
+}
 /**轮播**/
 var slider = {
 	cur_index:1,
