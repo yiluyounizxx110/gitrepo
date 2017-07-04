@@ -1,14 +1,9 @@
 var timer = null;
-$(function(){
-	initPage();
-	initLabel();
-	initAreaSelect();
-	initLoginInfo();
-});
+
 function initPage(){
 	
 	var width = $(window).width();
-	
+	var height = width * 559 / 1349;
 	$(".carousel_item").width(width);
 	$(".carousel_container").removeClass("none");
 	//轮播初始化
@@ -25,6 +20,9 @@ function initPage(){
 }
 
 function initLabel(){
+	var width = $(window).width();
+	var height = width * 559 / 1349;
+	
     $.getJSON("js/joblabel.json",function(data){
     	var $BNavH="<div class='BNav'>",_navCenter="";
         for(var i=0;i<data.length;i++){
@@ -50,7 +48,7 @@ function initLabel(){
     
     $('.header_select_link').hover(function(){
 		var $fixBox=$('.header_select_link .fixBox');
-    	$fixBox.css({width:$(window).width(),height:$('.carousel_item img').first().height()});
+    	$fixBox.css({width:$(window).width(),height:height});
         $fixBox.stop().slideDown(300);
     },function(){
         $('.header_select_link .fixBox').stop().slideUp(300,function(){
@@ -75,10 +73,12 @@ function initLabel(){
 }
 
 function initAreaSelect(){
+	var width = $(window).width();
+	var height = width * 559 / 1349;
 	//悬浮展示
 	$('.area').hover(function(){
 		var $fixBox=$('.area .fixBox');
-    	$fixBox.css({width:$(window).width(),height:$('.carousel_item img').first().height()});
+    	$fixBox.css({width:width,height:height});
         $fixBox.stop().slideDown(300);
     },function(){
         $('.area .fixBox').stop().slideUp(300,function(){
@@ -154,10 +154,12 @@ function initAreaSelect(){
 }
 /**登录注册信息**/
 function initLoginInfo(){
+	var width = $(window).width();
+	var height = width * 559 / 1349;
 	//下拉悬浮层
 	$('.unlogin').hover(function(){
 		var $fixBox=$('.unlogin .fixBox');
-    	$fixBox.css({width:$(window).width(),height:$('.carousel_item img').first().height()});
+    	$fixBox.css({width:width,height:height});
         $fixBox.stop().slideDown(300);
         $fixBox.show();
     },function(){

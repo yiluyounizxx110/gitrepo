@@ -673,3 +673,102 @@ ul.two_menu li a{
 .reg_form .login_btn:hover{
 	background-color: #393939;
 }
+
+
+
+/***user**/
+.user_main{
+	width:1170px;
+	height:200px;
+	margin: 15px auto 0;
+}
+
+.user_main img.userImg{
+	width:190px;
+	height:190px;
+	float:left;
+}
+.user_main .user_desc{
+	width:978px;
+	display: inline-block;
+	height: 190px;
+	margin-left:2px;
+	background-color: #EEEEEE;
+	float:left;
+	position: relative;
+}
+.user_desc .user_title{
+	width:140px;
+	height:190px;
+	float:left;
+}
+.user_desc .user_title .user_desc_name{
+	display: block;
+	width:140px;
+	height:35px;
+	line-height: 35px;
+	font-size: 27px;
+	color:#343132;
+	font-family: "华文细黑";
+	font-weight: bold;
+	text-indent: 15px;
+	margin-top: 10px;
+}
+.user_desc .user_title .user_desc_name.cert i{
+	display: inline-block;
+	width:16px;
+	height:16px;
+	position: relative;
+	top:4px;
+	background: url(../images/cert.png) no-repeat 0px 0px;
+}
+.user_desc .user_title .user_title_name{
+	display: block;
+	width:140px;
+	height:25px;
+	line-height: 25px;
+	font-size: 15px;
+	text-indent: 15px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.user_desc .user_title .user_title_area{
+	display: block;
+	width:140px;
+	height:25px;
+	line-height: 25px;
+	font-size: 15px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-indent: 15px;
+    text-overflow:ellipsis;
+}
+.user_desc .user_title .user_title_choose{
+	width:100px;
+	height:25px;
+	position: absolute;
+	bottom: 20px;
+	left: 15px;
+}
+.user_desc .user_title .user_title_choose span{
+	width:78px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	font-size: 15px;
+	display: inline-block;
+	float:left;
+	background-color: #044D6C;
+	color:#ffffff;
+}
+.user_desc .user_title .user_title_choose i{
+	cursor: pointer;
+	width:20px;
+	height:25px;
+	display: inline-block;
+	margin-left: 2px;
+	float:left;
+	background: url(../images/arr_down16.png) no-repeat 2px 4px;
+	background-color: #044D6C;
+}
