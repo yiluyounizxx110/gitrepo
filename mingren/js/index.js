@@ -225,3 +225,21 @@ var slider = {
 	}
 }
 
+/**发帖按钮时间初始化**/
+function initSendBtnEvent(){
+	$(window).scroll(function () {
+		if($("body").scrollTop() >= 101){
+			$(".fixed_nav_btn").removeClass("none");
+		}else{
+			$(".fixed_nav_btn").addClass("none");
+		}
+	});
+	
+	$(".fixed_nav_btn .send_article").click(function(){
+		if($(this).hasClass("active")){
+			return false;
+		}
+		$(this).addClass("active");
+		$(".fixed_nav_btn_h_group").removeClass("none");
+	});
+}

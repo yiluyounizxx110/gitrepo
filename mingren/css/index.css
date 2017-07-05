@@ -892,7 +892,7 @@ ul.two_menu li a{
 	font-size: 16px;
 	padding: 0 34px;
 	cursor: pointer;
-	margin: 0 3px 5px;
+	margin: 0 5px 5px 0px;
 	background-color: #EEEEEE;
 	color:#333;
 }
@@ -1017,4 +1017,67 @@ ul.two_menu li a{
 	height:100px;
 	margin: 0 10px 0 0;
 	float:left;
+}
+
+/**发帖按钮**/
+.fixed_nav_btn{
+	width:100%;
+	height:180px;
+	position: fixed;
+	margin-top:-60px;
+	top:50%;
+}
+.fixed_nav_btn .container{
+	height:180px;
+	position: relative;
+}
+.fixed_nav_btn_group{
+	width:60px;
+	height:180px;
+	position: absolute;
+	right:0;
+	top:0;
+}
+.fixed_nav_btn_group .fixed_nav_btn_s{
+	width:50px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	float:left;
+	display: block;
+	margin: 5px;
+	background: #004C6F;
+	color:#ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.fixed_nav_btn_group .fixed_nav_btn_s:hover{
+	background: #033B55;
+}
+.fixed_nav_btn_group .fixed_nav_btn_s.active{
+	background: #00BEE2;
+	margin-left: 4px;
+}
+.fixed_nav_btn_group .fixed_nav_btn_h_group{
+	width:50px;
+	height:100px;
+	position: absolute;
+	top:40px;
+	left:-40px;
+}
+.fixed_nav_btn_group .fixed_nav_btn_h_group .fixed_nav_btn_h{
+	width:40px;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	float:left;
+	display: block;
+	margin: 5px;
+	background: #00BEE2;
+	color:#ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.fixed_nav_btn_group .fixed_nav_btn_h_group .fixed_nav_btn_h:hover{
+	background: #05A5C4;
 }
