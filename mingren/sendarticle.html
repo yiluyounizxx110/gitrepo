@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发帖</title>
+		<link rel="stylesheet" href="css/css_reset.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="in_width header_in">
+				<a href="#" class="logo_link"><img class="logo" src="images/logo.png"/></a>
+				<div class="header_select_link">
+					<a class="header_select_link_a">标签选择</a>
+					<div class="fixBox">
+						<div class="fixCenter container"></div>
+					</div>
+				</div>
+				<div class="search_input_box">
+					<input type="text" placeholder="搜标签/搜名人/搜贴" id="search">
+					<i class="searchbtn"></i>
+				</div>
+				<div class="area">
+					<a class="area_text" data-index="421">中国-湖北-武汉</a>
+					<div class="fixBox">
+						<div class="fixCenter container"></div>
+					</div>
+				</div>
+				<div class="user_info unlogin">
+					<i></i>
+					<div class="fixBox">
+						<div class="fixCenter container">
+							<table class="login_form">
+								<tr>
+									<td>手机号码(ID)</td>
+									<td><input type="text" value="153****1559"/></td>
+								</tr>
+								<tr>
+									<td>密码</td>
+									<td><input type="password" value=""/></td>
+								</tr>
+								<tr>
+									<td><div class="reg_btn">注册</div></td>
+									<td><div class="login_btn">点击登录</div></td>
+								</tr>
+							</table>
+							<table class="reg_form none">
+								<tr>
+									<td>手机号码(ID)</td>
+									<td><input type="text" value="153****1559"/><span class="sendconf">发送验证</span></td>
+								</tr>
+								<tr>
+									<td>验证码</td>
+									<td><input type="text" value="123123"/></td>
+								</tr>
+								<tr>
+									<td>密码</td>
+									<td><input type="password" value="123123"/></td>
+								</tr>
+								<tr>
+									<td>重复密码</td>
+									<td><input type="password" value="123123"/></td>
+								</tr>
+								<tr>
+									<td>邀请码</td>
+									<td><input type="text" value="4fsdf43"/></td>
+								</tr>
+								<tr>
+									<td><div class="reg_btn">注册</div></td>
+									<td><div class="login_btn">点击登录</div></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="sa_btn_group container">
+			<a class="sa_btn" href="javascript:void(0)">发帖</a>
+			<a class="sa_returnbtn" href="javascript:void(0)">返回</a>
+		</div>
+		<div class="sa_con">
+			<span class="ch_my_label">请为该帖选择我的标签</span>
+			<div class="sa_addlable_list">
+				<i class="sa_addlable_i dark_green">蜂蜡采集</i>
+				<i class="sa_addlable_i dark_green">蜂蜡采集</i>
+				<i class="sa_addlable_i dark_green add">+</i>
+				<i class="sa_addlable_i dark_orange">养蜂蜜</i>
+				<i class="sa_addlable_i dark_orange">养生</i>
+				<i class="sa_addlable_i dark_orange">养蜂蜜</i>
+				<i class="sa_addlable_i dark_orange">养蜂蜜</i>
+				<i class="sa_addlable_i dark_orange">养蜂蜜</i>
+				<i class="sa_addlable_i dark_orange">养蜂蜜</i>
+				<i class="sa_addlable_i dark_orange add">+</i>
+				<i class="sa_addlable_i dark_orange add">+</i>
+				<i class="sa_addlable_i dark_orange add">+</i>
+				<div class="clear"></div>
+			</div>
+			<span class="select_label">该贴将在以下标签发布</span>
+			<div class="sa_select_list">
+				<i class="sa_select_i dark_green">蜂蜡采集</i>
+				<div class="clear"></div>
+			</div>
+			<div class="sa_article">
+				<div class="sa_article_content" id="sa_artivle_content"></div>
+				<div class="input_group">
+					<div class="sa_article_title_input_w">
+						<input class="sa_article_title_input" type="text" placeholder="请在这里输入标题"/>
+						<span class="sa_article_title_limit">0/64</span>
+					</div>
+					<input class="sa_article_author_input" type="text" placeholder="请输入作者"/>
+				</div>
+				<div class="source_link_w">
+					<input type="checkbox" id="source_link_input"/><label for="source_link_input">原文链接</label>
+				</div>
+				<div class="mutimedia_w">
+					<div class="title">多媒体</div>
+					<a class="mutimedia_img">图片</a>
+					<a class="mutimedia_video">视频</a>
+					<a class="mutimedia_music">音乐</a>
+					<a class="mutimedia_audio">音频</a>
+					<a class="mutimedia_vote">投票</a>
+				</div>
+				<div class="clear"></div>
+				<!--<div id="sa_article_tool" class="toolbar"></div>
+				<div id="sa_article_content" class="text"></div>-->
+			</div>
+		</div>
+		<div class="fixed_send_btn none">
+			<div class="container">
+				<div class="fixed_send_btn_group">
+					<a class="fixed_send_btn_s">首页</a>
+					<a class="fixed_send_btn_s">发帖</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+	<!-- 配置文件 -->
+    <script type="text/javascript" src="js/ueditor1_4_3_3-utf8-php/utf8-php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="js/ueditor1_4_3_3-utf8-php/utf8-php/ueditor.all.min.js"></script>
+    <script type="text/javascript" src="js/ueditor1_4_3_3-utf8-php/utf8-php/lang/zh-cn/zh-cn.js"></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<script>
+		$(function(){
+			initLabel();
+			initAreaSelect();
+			initLoginInfo();
+			sa_article_init('sa_artivle_content');
+			initSendArticleBtnEvent();
+		});
+	</script>
+</html>

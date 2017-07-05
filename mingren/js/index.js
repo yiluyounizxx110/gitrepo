@@ -64,7 +64,11 @@ function initLabel(){
         $('.navCenter').eq(i).show().siblings('.navCenter').hide().end().find('.navName').text(_this.text());
     }).on('click','.navCenterListCenter i',function(){
     	//此处获取点击的标签
-        console.log($(this).text())
+        console.log($(this).text());
+        $(".navCenterListCenter i").not($(this)).removeClass("active");
+        $(this).addClass("active");
+        $(".header_select_link_a").html($(this).text());
+        $(".header_select_link_a").attr("data-index",$(this).attr("data-index"));
     }).on('mouseenter','.navCenterList span',function(){
         var i=$(this).index();
         $(this).parent().parent().siblings('.navRightBox').find(".navCenterListCenter")
@@ -241,5 +245,110 @@ function initSendBtnEvent(){
 		}
 		$(this).addClass("active");
 		$(".fixed_nav_btn_h_group").removeClass("none");
+	});
+}
+
+function sa_article_init(id){
+	UE.Editor.prototype.placeholder = function (justPlainText) {
+		var _editor = this;
+		_editor.addListener("focus", function () {
+			var localHtml = _editor.getPlainTxt();
+			if ($.trim(localHtml) === $.trim(justPlainText)) {
+				_editor.setContent(" ");
+			}
+		});
+		_editor.addListener("blur", function () {
+			var localHtml = _editor.getContent();
+			if (!localHtml) {
+				_editor.setContent(justPlainText);
+			}
+		});
+		_editor.ready(function () {
+			_editor.fireEvent("blur");
+		});
+	};
+    var ue = UE.getEditor(id,{
+    toolbars: [
+        [
+        	'undo', 
+        	'redo', 
+        	'bold',
+        	'fontfamily',
+        	'fontsize', //字号
+        	'blockquote', //引用
+        	'horizontal', //分隔线
+        	'removeformat', //清除格式
+        	'formatmatch'//格式刷
+    	],
+        [
+        	'bold', //加粗
+	        'italic', //斜体
+	        'underline', //下划线
+	        'forecolor', //字体颜色
+        	'backcolor', //背景色
+        	'indent', //首行缩进
+        	'justifyleft', //居左对齐
+	        'justifyright', //居右对齐
+	        'justifycenter', //居中对齐
+	        'justifyjustify', //两端对齐
+	        'rowspacingtop', //段前距
+       		'rowspacingbottom', //段后距
+       		'lineheight', //行间距
+       		'insertorderedlist', //有序列表
+     	    'insertunorderedlist', //无序列表
+     	    'imagenone', //默认
+	        'imageleft', //左浮动
+	        'imageright', //右浮动
+	        'attachment', //附件
+	        'imagecenter' //居中
+        ]
+    ],
+    elementPathEnabled : false,　　//是否启用元素路径，默认是true显示
+	wordCount:false,          //是否开启字数统计
+	autoHeightEnabled:true,　　// 编辑器内容，是否自动长高,默认true
+	fullscreen : false, //是否开启初始化时即全屏，默认关闭
+	initialFrameHeight:500,
+	autoFloatEnabled :false
+    });
+    ue.ready(function() {
+     	$(".edui-default .edui-editor-toolbarboxouter").css(
+	    	{
+	    		border:'none',
+	    		background:'none',
+	    		boxShadow: 'none'
+	    	}
+	    )
+     	$(".edui-default .edui-editor-toolbarbox").css({
+     		border:'none',
+	    	background:'none',
+	    	boxShadow: 'none',
+	    	borderBottom:'1px solid #F3F3F5'
+     	});
+     	$(".edui-editor.edui-default").css({
+     		zIndex:1
+     	});
+     	$("#edui1_iframeholder").css({marginTop:'140px'});
+     	$(".edui-editor-iframeholder.edui-default").css(
+     		{
+     			width:'700px',
+     			marginTop:'160px', 
+     			marginLeft:'100px',
+     			borderBottom:'1px solid #DBDBDB'
+ 			}
+ 		);
+ 		$(".edui-default .edui-editor").css({border:'none'});
+     	//设置编辑器的内容
+		ue.placeholder("从这里开始写正文");
+    });
+    
+}
+/**发帖页面按钮事件初始化**/
+function initSendArticleBtnEvent(){
+	$(window).scroll(function () {
+		if($("body").scrollTop() >= 380){
+			$(".fixed_send_btn").removeClass("none");
+		}else{
+			$(".fixed_send_btn").addClass("none");
+		}
 	});
 }
