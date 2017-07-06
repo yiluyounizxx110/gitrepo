@@ -358,3 +358,16 @@ function initSendArticleBtnEvent(){
 		}
 	});
 }
+
+
+/***服务中心**/
+function initServiceCenter(){
+	$(".sc_header_item").click(function(){
+		if($(this).hasClass("active")){
+			return false;
+		}
+		$(this).addClass("active").siblings().removeClass("active");
+		var index = $(".sc_header_item").index($(this));
+		$(".sc_acc_content").eq(index).removeClass("none").siblings(".sc_acc_content").addClass("none");
+	});
+}

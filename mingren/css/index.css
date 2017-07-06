@@ -45,6 +45,12 @@ a:hover{
 .clear{
 	clear: both;
 }
+.clear_l{
+	clear: left;
+}
+.clear_r{
+	clear: right;
+}
 /*#logo{
     width: 95px;
    margin-top: -13px;

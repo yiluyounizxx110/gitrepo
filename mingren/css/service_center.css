@@ -1,0 +1,222 @@
+.sc_header{
+	width:100%;
+	height:30px;
+	margin-top:5px;
+	background-color: #DCDEDD;
+}
+.sc_header_container{
+	width:1170px;
+	height:30px;
+	margin: 0 auto;
+}
+.sc_header_item{
+	display: inline-block;
+	width:300px;
+	height:30px;
+}
+.sc_header_item a{
+	width:300px;
+	height:20px;
+	box-sizing: border-box;
+	line-height: 20px;
+	margin-top: 5px;
+	color:#0F3B56;
+	text-decoration: underline;
+	text-indent: 30px;
+	border-left:1px dotted #B4B5B5;
+}
+.sc_header_item.active{
+	background-color: #EEEEEE;
+}
+.sc_header_item a.sc_acc_mg{
+	background-image: url(../images/sc_acc1.png);
+    background-position: 8px 2px;
+	background-repeat: no-repeat;
+}
+.sc_header_item.active a.sc_acc_mg{
+	background-image: url(../images/sc_acc.png);
+}
+.sc_header_item a.sc_report{
+	background-image: url(../images/sc_report2.png);
+    background-position: 8px 2px;
+	background-repeat: no-repeat;
+}
+.sc_header_item.active a.sc_report{
+	background-image: url(../images/sc_report.png);
+}
+.sc_header_item a.sc_ads{
+	background-image: url(../images/sc_ads.png);
+    background-position: 8px 2px;
+	background-repeat: no-repeat;
+}
+.sc_header_item.active a.sc_ads{
+	background-image: url(../images/sc_ads1.png);
+}
+
+.sc_acc_mg_content{
+	width:1170px;
+	box-sizing: border-box;
+	border-left:2px solid #DFDFE0;
+	border-right:2px solid #DFDFE0;
+	margin-top: 15px;
+	margin: 15px auto 0;
+}
+.sc_acc_wr{
+	width:880px;
+	/*height:400px;*/
+	padding: 74px 0 30px;
+	margin: 0 auto;
+	/*border:1px solid red;*/
+}
+.sys_handle_rec{
+	width:420px;
+	height:275px;
+	background-color: #EAF1FB;
+	float: left;
+	font-size: 18px;
+}
+.sys_del_rec{
+	width:420px;
+	height:275px;
+	background-color: #EAF1FB;
+	float: left;
+	margin-left: 40px;
+	font-size: 18px;
+}
+.sys_rec .tips{
+	color:#EF9224;
+	display: block;
+	margin-top: 52px;
+	margin-left:43px;
+}
+.sys_rec .tips2{
+	color:#EF9224;
+	display: block;
+	margin-top: 5px;
+	margin-left:43px;
+}
+.sys_rec .confirm_btn{
+	display: block;
+	margin-top: 90px;
+	margin-left:43px;
+	width: 178px;
+	height:50px;
+	background-color:#DCDEDD;
+	color:#336D88;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.sys_rec .confirm_btn:hover{
+	background-color: #959898;
+}
+.sys_rec {
+	background-image: url(../images/sy_rec_bg.png);
+    background-position: 240px 100px;
+	background-repeat: no-repeat;
+}
+.sys_tip{
+	width:420px;
+	height:215px;
+	background-color: #EEEEEE;
+	margin-top:140px;
+	float:left;
+	position:relative;
+	font-size: 15px;
+}
+.copyright_notice{
+	
+}
+.notice{
+	margin-left: 40px;
+}
+.sys_tip .sys_tip_title{
+	width:80px;
+	height:18px;
+	text-align: center;
+	line-height: 6px;
+	position: absolute;
+	top:-10px;
+	border-radius: 80px/18px;
+	color:#336D88;
+}
+/*.sys_tip .sys_tip_title:after{
+	content: "";
+	display: inline-block;
+	position:absolute;
+	top:10px;
+	left:0;
+	background-color:red;
+	width:80px;
+	height:18px;
+	border-radius: 80px/18px;
+	z-index: 1;
+}*/
+.copyright_notice .sys_tip_title{
+	background-color: #ED871D;
+}
+.notice .sys_tip_title{
+	background-color: #59A894;
+}
+.sys_tips_c{
+	width:330px;
+	margin: 45px auto;
+	color: #5A747F;
+	font-family: "黑体";
+	font-size: 15px;
+	line-height:1.1em;
+}
+
+.sc_report_content{
+	width:1170px;
+	height:300px;
+	margin: 10px auto;
+}
+.sc_report_content .title{
+	font-size: 16px;
+	margin-top: 50px;
+	color: #5A747F;
+}
+.sc_ads_content{
+	width:1170px;
+	margin: 10px auto 0;
+}
+.ads_pos{
+	width:1170px;
+	height:200px;
+	line-height: 200px;
+	text-align: center;
+	font-size: 14px;
+	color: #DFB1B0;
+	border:1px dotted #A9A9A9;
+}
+.sc_ads_co{
+	font-size: 15px;
+	margin-left: 10px;
+	margin-top: 40px;
+	color: #3D4F53;
+}
+.sc_ads_co_me{
+	width:400px;
+	height:50px;
+	margin-left: 115px;
+	margin-top: 70px;
+}
+.sc_ads_co_me li{
+	list-style: disc;
+}
+.decliar{
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+.decliar_list{
+	margin-top: 20px;
+}
+.decliar_list li{
+	font-weight: normal;
+	list-style: decimal;
+	margin-left: 115px;
+}
