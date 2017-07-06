@@ -156,6 +156,7 @@ a:hover{
 	width:130px;
 	height:60px;
 	margin-right: 45px;
+	position: relative;
 }
 .user_info i{
 	display: inline-block;
@@ -164,10 +165,68 @@ a:hover{
 	box-sizing: border-box;
 	line-height: 60px;
 	cursor: pointer;
+	position: relative;
 	background: url(../images/user_icon.png) no-repeat 50px 15px;
 }
 .user_info:hover i{
 	border-bottom: 4px solid #3D9BFF;
+}
+.user_info.logined i:after{
+	content: "";
+	display: inline-block;
+	width:4px;
+	height:4px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: red;
+	top: 21px;
+    left: 68px;
+}
+.user_info.logined .user_menu{
+	position: absolute;
+	background-color: #000000;
+	color:#ffffff;
+	list-style: none;
+	display: none;
+	z-index: 2;
+	top:60px;
+	left:0px;
+}
+.user_info.logined:hover .user_menu{
+	display: inline-block;
+}
+.user_info.logined .user_menu li{
+	width:185px;
+	height:25px;
+	line-height: 25px;
+	text-align: right;
+}
+.user_info.logined .user_menu li:first-child{
+	padding-right: 5px;
+}
+.user_info.logined .user_menu li a{
+	display: inline-block;
+	width:175px;
+	height:25px;
+	margin-right: 5px;
+	line-height: 25px;
+	color: #ffffff;
+	border-top: 1px dotted #ffffff;
+	position: relative;
+}
+.user_info.logined .user_menu li.new_msg a:after{
+	content: "";
+	display: inline-block;
+	width:5px;
+	height:5px;
+	border-radius: 50%;
+	background-color: red;
+	position: absolute;
+	right:0;
+	top:0;
+}
+.user_info.logined .user_menu li a:hover{
+	color: #3D9BFF;
 }
 .carousel{
 	width: 100%;
@@ -1030,7 +1089,7 @@ ul.two_menu li a{
 	width:100%;
 	height:180px;
 	position: fixed;
-	margin-top:-60px;
+	/*margin-top:-60px;*/
 	top:50%;
 }
 .fixed_nav_btn .container{
@@ -1299,7 +1358,7 @@ ul.two_menu li a{
 	width:100%;
 	height:120px;
 	position: fixed;
-	margin-top:-60px;
+	/*margin-top:-60px;*/
 	top:50%;
 	z-index: 2;
 }
