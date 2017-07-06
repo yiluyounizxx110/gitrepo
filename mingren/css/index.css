@@ -156,7 +156,7 @@ a:hover{
 	width:130px;
 	height:60px;
 	margin-right: 45px;
-	position: relative;
+	/*position: relative;*/
 }
 .user_info i{
 	display: inline-block;
@@ -182,7 +182,7 @@ a:hover{
 	top: 21px;
     left: 68px;
 }
-.user_info.logined .user_menu{
+.user_info.logined i .user_menu{
 	position: absolute;
 	background-color: #000000;
 	color:#ffffff;
@@ -190,21 +190,21 @@ a:hover{
 	display: none;
 	z-index: 2;
 	top:60px;
-	left:0px;
+	left:-55px;
 }
-.user_info.logined:hover .user_menu{
+.user_info.logined:hover i .user_menu{
 	display: inline-block;
 }
-.user_info.logined .user_menu li{
+.user_info.logined i .user_menu li{
 	width:185px;
 	height:25px;
 	line-height: 25px;
 	text-align: right;
 }
-.user_info.logined .user_menu li:first-child{
+.user_info.logined i .user_menu li:first-child{
 	padding-right: 5px;
 }
-.user_info.logined .user_menu li a{
+.user_info.logined i .user_menu li a{
 	display: inline-block;
 	width:175px;
 	height:25px;
@@ -214,7 +214,7 @@ a:hover{
 	border-top: 1px dotted #ffffff;
 	position: relative;
 }
-.user_info.logined .user_menu li.new_msg a:after{
+.user_info.logined i .user_menu li.new_msg a:after{
 	content: "";
 	display: inline-block;
 	width:5px;
@@ -225,7 +225,7 @@ a:hover{
 	right:0;
 	top:0;
 }
-.user_info.logined .user_menu li a:hover{
+.user_info.logined i .user_menu li a:hover{
 	color: #3D9BFF;
 }
 .carousel{
