@@ -231,11 +231,11 @@ var slider = {
 
 /**发帖按钮时间初始化**/
 function initSendBtnEvent(){
-	if(310- $("body").scrollTop() <= $(window).height()/2){
+	if(310- $(document).scrollTop() <= $(window).height()/2){
 		$(".fixed_nav_btn").removeClass("none");
 	}
 	$(window).scroll(function () {
-		if(310- $("body").scrollTop() <= $(window).height()/2){
+		if(310- $(document).scrollTop() <= $(window).height()/2){
 			$(".fixed_nav_btn").removeClass("none");
 		}else{
 			$(".fixed_nav_btn").addClass("none");
@@ -347,11 +347,11 @@ function sa_article_init(id){
 }
 /**发帖页面按钮事件初始化**/
 function initSendArticleBtnEvent(){
-	if(630- $("body").scrollTop() <= $(window).height()/2){
+	if(630- $(document).scrollTop() <= $(window).height()/2){
 		$(".fixed_send_btn").removeClass("none");
 	}
 	$(window).scroll(function () {
-		if(630- $("body").scrollTop() <= $(window).height()/2){
+		if(630- $(document).scrollTop() <= $(window).height()/2){
 			$(".fixed_send_btn").removeClass("none");
 		}else{
 			$(".fixed_send_btn").addClass("none");
