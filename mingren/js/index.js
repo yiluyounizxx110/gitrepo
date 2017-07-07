@@ -371,3 +371,63 @@ function initServiceCenter(){
 		$(".sc_acc_content").eq(index).removeClass("none").siblings(".sc_acc_content").addClass("none");
 	});
 }
+
+
+/***反馈中心**/
+function fdba_richtext_init(id){
+	UE.Editor.prototype.placeholder = function (justPlainText) {
+		var _editor = this;
+		_editor.addListener("focus", function () {
+			var localHtml = _editor.getPlainTxt();
+			if ($.trim(localHtml) === $.trim(justPlainText)) {
+				_editor.setContent(" ");
+			}
+		});
+		_editor.addListener("blur", function () {
+			var localHtml = _editor.getContent();
+			if (!localHtml) {
+				_editor.setContent(justPlainText);
+			}
+		});
+		_editor.ready(function () {
+			_editor.fireEvent("blur");
+		});
+	};
+    var ue = UE.getEditor(id,{
+    toolbars: [
+        [
+        	'bold', //加粗
+	        'italic', //斜体
+	        'underline', //下划线
+	        'pasteplain', //纯文本粘贴模式
+	        'forecolor', //字体颜色
+        	'backcolor', //背景色
+        	'justifyleft', //居左对齐
+	        'justifyright', //居右对齐
+	        'justifycenter', //居中对齐
+	        'justifyjustify', //两端对齐
+	        'rowspacingtop', //段前距
+       		'rowspacingbottom', //段后距
+       		'lineheight', //行间距
+       		'insertorderedlist', //有序列表
+     	    'insertunorderedlist', //无序列表
+     	    'link', //超链接
+        	'emotion', //表情
+        	'snapscreen' //截图
+        ]
+    ],
+    elementPathEnabled : false,　　//是否启用元素路径，默认是true显示
+	wordCount:false,          //是否开启字数统计
+	autoHeightEnabled:true,　　// 编辑器内容，是否自动长高,默认true
+	fullscreen : false, //是否开启初始化时即全屏，默认关闭
+	initialFrameHeight:200,
+	initialFrameWidth:860,
+	autoFloatEnabled :false
+    });
+    ue.ready(function() {
+     	//设置编辑器的内容
+     	$("#edui1_toolbarbox").css({width:'857px',height:"31px"})
+		ue.placeholder("<p style='white-space: normal;'><span style='background-color: rgb(255, 255, 255); color: rgb(165, 165, 165);'>感谢您给我们提出建议</span></p><p style='white-space: normal;'><br/></p><p style='white-space: normal;'><span style='background-color: rgb(255, 255, 255); color: rgb(165, 165, 165);'>抱歉我们不能逐一回复您的意见<br/></span></p><p style='white-space: normal;'><br/></p><p style='white-space: normal;'><span style='background-color: rgb(255, 255, 255); color: rgb(165, 165, 165);'>您的感受和建议一旦在此发表，即表示您同意我们可无偿参考您的感受和建议来优化我们的产品和服务。若您有商业合作意向，请联系公司相关业务部门。</span></p><p><br/></p>");
+    });
+    
+}
