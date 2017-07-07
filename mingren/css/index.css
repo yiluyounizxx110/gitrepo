@@ -1021,20 +1021,22 @@ ul.two_menu li a{
 .user_content_div .uct_title i:before{
 	content: "";
 	display: inline-block;
-	width:5px;
-	height:5px;
-	border-style: solid;
+	width:8px;
+	height:8px;
+/*	border-style: solid;
 	border-width: 1px 1px 0 0;
-	border-color: #E4E1E2;
+	border-color: #E4E1E2;*/
+	/*border:1px solid red;*/
 	position: absolute;
-	bottom: -3px;
-	left:3px;
-	background-color: #ffffff;
+	bottom: -6px;
+    background: url(../images/arra.png) no-repeat 2px -1px;
+    left: -3px;
+	/*background-color: #ffffff;
 	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 	transform: rotate(135deg);
 	-webkit-transform: rotate(135deg); 
     -moz-transform: rotate(135deg); 
-    -o-transform: rotate(135deg); 
+    -o-transform: rotate(135deg); */
 }
 .user_content_div  .uct_c{
 	width:480px;
