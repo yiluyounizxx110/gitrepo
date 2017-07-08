@@ -11,25 +11,32 @@
 	<body>
 		<div class="header">
 			<div class="in_width header_in">
-				<a href="#" class="logo_link"><img class="logo" src="images/logo.png"/></a>
-				<div class="header_select_link">
-					<a class="header_select_link_a">标签选择</a>
+				<a href="#" class="logo_link"><img class="logo" src="images/logo_white.png"/></a>
+				<div class="header_select_link mask_p">
+					<a class="header_select_link_a"><i>标签选择</i><b></b></a>
 					<div class="fixBox">
-						<div class="fixCenter container"></div>
+						<div class="fixCenter"></div>
 					</div>
 				</div>
 				<div class="search_input_box">
-					<input type="text" placeholder="搜标签/搜名人/搜贴" id="search">
+					<span>
+						<label><input type="radio" name="search_type"/>搜标签</label>
+						<label><input type="radio" name="search_type"/>搜名人</label>
+						<label><input type="radio" name="search_type"/>搜贴</label>
+					</span>
+					<input type="text" id="search">
 					<i class="searchbtn"></i>
 				</div>
-				<div class="area">
-					<a class="area_text" data-index="421">中国-湖北-武汉</a>
+				<div class="area mask_p">
+					<a class="area_text" data-index="421"><i>中国-湖北-武汉</i><b></b></a>
 					<div class="fixBox">
-						<div class="fixCenter container"></div>
+						<div class="fixCenter">
+						</div>
 					</div>
 				</div>
 				<div class="user_info logined">
-					<i>
+					<i class="mask_p">
+						<b></b>
 						<ul class="user_menu">
 							<li>已登陆：用户15089786745</li>
 							<li><a href="javascript:void(0);">我的名人圈</a></li>
@@ -43,7 +50,7 @@
 						</ul>
 					</i>
 					<div class="fixBox">
-						<div class="fixCenter container">
+						<div class="fixCenter">
 							<table class="login_form">
 								<tr>
 									<td>手机号码(ID)</td>
@@ -223,6 +230,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="clear"></div>
 		</div>
 	</body>
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
@@ -232,6 +240,7 @@
 			initLabel();
 			initAreaSelect();
 			initLoginInfo();
+			initCloseMask();
 		});
 	</script>
 </html>

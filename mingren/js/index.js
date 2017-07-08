@@ -4,7 +4,12 @@ function initPage(){
 	
 	var width = $(window).width();
 	var height = width * 559 / 1349;
+	$(".carousel").width(width);
+	$(".carousel").height(height);
 	$(".carousel_item").width(width);
+	$(".carousel_item").height(height);
+	$(".carousel_container").width(width);
+	$(".carousel_container").height(height);
 	$(".carousel_container").removeClass("none");
 	//轮播初始化
 	slider.init();
@@ -18,7 +23,15 @@ function initPage(){
 		slider.init();
 	});
 }
-
+function closeFixBox(){
+	$(".mask_p").removeClass("active");
+	$(".fixBox").css("display",'none');
+}
+function initCloseMask(){
+	$(".search_input_box span label").click(closeFixBox);
+	$(".search_input_box input[type='text']").on('focus',closeFixBox);
+	$(".search_input_box .searchbtn").on('click',closeFixBox);
+}
 function initLabel(){
 	var width = $(window).width();
 	var height = width * 559 / 1349;
@@ -46,14 +59,19 @@ function initLabel(){
         $('.header_select_link .fixCenter').html($BNavH+_navCenter);
     });
     
-    $('.header_select_link').hover(function(){
-		var $fixBox=$('.header_select_link .fixBox');
-    	$fixBox.css({width:$(window).width(),height:height});
-        $fixBox.stop().slideDown(300);
-    },function(){
-        $('.header_select_link .fixBox').stop().slideUp(300,function(){
+    $('.header_select_link_a').click(function(){
+    	if(!$(".header_select_link").hasClass("active")){
+    		$(".mask_p").removeClass("active");
+			$(".fixBox").css("display",'none');
+    		var $fixBox=$('.header_select_link .fixBox');
+    		$fixBox.css({width:$(window).width(),height:height});
+        	$fixBox.stop().slideDown(300);
+        	$(".header_select_link").addClass("active");
+    	}else{
 			$('.header_select_link .fixBox').css("display",'none')
-        });
+	        $(".header_select_link").removeClass("active");
+    	}
+		
     });
     
     var $body=$('body');
@@ -67,27 +85,34 @@ function initLabel(){
         console.log($(this).text());
         $(".navCenterListCenter i").not($(this)).removeClass("active");
         $(this).addClass("active");
-        $(".header_select_link_a").html($(this).text());
+        $(".header_select_link_a i").html($(this).text());
         $(".header_select_link_a").attr("data-index",$(this).attr("data-index"));
     }).on('mouseenter','.navCenterList span',function(){
         var i=$(this).index();
         $(this).parent().parent().siblings('.navRightBox').find(".navCenterListCenter")
-			   .eq(i).stop().slideDown(300).siblings('.navCenterListCenter').hide();
-    })
+			   .eq(i).show().siblings('.navCenterListCenter').hide();
+    }).on('click','.navName',function(){
+    	$(".navCenter").hide();
+    	$(".BNav").show();
+    });
 }
 
 function initAreaSelect(){
 	var width = $(window).width();
 	var height = width * 559 / 1349;
 	//悬浮展示
-	$('.area').hover(function(){
-		var $fixBox=$('.area .fixBox');
-    	$fixBox.css({width:width,height:height});
-        $fixBox.stop().slideDown(300);
-    },function(){
-        $('.area .fixBox').stop().slideUp(300,function(){
-			$('.area .fixBox').css("display",'none')
-        });
+	$('.area_text').click(function(){
+		if(!$(this).parent(".area").hasClass("active")){
+			$(".mask_p").removeClass("active");
+			$(".fixBox").css("display",'none');
+			var $fixBox=$('.area .fixBox');
+	    	$fixBox.css({width:width,height:height});
+	        $fixBox.stop().slideDown(300);
+	        $(this).parent(".area").addClass("active");
+		}else{
+	        $('.area .fixBox').css("display",'none');
+	        $(this).parent(".area").removeClass("active");
+		}
     });
     //数据初始化
     $.getJSON("js/area.json",function(data){
@@ -153,7 +178,7 @@ function initAreaSelect(){
     		provinceText = "-" + provinceW.find(".area_province").text() + "-";
     	}
     	
-    	$(".area .area_text").text("中国" + provinceText + datatext);
+    	$(".area .area_text i").text("中国" + provinceText + datatext);
     })
 }
 /**登录注册信息**/
@@ -161,15 +186,19 @@ function initLoginInfo(){
 	var width = $(window).width();
 	var height = width * 559 / 1349;
 	//下拉悬浮层
-	$('.user_info.unlogin').hover(function(){
-		var $fixBox=$('.unlogin .fixBox');
-    	$fixBox.css({width:width,height:height});
-        $fixBox.stop().slideDown(300);
-        $fixBox.show();
-    },function(){
-        $('.unlogin .fixBox').stop().slideUp(300,function(){
+	$('.user_info.unlogin i').click(function(){
+		if(!$(this).hasClass("active")){
+			$(".mask_p").removeClass("active");
+			$(".fixBox").css("display",'none');
+			$(this).addClass("active");
+			var $fixBox=$('.unlogin .fixBox');
+	    	$fixBox.css({width:width,height:height});
+	        $fixBox.stop().slideDown(300);
+	        $fixBox.show();
+		}else{
 			$('.unlogin .fixBox').css("display",'none');
-        });
+			$(this).removeClass("active");
+		}
     });
     
     //按钮跳转
@@ -208,7 +237,7 @@ var slider = {
 	cur_index:1,
 	sliderEvent:null,
 	init:function(){
-		slider.sliderEvent = setInterval(slider.start,3000);
+		slider.sliderEvent = setInterval(slider.start,5000);
 	},
 	stop:function(){
 		clearInterval(slider.sliderEvent);
@@ -223,8 +252,8 @@ var slider = {
 		slider.cur_index = next;
 	},
 	showIndexSlider:function(index){
-		var left = $($(".carousel_container .carousel_item")[0]).width() * (-1) * (index -1);
-		$(".carousel_container").animate({'margin-left':left + 'px'},400);
+		var top = $($(".carousel_container .carousel_item")[0]).height() * (-1) * (index -1);
+		$(".carousel_container").animate({'margin-top':top + 'px'},600);
 		$($(".carousel-indicator .carousel-indicators_item").get(index-1)).addClass('cur').siblings().removeClass('cur');
 	}
 }
@@ -425,6 +454,9 @@ function fdba_richtext_init(id){
 	autoFloatEnabled :false
     });
     ue.ready(function() {
+    	$(".edui-editor.edui-default").css({
+     		zIndex:1
+     	});
      	//设置编辑器的内容
      	$("#edui1_toolbarbox").css({width:'857px',height:"31px"})
 		ue.placeholder("<p style='white-space: normal;'><span style='background-color: rgb(255, 255, 255); color: rgb(165, 165, 165);'>感谢您给我们提出建议</span></p><p style='white-space: normal;'><br/></p><p style='white-space: normal;'><span style='background-color: rgb(255, 255, 255); color: rgb(165, 165, 165);'>抱歉我们不能逐一回复您的意见<br/></span></p><p style='white-space: normal;'><br/></p><p style='white-space: normal;'><span style='background-color: rgb(255, 255, 255); color: rgb(165, 165, 165);'>您的感受和建议一旦在此发表，即表示您同意我们可无偿参考您的感受和建议来优化我们的产品和服务。若您有商业合作意向，请联系公司相关业务部门。</span></p><p><br/></p>");

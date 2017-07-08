@@ -18,7 +18,7 @@
 	line-height: 25px;
 }
 .fdb_title .fdb_title_container{
-	width:1060px;
+	width:1200px;
 	height:25px;
 	line-height: 25px;
 	margin: 0 auto;
@@ -54,7 +54,7 @@
 	color:#20A35A;
 }
 .fdb_main_container{
-	width:1060px;
+	width:1200px;
 	margin: 10px auto;
 }
 .fdb_main_container .fdb_left_about{
@@ -69,7 +69,7 @@
 	border:1px dotted black;
 }
 .fdb_main_container .fdb_right_content{
-	width:780px;
+	width:925px;
 	min-height: 400px;
 	float: left;
 	margin-left: 10px;
@@ -78,20 +78,20 @@
 	border-color: #BBBCBC;
 }
 .fdb_main_container .fdb_right_content .fdb_list{
-	width:780px;
+	width:925px;
 	min-height:300px;
 	display: block;
 	list-style: none;
 }
 .fdb_main_container .fdb_right_content .fdb_item{
-	width:390px;
+	width:462px;
 	height:100px;
 	float:left;
 	/*border:1px solid red;*/
 }
 .fdb_main_container .fdb_right_content .fdb_item_title{
 	display: block;
-	width:300px;
+	width:370px;
 	height:30px;
 	line-height: 30px;
 	color:#004B6E;
@@ -115,7 +115,7 @@
 	position: absolute;
 }
 .fdb_item_nums{
-	width:300px;
+	width:370px;
 	height:30px;
 	line-height: 30px;
 	font-size: 13px;
@@ -125,7 +125,7 @@
 	display: inline-block;
 }
 .fdb_item_nums .fdb_user{
-	width:100px;
+	width:110px;
 	height:30px;
 	margin-left: 20px;
 	overflow: hidden;
@@ -133,21 +133,21 @@
     text-overflow:ellipsis;
 }
 .fdb_item_nums .fdb_read{
-	width:100px;
+	width:110px;
 	height:30px;
 	overflow: hidden;
 	white-space:nowrap;
     text-overflow:ellipsis;
 }
 .fdb_item_nums .fdb_reply{
-	width:70px;
+	width:100px;
 	height:30px;
 	overflow: hidden;
 	white-space:nowrap;
     text-overflow:ellipsis;
 }
 .fdb_item_content{
-	width:300px;
+	width:370px;
 	margin-left: 20px;
 	height:30px;
 	overflow: hidden;
@@ -156,11 +156,11 @@
     font-size: 15px;
 }
 .fdb_btn{
-	width:780px;
+	width:925px;
 	height:100px;
 }
 .fdb_btng{
-	width:300px;
+	width:370px;
 	height:100px;
 	float:right;
 }
@@ -188,7 +188,7 @@
 
 
 .fdbm_title{
-	width:1060px;
+	width:1200px;
 	height:25px;
 	margin: 0 auto;
 	background-color: #DCDCDD;
@@ -220,12 +220,12 @@
 	color:#004B6E;
 }
 .fdbm_list{
-	width:1060px;
+	width:1200px;
 	list-style: none;
 	margin: 20px auto;
 }
 .fdbm_item{
-	width:1060px;
+	width:1200px;
 	display: block;
 	margin-bottom: 20px;
 	padding-bottom: 10px;
@@ -233,7 +233,7 @@
 }
 .fdbm_item .fdbm_item_title{
 	display: block;
-	width:1060px;
+	width:1200px;
 	height:30px;
 	line-height: 30px;
 	color:#004B6E;
@@ -257,7 +257,7 @@
 	position: absolute;
 }
 .fdbm_item_nums{
-	max-width:1060px;
+	max-width:1200px;
 	height:20px;
 	line-height: 20px;
 	font-size: 13px;
@@ -306,13 +306,13 @@
 	font-size: 13px;
 }
 .fdbm_item_reply_content{
-	width:1060px;
+	width:1200px;
 	line-height: 22px;
 	font-size: 15px;
 	padding: 0 10px;
 }
 .fdbm_btn{
-	width:1060px;
+	width:1200px;
 	height:100px;
 	margin: 0 auto;
 }
@@ -336,7 +336,7 @@
 
 
 .fdbm_s_title{
-	width:1060px;
+	width:1200px;
 	height:25px;
 	margin: 0 auto;
 	background-color: #DCDCDD;
@@ -366,13 +366,13 @@
 	color:#004B6E;
 }
 .fdbm_s_item{
-	width:1060px;
+	width:1200px;
 	margin: 30px auto 0;
 	display: block;
 }
 .fdbm_s_item .fdbm_s_item_title{
 	display: block;
-	width:1060px;
+	width:1200px;
 	height:30px;
 	line-height: 30px;
 	color:#004B6E;
@@ -396,7 +396,7 @@
 	position: absolute;
 }
 .fdbm_s_item_nums{
-	max-width:1060px;
+	max-width:1200px;
 	height:20px;
 	line-height: 20px;
 	font-size: 13px;
@@ -443,7 +443,7 @@
 	font-size: 13px;
 }
 .fdbm_s_item_reply_user{
-	width:1060px;
+	width:1200px;
 	height:20px;
 	line-height: 20px;
 	color:#929292;
@@ -451,7 +451,7 @@
 	font-size: 13px;
 }
 .fdbm_s_item_reply_content{
-	width:1060px;
+	width:1200px;
 	line-height: 22px;
 	font-size: 15px;
 	padding: 20px 10px 30px;
@@ -464,7 +464,7 @@
 	padding-top:1px;
 }
 .fdba_tips{
-	width:1060px;
+	width:1200px;
 	height:30px;
 	line-height: 30px;
 	margin: 50px auto 0;
@@ -481,11 +481,11 @@
 	text-decoration: underline;
 }
 .fdba_apply_form{
-	width:1060px;
+	width:1200px;
 	margin:20px auto;
 }
 .fdba_apply_row{
-	width:1060px;
+	width:1200px;
 }
 .fdba_apply_label{
 	width:200px;

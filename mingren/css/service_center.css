@@ -5,7 +5,7 @@
 	background-color: #DCDEDD;
 }
 .sc_header_container{
-	width:1170px;
+	width:1200px;
 	height:30px;
 	margin: 0 auto;
 }
@@ -54,7 +54,7 @@
 }
 
 .sc_acc_mg_content{
-	width:1170px;
+	width:1200px;
 	box-sizing: border-box;
 	border-left:2px solid #DFDFE0;
 	border-right:2px solid #DFDFE0;
@@ -169,7 +169,7 @@
 }
 
 .sc_report_content{
-	width:1170px;
+	width:1200px;
 	height:300px;
 	margin: 10px auto;
 }
@@ -179,11 +179,11 @@
 	color: #5A747F;
 }
 .sc_ads_content{
-	width:1170px;
+	width:1200px;
 	margin: 10px auto 0;
 }
 .ads_pos{
-	width:1170px;
+	width:1200px;
 	height:200px;
 	line-height: 200px;
 	text-align: center;

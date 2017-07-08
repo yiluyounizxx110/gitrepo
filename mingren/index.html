@@ -10,142 +10,33 @@
 	<body>
 		<div class="header">
 			<div class="in_width header_in">
-				<a href="#" class="logo_link"><img class="logo" src="images/logo.png"/></a>
-				<div class="header_select_link">
-					<a class="header_select_link_a">标签选择</a>
+				<a href="#" class="logo_link"><img class="logo" src="images/logo_white.png"/></a>
+				<div class="header_select_link mask_p">
+					<a class="header_select_link_a"><i>标签选择</i><b></b></a>
 					<div class="fixBox">
-						<div class="fixCenter container"></div>
+						<div class="fixCenter"></div>
 					</div>
 				</div>
 				<div class="search_input_box">
-					<input type="text" placeholder="搜标签/搜名人/搜贴" id="search">
+					<span>
+						<label><input type="radio" name="search_type"/>搜标签</label>
+						<label><input type="radio" name="search_type"/>搜名人</label>
+						<label><input type="radio" name="search_type"/>搜贴</label>
+					</span>
+					<input type="text" id="search">
 					<i class="searchbtn"></i>
 				</div>
-				<div class="area">
-					<a class="area_text" data-index="421">中国-湖北-武汉</a>
+				<div class="area mask_p">
+					<a class="area_text" data-index="421"><i>中国-湖北-武汉</i><b></b></a>
 					<div class="fixBox">
-						<div class="fixCenter container">
-							<!--<div class="section_warpper">
-								<div class="area_section">直辖市</div>
-								<div class="province_wrapper_container">
-									<div class="province_wrapper">
-										<div class="area_province_empty"></div>
-										<div class="city_wrapper">
-											<div class="city_item">石家庄</div>
-											<div class="city_item">唐山</div>
-											<div class="city_item">青黄岛</div>
-											<div class="city_item">邯郸</div>
-											<div class="city_item">邢台</div>
-											<div class="city_item">保定</div>
-											<div class="city_item">张家口</div>
-											<div class="city_item">承德</div>
-											<div class="city_item">沧州</div>
-											<div class="city_item">廊坊</div>
-											<div class="city_item">衡水</div>
-										</div>	
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="section_warpper">
-								<div class="area_section">华北地区</div>
-								<div class="province_wrapper_container">
-									<div class="province_wrapper">
-										<div class="area_province">河北</div>
-										<div class="city_wrapper">
-											<div class="city_item">石家庄</div>
-											<div class="city_item">唐山</div>
-											<div class="city_item">青黄岛</div>
-											<div class="city_item">邯郸</div>
-											<div class="city_item">邢台</div>
-											<div class="city_item">保定</div>
-											<div class="city_item">张家口</div>
-											<div class="city_item">承德</div>
-											<div class="city_item">沧州</div>
-											<div class="city_item">廊坊</div>
-											<div class="city_item">衡水</div>
-										</div>	
-									</div>
-									<div class="province_wrapper">
-										<div class="area_province">山西</div>
-										<div class="city_wrapper">
-											<div class="city_item">太原</div>
-											<div class="city_item">大同</div>
-											<div class="city_item">阳泉</div>
-											<div class="city_item">长治</div>
-											<div class="city_item">晋城</div>
-											<div class="city_item">朔州</div>
-											<div class="city_item">忻州</div>
-											<div class="city_item">吕梁</div>
-											<div class="city_item">晋中</div>
-											<div class="city_item">临汾</div>
-											<div class="city_item current">运城</div>
-										</div>	
-									</div>
-									<div class="province_wrapper">
-										<div class="area_province">山西</div>
-										<div class="city_wrapper">
-											<div class="city_item">太原</div>
-											<div class="city_item">大同</div>
-											<div class="city_item">阳泉</div>
-											<div class="city_item">长治</div>
-											<div class="city_item">晋城</div>
-											<div class="city_item">朔州</div>
-											<div class="city_item">忻州</div>
-											<div class="city_item">吕梁</div>
-											<div class="city_item">晋中</div>
-											<div class="city_item">临汾</div>
-											<div class="city_item current">运城</div>
-										</div>	
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="section_warpper">
-								<div class="area_section">华北地区</div>
-								<div class="province_wrapper_container">
-									<div class="province_wrapper">
-										<div class="area_province">河北</div>
-										<div class="city_wrapper">
-											<div class="city_item">石家庄</div>
-											<div class="city_item">唐山</div>
-											<div class="city_item">青黄岛</div>
-											<div class="city_item">邯郸</div>
-											<div class="city_item">邢台</div>
-											<div class="city_item">保定</div>
-											<div class="city_item">张家口</div>
-											<div class="city_item">承德</div>
-											<div class="city_item">沧州</div>
-											<div class="city_item">廊坊</div>
-											<div class="city_item">衡水</div>
-										</div>	
-									</div>
-									<div class="province_wrapper">
-										<div class="area_province">山西</div>
-										<div class="city_wrapper">
-											<div class="city_item">太原</div>
-											<div class="city_item">大同</div>
-											<div class="city_item">阳泉</div>
-											<div class="city_item">长治</div>
-											<div class="city_item">晋城</div>
-											<div class="city_item">朔州</div>
-											<div class="city_item">忻州</div>
-											<div class="city_item">吕梁</div>
-											<div class="city_item">晋中</div>
-											<div class="city_item">临汾</div>
-											<div class="city_item current">运城</div>
-										</div>	
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>-->
+						<div class="fixCenter">
 						</div>
 					</div>
 				</div>
 				<div class="user_info unlogin">
-					<i></i>
+					<i class="mask_p"><b></b></i>
 					<div class="fixBox">
-						<div class="fixCenter container">
+						<div class="fixCenter">
 							<table class="login_form">
 								<tr>
 									<td>手机号码(ID)</td>
@@ -272,7 +163,7 @@
 			<div class="pad">
 				<div class="container">
 					<h2>想出名  上名人网络</h2>
-					<div class="find_info">
+					<div class="find_info1">
 						<div class="one">
 							<h3>工作不在仅仅是为了公司</h3>
 							<h5>您自己的标签就像一张代表您能力的身份证
@@ -287,7 +178,6 @@
 									<li>
 										<a href="javascript:void(0)">○让更好的机会主动找您</a>
 									</li>
-
 								</ul>
 							</div>
 						</div>
@@ -457,6 +347,7 @@
 			initLabel();
 			initAreaSelect();
 			initLoginInfo();
+			initCloseMask();
 		});
 	</script>
 </html>
