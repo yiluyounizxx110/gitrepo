@@ -463,3 +463,46 @@ function fdba_richtext_init(id){
     });
     
 }
+
+function initBaseInfoNavBar(){
+	$("body").on('click',".bi_title_menu",function(){
+		var index = $(".bi_title_menu").index($(this));
+		var left = 20 + (index) * (100 + 20 + 60);
+		$(".bi_title_menu_bar").css({left:left + 'px'});
+	});
+}
+function initBaseInfoPage(){
+	//菜单点击
+	$("body").on('click',".bi_nav_item",function(){
+		var index = $("bi_nav_item").index($(this));
+		$(this).addClass("active").siblings(".bi_nav_item").removeClass("active");
+		$($(".bi_right_content").get(index)).removeClass("none");
+		$($(".bi_right_content").get(index)).siblings(".bi_right_content").addClass("none");
+	});
+	//图标选择
+	$("body").on('click',".bi_img_select_a",function(){
+		var index = $(".bi_img_select_a").index($(this));
+		$(this).addClass("active").siblings(".bi_img_select_a").removeClass("active");
+		$($(".bi_img_select_content").get(index)).removeClass("none");
+		$($(".bi_img_select_content").get(index)).siblings(".bi_img_select_content").addClass("none");
+	});
+	 var url = window.location.hostname === 'blueimp.github.io' ?
+                '//jquery-file-upload.appspot.com/' : 'server/php/';
+    $('#fileupload').fileupload({
+        url: url,
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo('#files');
+            });
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+}
