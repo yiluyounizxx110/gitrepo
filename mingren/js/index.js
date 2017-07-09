@@ -469,12 +469,13 @@ function initBaseInfoNavBar(){
 		var index = $(".bi_title_menu").index($(this));
 		var left = 20 + (index) * (100 + 20 + 60);
 		$(".bi_title_menu_bar").css({left:left + 'px'});
+		$($(".bi_content").get(index)).removeClass("none").siblings(".bi_content").addClass("none");
 	});
 }
 function initBaseInfoPage(){
 	//菜单点击
 	$("body").on('click',".bi_nav_item",function(){
-		var index = $("bi_nav_item").index($(this));
+		var index = $(".bi_nav_item").index($(this));
 		$(this).addClass("active").siblings(".bi_nav_item").removeClass("active");
 		$($(".bi_right_content").get(index)).removeClass("none");
 		$($(".bi_right_content").get(index)).siblings(".bi_right_content").addClass("none");
@@ -496,13 +497,32 @@ function initBaseInfoPage(){
                 $('<p/>').text(file.name).appendTo('#files');
             });
         },
-        progressall: function (e, data) {
-            var progress = parseInt(data.loaded / data.total * 100, 10);
-            $('#progress .progress-bar').css(
-                'width',
-                progress + '%'
-            );
+        error:function(e){
+        	alert(e.responseText)
         }
     }).prop('disabled', !$.support.fileInput)
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
+}
+
+function initmodifyPass(){
+	$("body").on('click',".modify_pass_table .sendbtn",function(){
+		if($(this).hasClass("disabled")){
+    		return false;
+    	}
+    	$(this).html("<span>60</span>s");
+    	$(this).addClass("disabled");
+    	timer = setInterval(calcutemodifyPasstime,1000);
+	});
+}
+
+function calcutemodifyPasstime(){
+	var time = parseInt($(".modify_pass_table .sendbtn span").html());
+	if(time == 1){
+		clearInterval(timer);
+		timer = null;
+		$(".modify_pass_table .sendbtn").html("发送验证");
+		$(".modify_pass_table .sendbtn").removeClass("disabled");
+		return false;
+	}
+	$(".modify_pass_table .sendbtn span").html(time - 1);
 }

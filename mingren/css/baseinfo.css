@@ -111,16 +111,21 @@
 	color:#004B6E;
 	text-decoration: underline;
 }
-.bi_right_content{
+.bi_right_content_wrap{
 	width:904px;
 	margin-left: 96px;
 	float:left;
+}
+.bi_right_content{
+	float:left;
+	width:904px;
 }
 .bi_right_content_title{
 	width:904px;
 	height:30px;
 	border-bottom:3px solid #595757;
 	box-sizing: border-box;
+	font-size: 18px;
 }
 .bi_img_show_div{
 	width:400px;
@@ -224,9 +229,694 @@
 	z-index: 2;
 	top:0;
 	left:0;
+	opacity: 0;
+    cursor: pointer;
 }
 .bi_img_select_content_up_tip{
 	font-size: 12px;
 	text-align: center;
 	margin-top: 10px;
+}
+.bi_personal_info{
+	width:904px;
+	margin-top: 10px;
+}
+.bi_personal_info tr{
+	width:904px;
+	height:56px;
+}
+.bi_personal_info_label{
+	width:75px;
+	height:56px;
+	text-align: left;
+	line-height: 56px;
+}
+.bi_personal_info_content{
+	width:825px;
+	height:56px;
+}
+.bi_personal_info_content span{
+	margin-left: 3px;
+}
+.bi_personal_info_content input[type='text']{
+	width: 270px;
+	outline: none;
+	border-bottom: 1px solid #342B27;
+	height:22px;
+	line-height: 22px;
+	float:left;
+}
+.bi_personal_info_content input.gender{
+	height:22px;
+	line-height: 22px;
+	outline: none;
+	border:1px solid transparent;
+}
+.bi_personal_info_btng{
+	width:120px;
+	margin: 51px auto;
+}
+.bi_personal_info_btng a{
+	display: inline-block;
+	width:50px;
+	height:20px;
+	box-sizing: border-box;
+	border: 2px solid #A3A2A2;
+	background-color: #DCDCDD;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	color:#336D88;
+	float:left;
+}
+.bi_personal_info_btng a:first-child{
+	margin-right: 20px;
+}
+.bi_contact_information{
+	width:904px;
+	margin-top: 38px;
+}
+.bi_contact_information tr{
+	background-color: #ffffff;
+}
+.bi_contact_information tr td{
+	width:452px;
+	height:50px;
+	background-color: #DCDCDD;
+}
+.bi_contact_information .showType{
+	float:right;
+	width:80px;
+	height:20px;
+	margin-top: 15px;
+	background-color: #DCDCDD;
+	color:#004B6E;
+}
+
+.bi_contact_information tr td:first-child{
+	background-color: #E8F1FA;
+}
+.bi_contact_information tr.empty td{
+	width:904px;
+	height:50px;
+	background-color: #ffffff;
+}
+.bi_contact_information tr td:first-child .showType{
+	background-color: #E8F1FA;
+}
+.bi_contact_information .bi_contact_left_lable{
+	float: left;
+	width:110px;
+	height:50px;
+	line-height: 50px;
+	text-align: right;
+}
+.bi_contact_information td input{
+	width:200px;
+	height:22px;
+	float:left;
+    height: 22px;
+    float: left;
+    margin-top: 14px;
+    background-color: #DCDCDD;
+    border-bottom: 1px solid #605957;
+    outline: none;
+}
+.bi_contact_information tr td:first-child input{
+	background-color: #E8F1FA;
+}
+
+/****教育经历**/
+.edu_exp_list{
+	width:904px;
+	box-sizing: border-box;
+	border:1px solid #BBBBBB;
+	margin-top: 36px;
+}
+.edu_exp_th{
+	width:902px;
+	height:20px;
+	background-color: #595757;
+	color:#ffffff;
+	font-size: 14px;
+	float:left;
+	text-align: center;
+}
+.edu_exp_tr{
+	float:left;
+	width:902px;
+	height:20px;
+	background-color: #DCDCDD;
+	font-size: 14px;
+	margin-top: 6px;
+	color:#231915;
+}
+.edu_exp_list .edu_exp_school_name{
+	width:227px;
+	height:14px;
+	float:left;
+	line-height: 14px;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.edu_exp_tr .edu_exp_school_name{
+	text-indent: 16px;
+}
+.edu_exp_list .edu_exp_time{
+	width:155px;
+	height:14px;
+	line-height: 14px;
+	float:left;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.edu_exp_tr .edu_exp_time{
+	text-align: center;
+}
+.edu_exp_list .edu_exp_subject{
+	width:104px;
+	height:14px;
+	line-height: 14px;
+	float:left;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.edu_exp_tr .edu_exp_subject{
+	text-align: center;
+}
+.edu_exp_list .edu_exp_education{
+	width:107px;
+	height:14px;
+	line-height: 14px;
+	float:left;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.edu_exp_tr .edu_exp_education{
+	text-align: center;
+}
+.edu_exp_list .edu_exp_opr{
+	width:309px;
+	height:14px;
+	float:left;
+	line-height: 14px;
+	margin-top: 3px;
+	box-sizing: border-box;
+}
+.edu_exp_tr .edu_exp_opr{
+	height:20px;
+	line-height: 20px;
+	margin-top: 0px;
+}
+.edu_exp_opr span{
+	width:100px;
+	height:20px;
+	float:right;
+}
+.edu_exp_opr span a{
+	width:50px;
+	height:20px;
+	float:left;
+	color:#3F6176;
+	text-align: center;
+	line-height: 20px;
+}
+.edu_exp_batch_opr{
+	width:280px;
+	height:20px;
+	line-height: 20px;
+	float:left;
+	margin-top: 20px;
+	margin-left:595px;
+}
+.edu_exp_batch_opr a{
+	display: inline-block;
+	float:left;
+	width:100px;
+	height:20px;
+	text-align: center;
+	line-height: 20px;
+	box-sizing: border-box;
+	float: left;
+	border:1px solid #618EA3;
+	color:#618EA3;
+}
+.edu_exp_batch_opr select{
+	display: inline-block;
+	width:165px;
+	height:20px;
+	text-align: center;
+	line-height: 13px;
+	box-sizing: border-box;
+	border:1px solid #618EA3;
+	color:#618EA3;
+	float: right;
+}
+.add_edu_exp_title{
+	width:100%;
+	height:24px;
+	line-height: 24px;
+	margin-top: 27px;
+	font-size: 18px;
+}
+
+.add_edu_exp_table tr{
+	height:35px;
+}
+.add_edu_exp_table tr .add_edu_exp_lable{
+	height:35px;
+	width:100px;
+	text-align: left;
+}
+.add_edu_exp_table tr .add_edu_exp_con{
+	width:300px;
+	height:35px;
+	line-height: 35px;
+}
+.add_edu_exp_table tr .add_edu_exp_time{
+	width:60px;
+	height:15px;
+	line-height: 15px;
+	box-sizing: border-box;
+	border:1px solid #645D5B;
+	float:left;
+}
+.add_edu_exp_table tr span{
+	float:left;
+	width:36px;
+	height:15px;
+	line-height: 15px;
+	display: inline-block;
+	text-align: center;
+}
+.add_edu_school_name{
+	width:254px;
+	height:15px;
+	box-sizing: border-box;
+	border:1px solid #645D5B;
+}
+.add_edu_subject_name{
+	width:254px;
+	height:15px;
+	box-sizing: border-box;
+	border:1px solid #645D5B;
+}
+.add_edu_exp_education{
+	width: 87px;
+	box-sizing: border-box;
+	height:15px;
+}
+
+.add_edu_exp_btng{
+	width:147px;
+	margin: 40px auto;
+}
+.add_edu_exp_btng a{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 50px;
+	height:20px;
+	border:1px solid #7E7D7D;
+	text-align: center;
+	line-height: 20px;
+	background-color: #DCDCDD;
+	float:left;
+	color:#336D88;
+}
+.add_edu_exp_btng a:first-child{
+	width: 80px;
+	height:20px;
+	margin-right: 17px;
+}
+
+/**工作经历**/
+.work_exp_list{
+	width:904px;
+	box-sizing: border-box;
+	border:1px solid #BBBBBB;
+	margin-top: 36px;
+}
+.work_exp_th{
+	width:902px;
+	height:20px;
+	background-color: #595757;
+	color:#ffffff;
+	font-size: 14px;
+	float:left;
+	text-align: center;
+}
+.work_exp_tr{
+	float:left;
+	width:902px;
+	height:20px;
+	background-color: #DCDCDD;
+	font-size: 14px;
+	margin-top: 6px;
+	color:#231915;
+}
+.work_exp_list .work_exp_company_name{
+	width:227px;
+	height:14px;
+	float:left;
+	line-height: 14px;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.work_exp_tr .work_exp_company_name{
+	text-indent: 16px;
+}
+.work_exp_list .work_exp_time{
+	width:155px;
+	height:14px;
+	line-height: 14px;
+	float:left;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.work_exp_tr .work_exp_time{
+	text-align: center;
+}
+.work_exp_list .work_exp_position{
+	width:104px;
+	height:14px;
+	line-height: 14px;
+	float:left;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.work_exp_tr .work_exp_position{
+	text-align: center;
+}
+.work_exp_list .work_exp_salary{
+	width:107px;
+	height:14px;
+	line-height: 14px;
+	float:left;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.work_exp_tr .work_exp_salary{
+	text-align: center;
+}
+.work_exp_list .work_exp_opr{
+	width:309px;
+	height:14px;
+	float:left;
+	line-height: 14px;
+	margin-top: 3px;
+	box-sizing: border-box;
+}
+.work_exp_tr .work_exp_opr{
+	height:20px;
+	line-height: 20px;
+	margin-top: 0px;
+}
+.work_exp_opr span{
+	width:100px;
+	height:20px;
+	float:right;
+}
+.work_exp_opr span a{
+	width:50px;
+	height:20px;
+	float:left;
+	color:#3F6176;
+	text-align: center;
+	line-height: 20px;
+}
+.work_exp_batch_opr{
+	width:280px;
+	height:20px;
+	line-height: 20px;
+	float:left;
+	margin-top: 20px;
+	margin-left:595px;
+}
+.work_exp_batch_opr a{
+	display: inline-block;
+	float:left;
+	width:100px;
+	height:20px;
+	text-align: center;
+	line-height: 20px;
+	box-sizing: border-box;
+	float: left;
+	border:1px solid #618EA3;
+	color:#618EA3;
+}
+.work_exp_batch_opr select{
+	display: inline-block;
+	width:165px;
+	height:20px;
+	text-align: center;
+	line-height: 13px;
+	box-sizing: border-box;
+	border:1px solid #618EA3;
+	color:#618EA3;
+	float: right;
+}
+.add_work_exp_title{
+	width:100%;
+	height:24px;
+	line-height: 24px;
+	margin-top: 27px;
+	font-size: 18px;
+}
+
+.add_work_exp_table tr{
+	height:35px;
+}
+.add_work_exp_table tr .add_work_exp_lable{
+	height:35px;
+	width:100px;
+	text-align: left;
+}
+.add_work_exp_table tr .add_work_exp_con{
+	width:300px;
+	height:35px;
+	line-height: 35px;
+}
+.add_work_exp_table tr .add_work_exp_time{
+	width:60px;
+	height:15px;
+	line-height: 15px;
+	box-sizing: border-box;
+	border:1px solid #645D5B;
+	float:left;
+}
+.add_work_exp_table tr span{
+	float:left;
+	width:36px;
+	height:15px;
+	line-height: 15px;
+	display: inline-block;
+	text-align: center;
+}
+.add_work_company_name{
+	width:254px;
+	height:15px;
+	box-sizing: border-box;
+	border:1px solid #645D5B;
+}
+.add_work_position_name{
+	width:254px;
+	height:15px;
+	box-sizing: border-box;
+	border:1px solid #645D5B;
+}
+.add_work_exp_salary{
+	width: 87px;
+	box-sizing: border-box;
+	height:15px;
+}
+
+.add_work_exp_btng{
+	width:147px;
+	margin: 40px auto;
+}
+.add_work_exp_btng a{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 50px;
+	height:20px;
+	border:1px solid #7E7D7D;
+	text-align: center;
+	line-height: 20px;
+	background-color: #DCDCDD;
+	color:#336D88;
+	float:left;
+}
+.add_work_exp_btng a:first-child{
+	width: 80px;
+	height:20px;
+	margin-right: 17px;
+}
+
+/**文章管理**/
+.bi_article_list{
+	width:904px;
+	box-sizing: border-box;
+	border:1px solid #BBBBBB;
+	margin-top: 36px;
+}
+.bi_article_th{
+	width:902px;
+	height:20px;
+	background-color: #595757;
+	color:#ffffff;
+	font-size: 14px;
+	float:left;
+	text-align: center;
+}
+.bi_article_tr{
+	float:left;
+	width:902px;
+	height:20px;
+	background-color: #DCDCDD;
+	font-size: 14px;
+	margin-top: 6px;
+	color:#231915;
+}
+
+.bi_article_list .bi_article_name{
+	width:227px;
+	height:14px;
+	float:left;
+	line-height: 14px;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.bi_article_list .bi_article_time{
+	width:155px;
+	height:14px;
+	line-height: 14px;
+	float:left;
+	margin-top: 3px;
+	box-sizing: border-box;
+	border-right: 1px solid #ffffff;
+}
+.bi_article_tr .bi_article_name{
+	text-indent: 16px;
+}
+.bi_article_tr .bi_article_time{
+	text-align: center;
+}
+
+.bi_article_list .bi_article_opr{
+	width:520px;
+	height:14px;
+	float:left;
+	line-height: 14px;
+	margin-top: 3px;
+	box-sizing: border-box;
+}
+.bi_article_tr .bi_article_opr{
+	height:20px;
+	line-height: 20px;
+	margin-top: 0px;
+}
+.bi_article_opr span{
+	width:100px;
+	height:20px;
+	float:right;
+}
+
+.bi_article_opr span a{
+	width:50px;
+	height:20px;
+	float:left;
+	color:#3F6176;
+	text-align: center;
+	line-height: 20px;
+}
+.add_bi_article_btng{
+	width:147px;
+	margin: 40px auto;
+}
+.add_bi_article_btng a{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 50px;
+	height:20px;
+	border:1px solid #7E7D7D;
+	text-align: center;
+	line-height: 20px;
+	background-color: #DCDCDD;
+	color:#336D88;
+	float:left;
+}
+.add_bi_article_btng a:first-child{
+	width: 80px;
+	height:20px;
+	margin-right: 17px;
+}
+
+/**修改密码**/
+.modify_pass_table{
+	width:260px;
+	margin-top: 13px;
+}
+.modify_pass_table tr .mp_left_lable{
+	width:70px;
+	height:25px;	
+}
+.modify_pass_table tr .mp_right_content{
+	width:190px;
+	height:25px;	
+}
+.modify_pass_table tr .mp_right_content input{
+	width:190px;
+	height:16px;
+	outline: none;
+	box-sizing: border-box;
+	border: 1px solid #888686;
+}
+.modify_pass_table .sendbtn{
+	display: inline-block;
+	width:70px;
+	height:15px;
+	box-sizing: border-box;
+	border:1px solid #7E7D7D;
+	text-align: center;
+	line-height: 13px;
+	background-color: #DCDCDD;
+	font-size: 12px;
+	color:#3F6176;
+	float:right;
+}
+.modify_pass_table .sendbtn:hover{
+	background-color: #c6c6ce;
+}
+.modify_pass_table .sendbtn.disabled{
+	background-color: #bdbdbd;
+	color:#ffffff;
+}
+.modify_pass_btng{
+	width:120px;
+	margin: 51px auto;
+}
+.modify_pass_btng a{
+	display: inline-block;
+	width:50px;
+	height:20px;
+	box-sizing: border-box;
+	border: 2px solid #A0A0A0;
+	background-color: #DCDCDD;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	float:left;
+	color:#336D88;
+}
+.modify_pass_btng a:first-child{
+	margin-right: 20px;
 }

@@ -130,89 +130,801 @@
 						<a href="javascript:void(0)" class="bi_nav_item">文章管理</a>
 					</div>
 				</div>
-				<div class="bi_right_content">
-					<div class="bi_right_content_title">我的图像</div>
-					<div class="bi_img_show_div">
-						<div class="bi_img_empty">
-							<h3>请将图片拖入到这里</h3>
-							<h4>支持JPG、JPEG、PNG格式</h4>
-						</div>
-					</div>
-					<div class="bi_img_select">
-						<div class="bi_img_select_title">
-							<a class="bi_img_select_a active" href="javascript:void(0);">经典</a>
-							<a class="bi_img_select_a" href="javascript:void(0);">上传</a>
-						</div>
-						<div class="bi_img_select_content none">
-							<img src="images/qq/qq (1).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (2).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (3).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (4).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (5).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (6).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (7).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (8).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (9).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (10).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (11).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (12).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (13).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (14).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (15).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (16).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (17).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (18).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (19).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (20).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (21).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (22).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (23).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (24).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (25).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (26).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (27).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (28).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (29).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (30).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (31).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (32).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (33).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (34).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (35).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (36).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (37).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (38).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (39).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (40).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (41).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (42).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (43).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (44).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (45).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (46).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (47).jpg" class="qq_icon"/>
-							<img src="images/qq/qq (48).jpg" class="qq_icon"/>
-						</div>
-						<div class="bi_img_select_content noborder">
-							<div class="bi_img_select_content_up">点击上传你的个人图像
-								<input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
+				<div class="bi_right_content_wrap">
+					<!--我的图像-->
+					<div class="bi_right_content">
+						<div class="bi_right_content_title">我的图像</div>
+						<div class="bi_img_show_div">
+							<div class="bi_img_empty">
+								<h3>请将图片拖入到这里</h3>
+								<h4>支持JPG、JPEG、PNG格式</h4>
 							</div>
-							<h4 class="bi_img_select_content_up_tip">可直接拖拽图片</h4>
+						</div>
+						<div class="bi_img_select">
+							<div class="bi_img_select_title">
+								<a class="bi_img_select_a active" href="javascript:void(0);">经典</a>
+								<a class="bi_img_select_a" href="javascript:void(0);">上传</a>
+							</div>
+							<div class="bi_img_select_content">
+								<img src="images/qq/qq (1).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (2).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (3).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (4).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (5).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (6).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (7).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (8).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (9).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (10).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (11).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (12).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (13).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (14).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (15).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (16).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (17).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (18).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (19).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (20).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (21).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (22).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (23).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (24).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (25).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (26).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (27).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (28).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (29).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (30).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (31).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (32).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (33).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (34).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (35).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (36).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (37).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (38).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (39).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (40).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (41).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (42).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (43).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (44).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (45).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (46).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (47).jpg" class="qq_icon"/>
+								<img src="images/qq/qq (48).jpg" class="qq_icon"/>
+							</div>
+							<div class="bi_img_select_content noborder none">
+								<div class="bi_img_select_content_up">点击上传你的个人图像
+									<input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
+								</div>
+								<h4 class="bi_img_select_content_up_tip">可直接拖拽图片</h4>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="bi_right_content">
-				</div>
-				<div class="bi_right_content">
-				</div>
-				<div class="bi_right_content">
-				</div>
-				<div class="bi_right_content">
-				</div>
-				<div class="bi_right_content">
+					<!--个人资料-->
+					<div class="bi_right_content none">
+						<div class="bi_right_content_title">个人资料</div>
+						<table class="bi_personal_info">
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">昵称</td>
+								<td class="bi_personal_info_content"><input type="text" name="nickname" value="N-vision" /></td>
+							</tr>
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">性别</td>
+								<td class="bi_personal_info_content">
+									<select class="gender">
+										<option>顺性男</option>
+										<option>顺性女</option>
+										<option>无性别</option>
+										<option>双性人</option>
+										<option>跨性女</option>
+										<option>跨性男</option>
+										<option>变性女</option>
+										<option>变性男</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">生日</td>
+								<td class="bi_personal_info_content">
+									<select class="bi_birth_year">
+										<option>1970</option>
+										<option>1971</option>
+										<option>1972</option>
+										<option>1973</option>
+										<option>1974</option>
+										<option>1975</option>
+										<option>1976</option>
+										<option>1977</option>
+									</select>年
+									<select class="bi_birth_month">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+									</select>月
+									<select class="bi_birth_day">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option>
+										<option>24</option>
+										<option>25</option>
+										<option>26</option>
+										<option>27</option>
+										<option>28</option>
+										<option>29</option>
+										<option>30</option>
+										<option>31</option>
+									</select>日
+								</td>
+							</tr>	
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">年龄</td>
+								<td class="bi_personal_info_content"><span>28</span></td>
+							</tr>
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">生肖</td>
+								<td class="bi_personal_info_content"><span>兔</span></td>
+							</tr>
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">星座</td>
+								<td class="bi_personal_info_content"><span>天蝎座</span></td>
+							</tr>
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">现居地</td>
+								<td class="bi_personal_info_content">
+									<select class="bi_place_country">
+										<option>中国</option>
+									</select>-
+									<select class="bi_place_province">
+										<option>湖北</option>
+										<option>山东</option>
+										<option>湖南</option>
+										<option>北京</option>
+										<option>南京</option>
+										<option>河北</option>
+										<option>河南</option>
+									</select>-
+									<select class="bi_birth_day">
+										<option>武汉</option>
+										<option>荆州</option>
+										<option>襄樊</option>
+										<option>黄石</option>
+										<option>鄂州</option>
+										<option>仙桃</option>
+										<option>公安</option>
+										<option>潜江</option>
+										<option>宜昌</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">血型</td>
+								<td class="bi_personal_info_content">
+									<select class="bloodtype">
+										<option>A</option>
+										<option>B</option>
+										<option>AB</option>
+										<option>O</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">时区选择</td>
+								<td class="bi_personal_info_content"><span>+8时区（北京）</span></td>
+							</tr>
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">个性签名</td>
+								<td class="bi_personal_info_content"><input type="text" name="nickname" value="人活着不去改变世界和动物有什么区别" /></td>
+							</tr>
+							<tr class="bi_personal_info_tr">
+								<td class="bi_personal_info_label">个人主页</td>
+								<td class="bi_personal_info_content"><input type="text" name="nickname" value="http://www.sen.com" /></td>
+							</tr>
+						</table>
+						<div class="bi_personal_info_btng">
+							<a href="javascript:void(0);">保存</a>
+							<a href="javascript:void(0);">返回</a>
+							<div class="clear"></div>
+						</div>				
+					</div>
+					<!--联系方式-->
+					<div class="bi_right_content none">
+						<div class="bi_right_content_title">联系方式</div>
+						<table class="bi_contact_information">
+							<tr>
+								<td>
+									<span class="bi_contact_left_lable">感情意向：</span>
+									<input type="text" value=""/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+								<td>
+									<span class="bi_contact_left_lable">微信：</span>
+									<input type="text" value="QQ-43223423"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="empty">
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="bi_contact_left_lable">职业意向：</span>
+									<input type="text" value=""/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+								<td>
+									<span class="bi_contact_left_lable">陌陌：</span>
+									<input type="text" value="15367756478"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="empty">
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="bi_contact_left_lable">个人电话：</span>
+									<input type="text" value="15367756478"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+								<td>
+									<span class="bi_contact_left_lable">MSN：</span>
+									<input type="text" value="toxia520@live.cn"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="empty">
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="bi_contact_left_lable">家庭住址：</span>
+									<input type="text" value="湖北省武汉市狮子山街一号"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+								<td>
+									<span class="bi_contact_left_lable">Facebook：</span>
+									<input type="text" value="toxia520@live.cn"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="empty">
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="bi_contact_left_lable">邮箱：</span>
+									<input type="text" value="427267393@qq.com"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+								<td>
+									<span class="bi_contact_left_lable">G+：</span>
+									<input type="text" value="toxia520@live.cn"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="empty">
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="bi_contact_left_lable">Qq：</span>
+									<input type="text" value="427267393@qq.com"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+								<td>
+									<span class="bi_contact_left_lable">Twitter：</span>
+									<input type="text" value="toxia520@live.cn"/>
+									<select class="showType">
+										<option>隐藏</option>
+										<option>显示</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="empty">
+								<td colspan="2"></td>
+							</tr>
+						</table>
+						<div class="bi_personal_info_btng">
+							<a href="javascript:void(0);">保存</a>
+							<a href="javascript:void(0);">返回</a>
+							<div class="clear"></div>
+						</div>	
+					</div>
+					<!--教育背景-->
+					<div class="bi_right_content none">
+						<div class="bi_right_content_title">教育背景</div>
+						<div class="edu_exp_list">
+							<div class="edu_exp_th">
+								<div class="edu_exp_school_name">校名</div>
+								<div class="edu_exp_time">时间</div>
+								<div class="edu_exp_subject">专业</div>
+								<div class="edu_exp_education">学历</div>
+								<div class="edu_exp_opr"></div>
+							</div>
+							<div class="edu_exp_tr">
+								<div class="edu_exp_school_name">湖北大学</div>
+								<div class="edu_exp_time">2010-2014</div>
+								<div class="edu_exp_subject">影视专业</div>
+								<div class="edu_exp_education">本科</div>
+								<div class="edu_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="edu_exp_tr">
+								<div class="edu_exp_school_name">湖北大学</div>
+								<div class="edu_exp_time">2010-2014</div>
+								<div class="edu_exp_subject">影视专业</div>
+								<div class="edu_exp_education">本科</div>
+								<div class="edu_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="edu_exp_tr">
+								<div class="edu_exp_school_name">湖北大学</div>
+								<div class="edu_exp_time">2010-2014</div>
+								<div class="edu_exp_subject">影视专业</div>
+								<div class="edu_exp_education">本科</div>
+								<div class="edu_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="edu_exp_tr">
+								<div class="edu_exp_school_name">湖北大学</div>
+								<div class="edu_exp_time">2010-2014</div>
+								<div class="edu_exp_subject">影视专业</div>
+								<div class="edu_exp_education">本科</div>
+								<div class="edu_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="edu_exp_tr">
+								<div class="edu_exp_school_name">湖北大学</div>
+								<div class="edu_exp_time">2010-2014</div>
+								<div class="edu_exp_subject">影视专业</div>
+								<div class="edu_exp_education">本科</div>
+								<div class="edu_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="edu_exp_tr">
+								<div class="edu_exp_school_name">湖北大学</div>
+								<div class="edu_exp_time">2010-2014</div>
+								<div class="edu_exp_subject">影视专业</div>
+								<div class="edu_exp_education">本科</div>
+								<div class="edu_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="edu_exp_batch_opr">
+							<a href="javascript:void(0);">全部删除</a>
+							<select>
+								<option>全部隐藏</option>
+								<option>全部显示</option>
+							</select>
+						</div>
+						<div class="clear"></div>
+						<div class="add_edu_exp_title">添加教育经历</div>
+						<table class="add_edu_exp_table">
+							<tr>
+								<td class="add_edu_exp_lable">时间</td>
+								<td class="add_edu_exp_con">
+									<input type="text" name="add_edu_exp_year" class="add_edu_exp_time" value="" /><span>年</span>
+									<input type="text" name="add_edu_exp_month" class="add_edu_exp_time" value="" /><span>月</span>
+									<input type="text" name="add_edu_exp_day" class="add_edu_exp_time" value="" /><span>日</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="add_edu_exp_lable">校名</td>
+								<td class="add_edu_exp_con">
+									<input type="text" class="add_edu_school_name" value="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="add_edu_exp_lable">专业</td>
+								<td class="add_edu_exp_con">
+									<input type="text" class="add_edu_subject_name" value="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="add_edu_exp_lable">学历</td>
+								<td class="add_edu_exp_con" class="add_edu_exp_education">
+									<select name="">
+										<option value="">请选择</option>
+										<option value="">小学</option>
+										<option value="">初中</option>
+										<option value="">高中</option>
+										<option value="">本科</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+						<div class="add_edu_exp_btng">
+							<a href="javascript:void(0);">添加并保存</a>
+							<a href="javascript:void(0);">返回</a>
+							<div class="clear"></div>
+						</div>	
+					</div>
+					<!--工作经历-->
+					<div class="bi_right_content none">
+						<div class="bi_right_content_title">工作经历</div>
+						<div class="work_exp_list">
+							<div class="work_exp_th">
+								<div class="work_exp_company_name">公司名</div>
+								<div class="work_exp_time">时间</div>
+								<div class="work_exp_position">职位</div>
+								<div class="work_exp_salary">月薪</div>
+								<div class="work_exp_opr"></div>
+							</div>
+							<div class="work_exp_tr">
+								<div class="work_exp_company_name">N-vision设计公司</div>
+								<div class="work_exp_time">2010-2014</div>
+								<div class="work_exp_position">设计总监</div>
+								<div class="work_exp_salary">20k-30k</div>
+								<div class="work_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="work_exp_tr">
+								<div class="work_exp_company_name">N-vision设计公司</div>
+								<div class="work_exp_time">2010-2014</div>
+								<div class="work_exp_position">设计总监</div>
+								<div class="work_exp_salary">20k-30k</div>
+								<div class="work_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="work_exp_tr">
+								<div class="work_exp_company_name">N-vision设计公司</div>
+								<div class="work_exp_time">2010-2014</div>
+								<div class="work_exp_position">设计总监</div>
+								<div class="work_exp_salary">20k-30k</div>
+								<div class="work_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="work_exp_tr">
+								<div class="work_exp_company_name">N-vision设计公司</div>
+								<div class="work_exp_time">2010-2014</div>
+								<div class="work_exp_position">设计总监</div>
+								<div class="work_exp_salary">20k-30k</div>
+								<div class="work_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="work_exp_tr">
+								<div class="work_exp_company_name">N-vision设计公司</div>
+								<div class="work_exp_time">2010-2014</div>
+								<div class="work_exp_position">设计总监</div>
+								<div class="work_exp_salary">20k-30k</div>
+								<div class="work_exp_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="work_exp_batch_opr">
+							<a href="javascript:void(0);">全部删除</a>
+							<select>
+								<option>全部隐藏</option>
+								<option>全部显示</option>
+							</select>
+						</div>
+						<div class="clear"></div>
+						<div class="add_work_exp_title">添加工作经历</div>
+						<table class="add_work_exp_table">
+							<tr>
+								<td class="add_work_exp_lable">时间</td>
+								<td class="add_work_exp_con">
+									<input type="text" name="add_work_exp_year" class="add_work_exp_time" value="" /><span>年</span>
+									<input type="text" name="add_work_exp_month" class="add_work_exp_time" value="" /><span>月</span>
+									<input type="text" name="add_work_exp_day" class="add_work_exp_time" value="" /><span>日</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="add_work_exp_lable">公司名</td>
+								<td class="add_work_exp_con">
+									<input type="text" class="add_work_company_name" value="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="add_work_exp_lable">职位</td>
+								<td class="add_work_exp_con">
+									<input type="text" class="add_work_position_name" value="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="add_work_exp_lable">月薪</td>
+								<td class="add_work_exp_con" class="add_work_exp_salary">
+									<select name="">
+										<option value="">请选择</option>
+										<option value="">小学</option>
+										<option value="">初中</option>
+										<option value="">高中</option>
+										<option value="">本科</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+						<div class="add_work_exp_btng">
+							<a href="javascript:void(0);">添加并保存</a>
+							<a href="javascript:void(0);">返回</a>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!--文章管理-->
+					<div class="bi_right_content none">
+						<div class="bi_right_content_title">文章管理</div>
+						<div class="bi_article_list">
+							<div class="bi_article_th">
+								<div class="bi_article_name">我的文章</div>
+								<div class="bi_article_time">时间</div>
+								<div class="bi_article_opr"></div>
+							</div>
+							<div class="bi_article_tr">
+								<div class="bi_article_name">【美食】DIY记录一下自己</div>
+								<div class="bi_article_time">2016.12.12</div>
+								<div class="bi_article_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="bi_article_tr">
+								<div class="bi_article_name">【美食】DIY记录一下自己</div>
+								<div class="bi_article_time">2016.12.12</div>
+								<div class="bi_article_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="bi_article_tr">
+								<div class="bi_article_name">【美食】DIY记录一下自己</div>
+								<div class="bi_article_time">2016.12.12</div>
+								<div class="bi_article_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="bi_article_tr">
+								<div class="bi_article_name">【美食】DIY记录一下自己</div>
+								<div class="bi_article_time">2016.12.12</div>
+								<div class="bi_article_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="bi_article_tr">
+								<div class="bi_article_name">【美食】DIY记录一下自己</div>
+								<div class="bi_article_time">2016.12.12</div>
+								<div class="bi_article_opr">
+									<span>
+										<a href="javascript:void(0);">修改</a>
+										<a href="javascript:void(0);">删除</a>
+									</span>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="add_bi_article_btng">
+							<a href="javascript:void(0);">添加并保存</a>
+							<a href="javascript:void(0);">返回</a>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
 			</div>
+			<!--密码安全-->
+			<div class="bi_content none">
+				<div class="bi_left_content">
+					<div class="bi_acc_info">
+						<div class="bi_model_title">我的账号</div>
+						<div class="bi_acc_div">
+							<a href="javascript:void(0);" class="bi_acc_id">15071232323</a>
+							<a href="javascript:void(0);" class="bi_acc_btn">修改</a>
+							<i class="vip_logo"></i>
+						</div>
+					</div>
+					<div class="bi_nav_info">
+						<div class="bi_model_title">密码安全</div>
+						<a href="javascript:void(0)" class="bi_nav_item active">修改密码</a>
+						<a href="javascript:void(0)" class="bi_nav_item">申请找回</a>
+					</div>
+				</div>
+				<div class="bi_right_content_wrap">
+					<!--修改密码-->
+					<div class="bi_right_content">
+						<div class="bi_right_content_title">修改密码</div>
+						<table class="modify_pass_table">
+							<tr>
+								<td class="mp_left_lable">原始密码：</td>
+								<td class="mp_right_content">
+									<input type="text"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="mp_left_lable">手机号：</td>
+								<td class="mp_right_content">
+									<input type="text"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="mp_left_lable"></td>
+								<td class="mp_right_content">
+									<a class="sendbtn" href="javascript:void(0);">发送验证码</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="mp_left_lable">验证码：</td>
+								<td class="mp_right_content">
+									<input type="text"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="mp_left_lable">新密码：</td>
+								<td class="mp_right_content">
+									<input type="text"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="mp_left_lable">重复密码:</td>
+								<td class="mp_right_content">
+									<input type="text"/>
+								</td>
+							</tr>
+						</table>
+						<div class="modify_pass_btng">
+							<a href="javascript:void(0);">保存</a>
+							<a href="javascript:void(0);">返回</a>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!--找回密码-->
+					<div class="bi_right_content none">
+						<div class="bi_right_content_title">找回密码</div>
+						<table class="modify_pass_table">
+							<tr>
+								<td class="mp_left_lable">手机号：</td>
+								<td class="mp_right_content">
+									<input type="text"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="mp_left_lable"></td>
+								<td class="mp_right_content">
+									<a class="sendbtn" href="javascript:void(0);">发送验证码</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="mp_left_lable">验证码：</td>
+								<td class="mp_right_content">
+									<input type="text"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="mp_left_lable">新密码：</td>
+								<td class="mp_right_content">
+									<input type="text"/>
+								</td>
+							</tr>
+						</table>
+						<div class="modify_pass_btng">
+							<a href="javascript:void(0);">保存</a>
+							<a href="javascript:void(0);">返回</a>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>	
 		</div>
 	</body>
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
@@ -228,6 +940,7 @@
 			initCloseMask();
 			initBaseInfoNavBar();
 			initBaseInfoPage();
+			initmodifyPass();
 		});
 	</script>
 </html>
