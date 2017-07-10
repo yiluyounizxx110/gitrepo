@@ -40,7 +40,7 @@ function initLabel(){
     	var $BNavH="<div class='BNav'>",_navCenter="";
         for(var i=0;i<data.length;i++){
             $BNavH+="<span data-index='"+ data[i].id +"'>"+data[i].name+"</span>";
-            _navCenter+="<div class='navCenter'><div class='navName'>名称</div><div class='navCenterBox'><div class='navCenterList'>";
+            _navCenter+="<div class='navCenter'><div class='navNameList'><div class='navName'>名称</div></div><div class='navCenterList'>";
             var navCenterListCh="";
             if(data[i].data != null){
             	for(var n=0;n<data[i].data.length;n++){
@@ -53,7 +53,7 @@ function initLabel(){
 	                navCenterListCh+="</div>"
 	            }
             }
-            _navCenter+="</div></div><div class='navRightBox'>"+ navCenterListCh +"</div></div>";
+            _navCenter+="</div><div class='navRightBox'>"+ navCenterListCh +"</div></div>";
         }
         $BNavH+="<i></i></div>";
         $('.header_select_link .fixCenter').html($BNavH+_navCenter);
@@ -64,7 +64,7 @@ function initLabel(){
     		$(".mask_p").removeClass("active");
 			$(".fixBox").css("display",'none');
     		var $fixBox=$('.header_select_link .fixBox');
-    		$fixBox.css({width:$(window).width(),height:height});
+    		$fixBox.css({width:$(window).width()});
         	$fixBox.stop().slideDown(300);
         	$(".header_select_link").addClass("active");
     	}else{
@@ -72,6 +72,11 @@ function initLabel(){
 	        $(".header_select_link").removeClass("active");
     	}
 		
+    });
+    
+    $(".header_select_link .fixBottom").click(function(){
+    	$(".fixBox").stop().slideUp(300);
+    	$(".header_select_link").removeClass("active");
     });
     
     var $body=$('body');
@@ -89,7 +94,7 @@ function initLabel(){
         $(".header_select_link_a").attr("data-index",$(this).attr("data-index"));
     }).on('mouseenter','.navCenterList span',function(){
         var i=$(this).index();
-        $(this).parent().parent().siblings('.navRightBox').find(".navCenterListCenter")
+        $(this).parent().siblings('.navRightBox').find(".navCenterListCenter")
 			   .eq(i).show().siblings('.navCenterListCenter').hide();
     }).on('click','.navName',function(){
     	$(".navCenter").hide();
@@ -106,7 +111,7 @@ function initAreaSelect(){
 			$(".mask_p").removeClass("active");
 			$(".fixBox").css("display",'none');
 			var $fixBox=$('.area .fixBox');
-	    	$fixBox.css({width:width,height:height});
+	    	$fixBox.css({width:width});
 	        $fixBox.stop().slideDown(300);
 	        $(this).parent(".area").addClass("active");
 		}else{
@@ -179,7 +184,11 @@ function initAreaSelect(){
     	}
     	
     	$(".area .area_text i").text("中国" + provinceText + datatext);
-    })
+    });
+    $(".area .fixBottom").click(function(){
+    	$(".fixBox").stop().slideUp(300);
+    	$(".area").removeClass("active");
+    });
 }
 /**登录注册信息**/
 function initLoginInfo(){
@@ -192,7 +201,7 @@ function initLoginInfo(){
 			$(".fixBox").css("display",'none');
 			$(this).addClass("active");
 			var $fixBox=$('.unlogin .fixBox');
-	    	$fixBox.css({width:width,height:height});
+	    	$fixBox.css({width:width});
 	        $fixBox.stop().slideDown(300);
 	        $fixBox.show();
 		}else{
@@ -218,6 +227,10 @@ function initLoginInfo(){
     	$(this).html("<span>60</span>s");
     	$(this).addClass("disabled");
     	timer = setInterval(calcutetime60,1000); 
+    });
+    $('.user_info.unlogin .fixBottom').click(function(){
+    	$('.unlogin .fixBox').stop().slideUp(300);
+    	$(".user_info.unlogin .mask_p").removeClass("active");
     });
 }    
 

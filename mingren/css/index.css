@@ -80,20 +80,21 @@ a:hover{
 }
 .logo{
 	width: 95px;
+	height:45px;
 	float:left;
 	/*margin-left: 54px;*/
-	margin-top: 9px;
+	margin-top: 6px;
 }
 .header_select_link{
 	width:130px;
 	height:60px;
 	float:left;
     margin-left: 108px;
-    cursor: pointer;
 	color:#ffffff;
 	font-size: 14px;
 }
 .header_select_link_a{
+	cursor: pointer;
 	display: inline-block;
 	box-sizing: border-box;
 	width:130px;
@@ -105,6 +106,16 @@ a:hover{
     text-overflow:ellipsis;
 	color:#ffffff;
 	position: relative;
+}
+.header_select_link_a i{
+	width:130px;
+	height:60px;
+	line-height: 60px;
+	text-align: center;
+	white-space:nowrap;
+    overflow:hidden;
+    float:left;
+    text-overflow:ellipsis;
 }
 .header_select_link_a:hover{
 	color:#ffffff;
@@ -457,22 +468,30 @@ a:hover{
     background: rgba(40,40,40,.95);
     z-index: 16;
     display: none;
+    height:699px;
 }
 .fixCenter{
-    height: 100%;
+    height: 649px;
     width:1200px;
     margin: 0 auto;
     position: relative;
 }
 .area .fixCenter{
-    height: 100%;
+    height: 649px;
     width:1200px;
     margin: 0 auto;
     overflow-x: hidden;
     overflow-y: scroll;
 }
+.fixBottom{
+	width:200px;
+	height:50px;
+	cursor: pointer;
+	margin: 0 auto;
+	background: url(../images/arra_up.png) no-repeat 92px 23px;
+}
 .BNav{
-    height: 100%;
+    height: 649px;
     margin: 0 auto;
     width: 1200px;
 }
@@ -501,87 +520,209 @@ a:hover{
 }
 
 .navCenter{
-	padding-top: 20px;
     height: 100%;
     display: none;
 }
+.navCenter .navNameList{
+	width:190px;
+	height: 649px;
+	overflow-x: hidden;
+    float:left;
+    border-right: 1px solid #6F6F6F;
+}
 .navName{
     float: left;
-    width: 160px;
+    width: 180px;
+    height: 40px;
     line-height: 40px;
     text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
 }
-
-.navCenterBox{
+.navCenter .navNameList .navName:first-child{
+	margin-top: 47px;
+}
+.navName:after{
+	content: "";
+	display: inline-block;
+	clear: both;
+}
+/*.navCenterBox{
     float: right;
     height: 100%;
     overflow: auto;
     width: calc(100% - 161px);
-}
-.navCenterListCenter{
+}*/
+/*.navCenterListCenter{
     display: inline-block;
     right: 0;
     line-height: normal;
     text-align: left;
     display: none;
-}
+}*/
 .navCenterList{
     line-height: normal;
-    width: 185px;
+    width: 190px;
+    height: 649px;
     float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-right: 1px solid #6F6F6F;
 }
-.navCenterList:after{
+/*.navCenterList:after{
     content:" ";
     clear: both;
     display: block;
-}
+}*/
+
+   /* width:180px;
+    height:40px;
+    background: #4f4f4f;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0 5px 5px;
+    cursor: pointer;
+    float:left;*/
+
 .navCenterList span{
-    width: 186px;
-    margin: 5px 0;
-    line-height: 30px;
+    width: 170px;
+    height: 40px;
+    /*margin-top: 5px;*/
+    margin-left: 10px;
+    line-height: 20px;
     cursor: pointer;
     text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    float: left;
+    /*padding-left: 10px;
+    padding-right: 10px;*/
 }
 .navCenterList span:hover{
     background: rgb(0,190,220);
+    border:none;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+/*.navCenterList span:after{
+	clear: both;
+	content: "";
+	display: inline-block;
+}*/
+.navCenterList span:first-child{
+	margin-top: 47px;
 }
 
-.navCenterList div{
+/*.navCenterList div{
     float: right;
     width: calc(100% - 220px);
     text-align: left;
-}
+}*/
 .navRightBox{
-    width: 725px;
-    height: 100%;
-    position: absolute;
-    right: 54px;
-    top: 0px;
-    padding-top: 20px;
+    width: 790px;
+    height: 649px;
+    padding-top: 47px;
+    padding-left: 5px;
     overflow-y: auto;
     overflow-x: hidden;
+    border-right: 1px solid #6F6F6F;
+    float: left;
 }
 .navCenterListCenter{
-	width: 710px;
+	width: 790px;
 }
 .navCenterListCenter i{
-    display: inline-block;
-    padding: 0 20px;
+    /*display: inline-block;*/
+    /*padding: 0 20px;*/
+    width:180px;
+    height:40px;
     background: #4f4f4f;
-    line-height: 30px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
     text-align: center;
-    white-space:nowrap;
+    /*white-space:nowrap;
     overflow:hidden;
-    text-overflow:ellipsis;
-    vertical-align: top;
-    margin: 5px;
+    text-overflow:ellipsis;*/
+    /*vertical-align: top;*/
+    margin: 0 0 5px 5px;
     cursor: pointer;
+    float:left;
 }
 .navCenterListCenter i:hover{
     background: rgb(0,190,220);
 }
 .navCenterListCenter i.active{
 	background: rgb(0,190,220);
+}
+/***滚动条样式**/
+.navCenterList::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 8px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 8px;
+}
+.navCenterList::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    background: #8C8C8C;
+}
+.navCenterList::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    background: none;
+}
+.navNameList::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 8px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 8px;
+}
+.navNameList::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    background: #8C8C8C;
+}
+.navNameList::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    background: none;
+}
+.navRightBox::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 8px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 8px;
+}
+.navRightBox::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    background: #8C8C8C;
+}
+.navRightBox::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    background: none;
+}
+.area .fixCenter::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 8px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 8px;
+}
+.area .fixCenter::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    background: #8C8C8C;
+}
+.area .fixCenter::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    background: none;
 }
 /*地区选择*/
 .section_warpper{
@@ -665,10 +806,10 @@ a:hover{
 	cursor: pointer;
 }
 .province_wrapper .city_wrapper .city_item.current{
-	background-color: #00C0DC;
+	background-color: rgb(0,190,220);
 }
 .province_wrapper .city_wrapper .city_item:hover{
-	background-color: #00C0DC;
+	background-color: rgb(0,190,220);
 }
 
 
