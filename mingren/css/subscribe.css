@@ -1,26 +1,29 @@
 .sc_ad_pos{
 	width:1200px;
-	height:200px;
+	height:130px;
 	border:1px dotted #dddddd;
 	margin: 0 auto;
 }
 .sc_ad_pos_img{
-	margin: 27px auto;
+	width:146px;
+	height:130px;
+	margin: 0px auto;
 	display: block;
 }
 .sc_title{
 	width:1200px;
-	height:35px;
+	height:30px;
 	margin: 0 auto;
 	background-color: #DCDCDD;
 	color:#004E6E;
 }
 .sc_title span{
+	width:240px;
 	cursor: pointer;
 	padding-left: 40px;
 	padding-right: 40px;
 	display: inline-block;
-	height:35px;
+	height:30px;
 	float:left;
 	border-left:1px dotted #C0C1C1; 
 }
@@ -32,9 +35,9 @@
 }
 .sc_title span.sc_title_item a{
 	display: inline-block;
-	height:23px;
-	line-height: 22px;
-	padding-left: 5px;
+	height:18px;
+	line-height: 18px;
+	padding-left: 10px;
 	margin-top: 6px;
 	border-left:4px solid #004B6E;
 	font-size: 20px;
@@ -49,13 +52,14 @@
 }
 .sc_content_in_list{
 	width:100%;
-	height:410px;
+	height:486px;
 	background-color: #EDEDEF;
 }
 .sc_content_item{
 	float:left;
 	box-sizing: border-box;
 	width:150px;
+	height:486px;
 }
 .sc_content_item_lable:hover{
 	color:#ffffff;
@@ -73,22 +77,22 @@
 	top:0;
 	right:4px;
 	width: 40px;
-	height:12px;
+	height:10px;
 	font-size: 12px;
 	text-align: center;
-	line-height: 12px;
+	line-height: 10px;
 	background-color: red;
-	border-radius: 6px;
+	border-radius: 5px;
 }
 .sc_content_item_lable{
-	width: 120px;
-	height:40px;
+	width: 122px;
+	height:35px;
 	display: block;
-	border-radius: 20px;
+	border-radius: 17px;
 	background-color: #004B6E;
-	margin: 20px 15px;
+	margin: 12px 14px;
 	text-align: center;
-	line-height: 40px;
+	line-height: 35px;
 	color: #ffffff;
 	font-size: 16px;
 	position: relative;
@@ -98,7 +102,7 @@
 }
 .sc_user_list{
 	width: 150px;
-	height:320px;
+	height:407px;
 	box-sizing: border-box;
 	border-right: 2px solid #9E9F9F;
 	list-style: none;
@@ -106,7 +110,7 @@
 }
 .sc_user_list .sc_user_item{
 	width: 150px;
-	height:80px;
+	height:98px;
 	float: left;
 }
 .sc_content_item:nth-of-type(8) .sc_user_list{
@@ -116,18 +120,19 @@
 	content: "";
 	display: inline-block;
 	position: absolute;
-    top: 33px;
-    left: 85px;
-	width: 14px;
-	height:14px;
-	background: url(../images/vip_logo.png) no-repeat -1px -1px;
+    top: 52px;
+    left: 88px;
+	width: 12px;
+	height:12px;
+	border:1px solid #ffffff;
+	background: url(../images/vip12.png) no-repeat 0 0;
 	background-color: #ffffff;
 	border-radius: 50%;
 }
 .sc_user_list .sc_user_item .sc_user_logo{
 	display: block;
-	width:50px;
-	height:50px;
+	width:60px;
+	height:60px;
 	border-radius: 50%;
 	border:3px solid #717070;
 	margin: 0 auto;
@@ -145,19 +150,19 @@
 }
 .my_sc_title{
 	width:1200px;
-	height:200px;
+	height:228px;
 	margin: 0 auto;
 }
 .my_sc_title .my_sc_title_img{
-	width:131px;
-	height:160px;
-	margin-left: 200px;
+	width:164px;
+	height:228px;
+	margin-left: 168px;
 	float:left;
 }
 .my_sc_title span{
 	display: inline-block;
 	font-size: 26px;
-    margin-left: 70px;
+    margin-left: 40px;
     margin-top: 60px;
 	float:left;
 }
@@ -169,35 +174,35 @@
 	background-color: #E5F3E6;
 }
 .subscript_my_user_title{
-	width:240px;
-	height:40px;
+	width:292px;
+	height:42px;
 	background-color: #014B6E;
 	color:#ffffff;
 	font-size: 18px;
 	text-align: center;
-	line-height: 40px;
-    border-radius: 15px 0px 40px 0;
+	line-height: 42px;
+    border-radius: 21px 0px 42px 0;
 }
 .subscript_my_user_container{
-	width:1080px;
-	margin: 10px auto 0;
+	width:1152px;
+	margin: 10px 24px 0;
 }
 .subscript_my_user_item{
-	width:90px;
-	height:80px;
+	width:96px;
+	height:102px;
 	float: left;
 	position: relative;
 }
 .subscript_my_user_logo{
-	width:50px;
-	height:50px;
+	width:56px;
+	height:56px;
 	display: block;
 	margin: 0 auto;
     border:3px solid #717070;
 	border-radius: 50%;
 }
 .subscript_my_user_name{
-	width:90px;
+	width:96px;
 	height:20px;
 	display: inline-block;
 	text-align: center;
@@ -210,11 +215,12 @@
 	content: "";
 	display: inline-block;
 	position: absolute;
-    top: 33px;
-    left: 56px;
-	width: 14px;
-	height:14px;
-	background: url(../images/vip_logo.png) no-repeat -1px -1px;
+    top: 48px;
+    left: 62px;
+	width: 12px;
+	height:12px;
+	border:1px solid #ffffff;
+	background: url(../images/vip12.png) no-repeat 0px 0px;
 	background-color: #ffffff;
 	border-radius: 50%;
 }
@@ -255,28 +261,30 @@
 	text-decoration: underline;
 }
 .scm_user_list_wrap{
-	width:810px;
+	width:826px;
 	margin: 0 auto;
 	overflow-x:hidden;
 }
 .scm_user_list{
 	width:900px;
-	height:600px;
+	height:564px;
 	margin: 20px auto 0;
 	list-style: none;
 	float:left;
-	margin-left: -45px;
+	margin-left: -37px;
+    border-bottom: 2px solid #ffffff;
+	background: url(../images/morebg_ling.png) 0 1px;;
 }
 .scm_user_list li.scm_user_item{
 	width: 150px;
-	height:100px;
+	height:94px;
 	float: left;
 	position: relative;
 }
 .scm_user_list .scm_user_item .scm_user_logo{
 	display: block;
-	width:50px;
-	height:50px;
+	width:56px;
+	height:56px;
 	border-radius: 50%;
 	border:3px solid #717070;
 	margin: 5px auto;
@@ -296,29 +304,30 @@
 	content: "";
 	display: inline-block;
 	position: absolute;
-    top: 41px;
-    left: 90px;
-	width: 14px;
-	height:14px;
-	background: url(../images/vip_logo.png) no-repeat -1px -1px;
+    top: 53px;
+    left: 88px;;
+	width: 12px;
+	height:12px;
+	border:1px solid #ffffff;
+	background: url(../images/vip12.png) no-repeat 0px 0px;
 	background-color: #ffffff;
 	border-radius: 50%;
 }
 .scm_lable_list{
 	width:1200px;
-	height:80px;
-	margin: 0 auto;
+	height:117px;
+	margin: 10px auto 0;
 	background-color: #EEEEEE;
 }
 .scm_lable_item{
 	width: 120px;
-	height:40px;
+	height:35px;
 	float:left;
-	border-radius: 20px;
+	border-radius: 17px;
 	background-color: #004B6E;
-	margin: 20px 15px;
+	margin: 38px 15px;
 	text-align: center;
-	line-height: 40px;
+	line-height: 35px;
 	color: #ffffff;
 	font-size: 16px;
 	overflow: hidden;
@@ -336,15 +345,15 @@
 	background-color: #EDEDEF;
 }
 .my_sc_user_list{
-	width:1020px;
+	width:1062px;
 	height:340px;
 	margin: 0 70px 0 110px;
 }
 .my_sc_user_item{
 	float:left;
-	width:300px;
+	width:292px;
 	height:90px;
-	margin: 20px 40px 0 0;
+	margin: 21px 31px 0 31px;
 	background-color: #DCDCDD;
 	border-radius: 5px;
 }
@@ -357,11 +366,11 @@
 }
 .my_sc_user_icon img{
 	display: block;
-	width:50px;
-	height:50px;
+	width:56px;
+	height:56px;
 	border-radius: 50%;
 	border:3px solid #717070;
-	margin: 5px auto;
+	margin: 3px auto;
 }
 .my_sc_user_icon span{
 	width:90px;
@@ -374,11 +383,12 @@
 	content: "";
 	display: inline-block;
 	position: absolute;
-    top: 41px;
-    left: 60px;
-	width: 14px;
-	height:14px;
-	background: url(../images/vip_logo.png) no-repeat -1px -1px;
+    top: 50px;
+    left: 58px;
+	width: 12px;
+	height:12px;
+	border: 1px solid #ffffff;
+	background: url(../images/vip12.png) no-repeat;
 	background-color: #ffffff;
 	border-radius: 50%;
 }

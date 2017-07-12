@@ -1,7 +1,7 @@
 .sc_header{
 	width:100%;
 	height:30px;
-	margin-top:5px;
+	margin-top:7px;
 	background-color: #DCDEDD;
 }
 .sc_header_container{
@@ -16,10 +16,10 @@
 }
 .sc_header_item a{
 	width:300px;
-	height:20px;
+	height:24px;
 	box-sizing: border-box;
-	line-height: 20px;
-	margin-top: 5px;
+	line-height: 24px;
+	margin-top: 3px;
 	color:#0F3B56;
 	text-decoration: underline;
 	text-indent: 30px;
@@ -30,7 +30,7 @@
 }
 .sc_header_item a.sc_acc_mg{
 	background-image: url(../images/sc_acc1.png);
-    background-position: 8px 2px;
+    background-position: 8px 4px;
 	background-repeat: no-repeat;
 }
 .sc_header_item.active a.sc_acc_mg{
@@ -38,7 +38,7 @@
 }
 .sc_header_item a.sc_report{
 	background-image: url(../images/sc_report2.png);
-    background-position: 8px 2px;
+    background-position: 8px 4px;
 	background-repeat: no-repeat;
 }
 .sc_header_item.active a.sc_report{
@@ -46,7 +46,7 @@
 }
 .sc_header_item a.sc_ads{
 	background-image: url(../images/sc_ads.png);
-    background-position: 8px 2px;
+    background-position: 8px 4px;
 	background-repeat: no-repeat;
 }
 .sc_header_item.active a.sc_ads{
@@ -59,34 +59,36 @@
 	border-left:2px solid #DFDFE0;
 	border-right:2px solid #DFDFE0;
 	margin-top: 15px;
-	margin: 15px auto 0;
+	margin: 20px auto 0;
 }
 .sc_acc_wr{
-	width:880px;
+	width:904px;
 	/*height:400px;*/
-	padding: 74px 0 30px;
+	padding: 94px 0 37px;
 	margin: 0 auto;
 	/*border:1px solid red;*/
 }
 .sys_handle_rec{
-	width:420px;
-	height:275px;
+	width:430px;
+	height:280px;
 	background-color: #EAF1FB;
 	float: left;
+	line-height: 30px;
 	font-size: 18px;
 }
 .sys_del_rec{
-	width:420px;
-	height:275px;
+	width:430px;
+	height:280px;
 	background-color: #EAF1FB;
 	float: left;
-	margin-left: 40px;
+	margin-left: 44px;
+	line-height: 30px;
 	font-size: 18px;
 }
 .sys_rec .tips{
 	color:#EF9224;
 	display: block;
-	margin-top: 52px;
+	margin-top: 50px;
 	margin-left:43px;
 }
 .sys_rec .tips2{
@@ -98,8 +100,8 @@
 .sys_rec .confirm_btn{
 	display: block;
 	margin-top: 90px;
-	margin-left:43px;
-	width: 178px;
+	margin-left:42px;
+	width: 183px;
 	height:50px;
 	background-color:#DCDEDD;
 	color:#336D88;
@@ -117,10 +119,10 @@
 	background-repeat: no-repeat;
 }
 .sys_tip{
-	width:420px;
-	height:215px;
+	width:430px;
+	height:224px;
 	background-color: #EEEEEE;
-	margin-top:140px;
+	margin-top:144px;
 	float:left;
 	position:relative;
 	font-size: 15px;
@@ -129,7 +131,7 @@
 	
 }
 .notice{
-	margin-left: 40px;
+	margin-left: 43px;
 }
 .sys_tip .sys_tip_title{
 	width:80px;
@@ -175,17 +177,17 @@
 }
 .sc_report_content .title{
 	font-size: 16px;
-	margin-top: 50px;
+	margin-top: 70px;
 	color: #5A747F;
 }
 .sc_ads_content{
 	width:1200px;
-	margin: 10px auto 0;
+	margin: 9px auto 0;
 }
 .ads_pos{
 	width:1200px;
-	height:200px;
-	line-height: 200px;
+	height:190px;
+	line-height: 190px;
 	text-align: center;
 	font-size: 14px;
 	color: #DFB1B0;
@@ -199,18 +201,19 @@
 }
 .sc_ads_co_me{
 	width:400px;
-	height:50px;
+	height:72px;
 	margin-left: 115px;
-	margin-top: 70px;
+	margin-top: 80px;
 }
 .sc_ads_co_me li{
 	list-style: disc;
+	line-height: 36px;
 }
 .decliar{
 	font-size: 14px;
 	font-weight: bold;
 	margin-left: 100px;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 .decliar_list{
 	margin-top: 20px;
@@ -219,4 +222,5 @@
 	font-weight: normal;
 	list-style: decimal;
 	margin-left: 115px;
+	line-height: 36px;
 }

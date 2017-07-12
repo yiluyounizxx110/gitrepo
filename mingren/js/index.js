@@ -1,5 +1,6 @@
 var timer = null;
-
+var navCenterListTop = 0,navCenterListTopPre=0;
+var navCenterListScrollInterval=null;
 function initPage(){
 	
 	var width = $(window).width();
@@ -33,14 +34,11 @@ function initCloseMask(){
 	$(".search_input_box .searchbtn").on('click',closeFixBox);
 }
 function initLabel(){
-	var width = $(window).width();
-	var height = width * 559 / 1349;
-	
     $.getJSON("js/joblabel.json",function(data){
     	var $BNavH="<div class='BNav'>",_navCenter="";
         for(var i=0;i<data.length;i++){
             $BNavH+="<span data-index='"+ data[i].id +"'>"+data[i].name+"</span>";
-            _navCenter+="<div class='navCenter'><div class='navNameList'><div class='navName'>名称</div></div><div class='navCenterList'>";
+            _navCenter+="<div class='navCenter'><div class='navNameList'><div class='navName'>名称</div><div class='selectFirstLable none'></div><div class='selectSecondLable none'></div></div><div class='navCenterList'>";
             var navCenterListCh="";
             if(data[i].data != null){
             	for(var n=0;n<data[i].data.length;n++){
@@ -57,6 +55,14 @@ function initLabel(){
         }
         $BNavH+="<i></i></div>";
         $('.header_select_link .fixCenter').html($BNavH+_navCenter);
+        
+        //一级菜单停止滚动后，和二级菜单对齐
+        $('body .navCenterList').scroll(function(){
+        	if(navCenterListScrollInterval == null){
+	    		navCenterListScrollInterval=setInterval(listenNavCenterListScroll,100);//这里就是判定时间，当前是1秒一判定
+	    	}
+	    	navCenterListTop = $(this)[0].scrollTop;
+        })
     });
     
     $('.header_select_link_a').click(function(){
@@ -90,10 +96,14 @@ function initLabel(){
         console.log($(this).text());
         $(".navCenterListCenter i").not($(this)).removeClass("active");
         $(this).addClass("active");
+        $(".selectSecondLable").removeClass("none").html($(this).html());
         $(".header_select_link_a i").html($(this).text());
         $(".header_select_link_a").attr("data-index",$(this).attr("data-index"));
-    }).on('mouseenter','.navCenterList span',function(){
+    }).on('click','.navCenterList span',function(){
+    	$(this).addClass("active").siblings("span").removeClass("active");
         var i=$(this).index();
+        $(".selectFirstLable").removeClass("none").html($(this).html());
+        $(".selectSecondLable").addClass("none");
         $(this).parent().siblings('.navRightBox').find(".navCenterListCenter")
 			   .eq(i).show().siblings('.navCenterListCenter').hide();
     }).on('click','.navName',function(){
@@ -101,6 +111,30 @@ function initLabel(){
     	$(".BNav").show();
     });
 }
+
+function listenNavCenterListScroll(){
+	if(navCenterListTopPre != navCenterListTop){
+		navCenterListTopPre = navCenterListTop;
+	}else{
+		clearInterval(navCenterListScrollInterval);
+		navCenterListScrollInterval = null;
+		var top = navCenterListTop % 45;
+		if(top < 23){
+//			$(".navCenterList").scrollTop(navCenterListTop - top);
+            $(".navCenterList").animate(
+            	{
+            		'scrollTop':navCenterListTop - top
+            	},200);
+		}else{
+//			$(".navCenterList").scrollTop(navCenterListTop + 45- top);
+			$(".navCenterList").animate(
+            	{
+            		'scrollTop':navCenterListTop + 45- top
+            	},200);
+		}
+	}
+}
+
 
 function initAreaSelect(){
 	var width = $(window).width();
@@ -273,11 +307,13 @@ var slider = {
 
 /**发帖按钮时间初始化**/
 function initSendBtnEvent(){
-	if(310- $(document).scrollTop() <= $(window).height()/2){
+	if(307- $(document).scrollTop() <= $(window).height()/2){
 		$(".fixed_nav_btn").removeClass("none");
+	}else{
+		$(".fixed_nav_btn").addClass("none");
 	}
 	$(window).scroll(function () {
-		if(310- $(document).scrollTop() <= $(window).height()/2){
+		if(307- $(document).scrollTop() <= $(window).height()/2){
 			$(".fixed_nav_btn").removeClass("none");
 		}else{
 			$(".fixed_nav_btn").addClass("none");
@@ -370,13 +406,13 @@ function sa_article_init(id){
 	    	borderBottom:'1px solid #F3F3F5'
      	});
      	$(".edui-editor.edui-default").css({
-     		zIndex:1
+     		zIndex:3
      	});
      	$("#edui1_iframeholder").css({marginTop:'140px'});
      	$(".edui-editor-iframeholder.edui-default").css(
      		{
      			width:'700px',
-     			marginTop:'160px', 
+     			marginTop:'208px', 
      			marginLeft:'100px',
      			borderBottom:'1px solid #DBDBDB'
  			}
@@ -389,11 +425,13 @@ function sa_article_init(id){
 }
 /**发帖页面按钮事件初始化**/
 function initSendArticleBtnEvent(){
-	if(630- $(document).scrollTop() <= $(window).height()/2){
+	if(708- $(document).scrollTop() <= $(window).height()/2){
 		$(".fixed_send_btn").removeClass("none");
+	}else{
+		$(".fixed_send_btn").addClass("none");
 	}
 	$(window).scroll(function () {
-		if(630- $(document).scrollTop() <= $(window).height()/2){
+		if(708- $(document).scrollTop() <= $(window).height()/2){
 			$(".fixed_send_btn").removeClass("none");
 		}else{
 			$(".fixed_send_btn").addClass("none");
