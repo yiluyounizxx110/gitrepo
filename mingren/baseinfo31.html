@@ -930,8 +930,48 @@
 			
 			<div class="bi_content">
 				<div class="bi_my_acc">
+					<!--数字展示位置调用函数初始化initMyLevel(32); initMyInviteNums(23);-->
 					<div class="bi_my_acc_title">我的账号</div>
+					<img src="images/user.png" class="bi_my_acc_user_img"/>
+					<div class="bi_my_acc_info">
+						<span class="bi_my_acc_user_mobile">名人：13387679854</span>
+						<span class="bi_my_acc_user_is_zc">众筹账户：是</span>
+						<span class="bi_my_acc_user_is_rz">账号认证：已认证</span>
+						<span class="bi_my_acc_user_is_vip">VIP认证：VIP用户</span>
+					</div>
+					<div class="bi_my_acc_level">
+						<span class="bi_my_acc_current_level">当前32级</span>
+					</div>	
+					<div class="bi_my_acc_level_line"></div>
+					<div class="bi_my_invite_friends_num">
+						<div class="bi_my_invite_friends_num_title">邀请好友共同成长:</div>
+						<img class="bi_my_invite_friends_num_img" src="images/bg_bg.png"/>
+						<div class="bi_my_invite_friends_current">成功邀请18位</div>
+					</div>
 				</div>
+				
+				<div class="my_acc_jc">
+					<div class="my_acc_jc_vip">
+						<div class="my_acc_jc_title">VIP账号加成</div>
+						<div class="my_acc_jc_content"></div>
+					</div>
+					<div class="my_acc_jc_total">
+						<div class="my_acc_jc_title">总加成值</div>
+						<div class="my_acc_jc_content">
+							<canvas class="my_acc_jc_pie_charts" id="my_acc_jc_pie_charts"></canvas> 
+							<div class="my_acc_jc_pie_calc">
+								<span class="my_acc_jc_pie_calc_title">您的总加成值为：</span>
+								<div class="my_acc_jc_pie_calc_total">40%</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="my_acc_grow_level_intro">成长等级介绍</div>
+				<div class="my_acc_grow_level_intro_d">参考淘宝个人信息图片</div>
+				
+				<div class="my_acc_vip_jc_intro">VIP加成介绍</div>
+				<div class="my_acc_vip_jc_intro_d">参考淘宝个人信息图片</div>
 			</div>	
 		</div>
 	</body>
@@ -939,6 +979,7 @@
 	<script type="text/javascript" src="js/jquery.ui.widget.js" ></script>
 	<script type="text/javascript" src="js/jquery.iframe-transport.js" ></script>
 	<script type="text/javascript" src="js/jquery.fileupload.js" ></script>
+	<script type="text/javascript" src="js/pie.js"></script>
 	<script type="text/javascript" src="js/index.js" ></script>
 	<script>
 		$(function(){
@@ -949,6 +990,9 @@
 			initBaseInfoNavBar();
 			initBaseInfoPage();
 			initmodifyPass();
+			initMyLevel(32);
+			initMyInviteNums(23);
+			initMyAccJcPieCharts();
 		});
 	</script>
 </html>

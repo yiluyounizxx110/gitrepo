@@ -577,3 +577,106 @@ function calcutemodifyPasstime(){
 	}
 	$(".modify_pass_table .sendbtn span").html(time - 1);
 }
+
+function initMyLevel(level){
+	var left = 0;
+	var top = 0;
+	if(level == 0){
+		top = 29;
+		left = -19;
+	}else if(level == 20){
+		top = 29;
+		left = 179;
+	}else if(level == 40){
+		top = 29;
+		left = 377;
+	}else if(level == 60){
+		top = 29;
+		left = 575;
+	}else if(level == 80){
+		top = 15;
+		left = 775;
+	}else if(level == 100){
+		top = 5;
+		left = 972;
+	}else if(level > 0 && level < 20){
+		top = 40;
+		left = -19 + 16 + (166/18)*(level-1);
+	}else if(level > 20 && level < 40){
+		top = 40;
+		left = 179 + 16 + (166/18)*(level-21);
+	}else if(level > 40 && level < 60){
+		top = 40;
+		left = 377 + 16 + (166/18)*(level-41);
+	}else if(level > 60 && level < 80){
+		top = 40;
+		left = 575 + 16 + (166/18)*(level-61);
+	}else if(level > 80 && level < 100){
+		top = 40;
+		left = 775 + 16 + (166/18)*(level-81);
+	}else if(level < 0){
+		top = 29;
+		left = -19;
+	}else if(level >= 100){
+		top = 40;
+		left = 775 + 16 + (166/18)*(level-81);
+	}
+	
+	$(".bi_my_acc_current_level").html("当前" + level + "级")
+	$(".bi_my_acc_current_level").css(
+		{
+			'left':left + 'px',
+			'top':top + 'px',
+			'display':'inline-block'
+		}
+	);
+}
+function initMyInviteNums(num){
+	var left = 0;
+	var top = 0;
+	if(num <= 0){
+		left = 120;
+		top=100;
+	}else if(num >= 100){
+		left = 1060;
+		top=27;
+	}else{
+		left = 120 + num * (1060 -120)/100;
+		top = 100 + num * (27 -100)/100;
+	}
+	$(".bi_my_invite_friends_current").html("成功邀请" + num + "位")
+	$(".bi_my_invite_friends_current").css(
+		{
+			'left':left + 'px',
+			'top':top + 'px',
+			'display':'inline-block'
+		}
+	);
+}
+function initMyAccJcPieCharts(){
+	var canvas = document.getElementById("my_acc_jc_pie_charts");  
+    var seriesData = [{name:"", value:20, color:"RGBA(0,160,233,1)"},  
+                  {name:"", value:20, color:"RGBA(239,130,0,1)"}]  
+    var config = {  
+            width : 800,   
+            height: 400,  
+            series: seriesData,  
+            canvas: canvas,  
+            unit: "1",  
+            title:"",  
+            tooltips : {  
+                enable : false  
+            },  
+            animation :{  
+                enable: false  
+            },  
+            legend : {  
+                enable : false  
+            },  
+            text : {  
+                enable: true  
+            },  
+    };  
+    pieChart.initSettings(config);  
+    pieChart.render();  
+}

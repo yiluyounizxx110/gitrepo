@@ -925,6 +925,7 @@
 .bi_my_acc{
 	width:1200px;
 	height:420px;
+	background-color: #EEEEEE;
 }
 .bi_my_acc_title{
 	width:100%;
@@ -934,4 +935,253 @@
 	line-height: 30px;
 	text-indent: 15px;
 	font-size: 15px;
+}
+.bi_my_acc_user_img{
+	width:111px;
+	height:111px;
+	float:left;
+	margin-top:10px;
+	margin-left: 14px;
+	border-radius: 50%;
+	border:3px solid #717070;
+}
+.bi_my_acc_info{
+	width:1069px;
+	height: 40px;
+	line-height: 40px;
+	float:left;
+	margin-top:10px;
+}
+.bi_my_acc_user_mobile{
+	display: inline-block;
+	float:left;
+	width:320px;
+	text-indent: 20px;
+	color:#231915;
+	font-size: 15px;
+	line-height: 40px;
+	height: 40px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.bi_my_acc_user_is_zc{
+	display: inline-block;
+	float:left;
+	width:260px;
+	text-indent: 20px;
+	line-height: 40px;
+	height: 40px;
+	color:#231915;
+	font-size: 15px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.bi_my_acc_user_is_rz{
+	display: inline-block;
+	float:left;
+	width:300px;
+	text-indent: 20px;
+	line-height: 40px;
+	height: 40px;
+	color:#231915;
+	font-size: 15px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.bi_my_acc_user_is_vip{
+	display: inline-block;
+	float:left;
+	width:189px;
+	height: 40px;
+	text-indent: 20px;
+	line-height: 40px;
+	color:#231915;
+	font-size: 15px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.bi_my_acc_level{
+	width:1030px;
+	height:100px;
+	float:left;
+    margin-left: 18px;
+    position: relative;
+	background: url(../images/level_bg.png) no-repeat 0px 39px;
+}
+.bi_my_acc_current_level{
+	display: inline-block;
+	width: 70px;
+	height:16px;
+	line-height: 16px;
+	text-align: center;
+	position: absolute;
+    top: 29px;
+    left: -19px;
+    display: none;
+}
+.bi_my_acc_current_level:after{
+	content: "";
+	display: inline-block;
+	width:15px;
+	height: 18px;
+	position: absolute;
+	top:18px;
+	left:27px;
+	color:#231915;
+	background: url(../images/current_level_bg.png) no-repeat 0px 0px;
+}
+.bi_my_acc_level_line{
+	width:1120px;
+	height:60px;
+	float:left;
+	margin-left:30px;
+	border-bottom:1px solid #8F8D8D;
+}
+.bi_my_invite_friends_num{
+	width:1160px;
+	height:175px;
+	float:left;
+	margin-left:14px;
+	position: relative;
+	background: url(../images/invite_num_bg.png) no-repeat 155px 64px;
+}
+.bi_my_invite_friends_num_title{
+	float:left;
+	width:175px;
+	height:45px;
+	font-size: 18px;
+	line-height: 45px;
+}
+.bi_my_invite_friends_num_img{
+	width:101px;
+	height:101px;
+	position: absolute;
+	left:45px;
+	bottom: 0;
+}
+.bi_my_invite_friends_current{
+	width:120px;
+	height: 16px;
+	position: absolute;
+	text-align: center;
+	line-height: 16px;
+	top:100px;
+	left:50px;
+	display: none;
+}
+.bi_my_invite_friends_current:after{
+	content: "";
+	display: inline-block;
+	width:15px;
+	height: 16px;
+	position: absolute;
+	top:16px;
+	left:52px;
+	color:#231915;
+	background: url(../images/current_level_bg.png) no-repeat 0px 0px;
+}
+.my_acc_jc{
+	width:1200px;
+	height: 190px;
+	margin: 56px auto 0;
+}
+.my_acc_jc_vip{
+	width:550px;
+	height:190px;
+	float:left;
+	border:1px solid #C9C9C9;
+}
+.my_acc_jc_total{
+	width:550px;
+	height:190px;
+	float:right;
+	border:1px solid #C9C9C9;
+}
+.my_acc_jc_title{
+	width:550px;
+	height:30px;
+	color:#ffffff;
+	background-color: #595757;
+	line-height: 30px;
+	text-indent: 24px;
+}
+.my_acc_jc_content{
+	width:550px;
+	height: 160px;
+	z-index: 2;
+	overflow: hidden;
+	position: relative;
+}
+.my_acc_jc_pie_charts{
+	width:370px;
+	height:185px;
+	margin-top: -11px;
+	margin-left: -82px;
+	z-index: -1;
+	float:left;
+}
+.my_acc_jc_pie_calc{
+	width:275px;
+	position: absolute;
+	height:160px;
+	right:0;
+	top:0;
+}
+.my_acc_jc_pie_calc_title{
+	width:275px;
+	height:16px;
+	line-height: 16px;
+	margin-top: 20px;
+	color:#004B6E;
+	text-indent: 9px;
+	display: inline-block;
+}
+.my_acc_jc_pie_calc_total{
+	width:275px;
+	height:110px;
+	line-height: 110px;
+	text-align: center;
+	line-height: 110px;
+	font-size: 80px;
+	color:#004B6E;
+}
+.my_acc_grow_level_intro{
+	width:1200px;
+	height:38px;
+	line-height: 38px;
+	font-size: 20px;
+	text-indent: 14px;
+	margin: 55px auto 0;
+}
+.my_acc_grow_level_intro_d{
+	width:930px;
+	height:200px;
+	line-height: 200px;
+	font-size: 19px;
+	margin: 0 auto 0;
+	text-align: center;
+	color:#004B6E;
+	border:1px dotted #004B6E;
+}
+.my_acc_vip_jc_intro{
+	width:1200px;
+	height:38px;
+	line-height: 38px;
+	font-size: 20px;
+	text-indent: 14px;
+	margin: 220px auto 0;
+}
+.my_acc_vip_jc_intro_d{
+	width:930px;
+	height:200px;
+	line-height: 200px;
+	font-size: 19px;
+	margin: 0 auto 0;
+	text-align: center;
+	color:#004B6E;
+	border:1px dotted #004B6E;
 }
