@@ -926,6 +926,7 @@
 	width:1200px;
 	height:420px;
 	background-color: #EEEEEE;
+	position: relative;
 }
 .bi_my_acc_title{
 	width:100%;
@@ -935,6 +936,18 @@
 	line-height: 30px;
 	text-indent: 15px;
 	font-size: 15px;
+}
+.vip_logo_b{
+	position: absolute;
+	display: inline-block;
+	border:1px solid red;
+	width:22px;
+	height:22px;
+    top: 128px;
+    left: 99px;
+    border:1px solid #ffffff;
+    border-radius: 50%;
+    background: url(../images/vip22.png) no-repeat 0px 0px;
 }
 .bi_my_acc_user_img{
 	width:111px;
