@@ -596,7 +596,7 @@ function initMyLevel(level){
 	}else if(level == 80){
 		top = 15;
 		left = 775;
-	}else if(level == 100){
+	}else if(level >= 100){
 		top = 5;
 		left = 972;
 	}else if(level > 0 && level < 20){
@@ -617,9 +617,6 @@ function initMyLevel(level){
 	}else if(level < 0){
 		top = 29;
 		left = -19;
-	}else if(level >= 100){
-		top = 40;
-		left = 775 + 16 + (166/18)*(level-81);
 	}
 	
 	$(".bi_my_acc_current_level").html("当前" + level + "级")
