@@ -677,3 +677,18 @@ function initMyAccJcPieCharts(){
     pieChart.initSettings(config);  
     pieChart.render();  
 }
+/**详情页面按钮事件初始化**/
+function initDetailBtnEvent(){
+	if(410- $(document).scrollTop() <= ($(window).height()/2 - 205)){
+		$(".dmt_fix_btn_container").removeClass("none");
+	}else{
+		$(".dmt_fix_btn_container").addClass("none");
+	}
+	$(window).scroll(function () {
+		if(410- $(document).scrollTop() <= ($(window).height()/2 - 205)){
+			$(".dmt_fix_btn_container").removeClass("none");
+		}else{
+			$(".dmt_fix_btn_container").addClass("none");
+		}
+	});
+}

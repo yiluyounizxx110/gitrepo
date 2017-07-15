@@ -1079,6 +1079,17 @@ a:hover{
     text-indent: 15px;
     text-overflow:ellipsis;
 }
+.user_desc .user_title .user_title_age{
+	display: block;
+	width:140px;
+	height:60px;
+	line-height: 60px;
+	font-size: 15px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-indent: 15px;
+    text-overflow:ellipsis;
+}
 .user_desc .user_title .user_title_choose{
 	width:105px;
 	height:30px;
@@ -1221,7 +1232,7 @@ a:hover{
 }
 .user_lables{
 	width:1200px;
-	margin: 4px auto;
+	margin: 4px auto 0;
 }
 .user_lables i{
 	display: inline-block;
